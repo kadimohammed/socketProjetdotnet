@@ -47,7 +47,7 @@ namespace Socket_Projet_Server
                             else
                             {
                                 Console.WriteLine("Client ne pas Connecter");
-                                formatter.Serialize(networkStream, new Utilisateur { UserID = -1 });
+                                formatter.Serialize(networkStream, new Utilisateur { Id = -1 });
                             }
 
                         }

@@ -64,16 +64,15 @@
             // 
             // guna2GradientPanel1
             // 
-            guna2GradientPanel1.BorderRadius = 290;
+            guna2GradientPanel1.BorderRadius = 240;
             guna2GradientPanel1.Controls.Add(label2);
             guna2GradientPanel1.CustomizableEdges = customizableEdges1;
             guna2GradientPanel1.FillColor = Color.FromArgb(255, 61, 87);
             guna2GradientPanel1.FillColor2 = Color.FromArgb(255, 128, 0);
-            guna2GradientPanel1.Location = new Point(-228, -10);
-            guna2GradientPanel1.Margin = new Padding(3, 4, 3, 4);
+            guna2GradientPanel1.Location = new Point(-212, -2);
             guna2GradientPanel1.Name = "guna2GradientPanel1";
             guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2GradientPanel1.Size = new Size(698, 644);
+            guna2GradientPanel1.Size = new Size(605, 477);
             guna2GradientPanel1.TabIndex = 0;
             // 
             // label2
@@ -82,20 +81,19 @@
             label2.BackColor = Color.FromArgb(17, 22, 32);
             label2.Font = new Font("Magneto", 48F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(224, 224, 224);
-            label2.Location = new Point(221, 135);
+            label2.Location = new Point(207, 101);
             label2.Name = "label2";
-            label2.Size = new Size(291, 97);
+            label2.Size = new Size(233, 78);
             label2.TabIndex = 0;
-            label2.Text = "AMO";
+            label2.Text = "MAO";
             label2.Click += label2_Click;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(44, 40);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(29, 30);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(77, 85);
+            pictureBox1.Size = new Size(67, 64);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -112,11 +110,10 @@
             guna2Button1.FillColor = Color.FromArgb(255, 128, 0);
             guna2Button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(611, 508);
-            guna2Button1.Margin = new Padding(3, 4, 3, 4);
+            guna2Button1.Location = new Point(535, 381);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button1.Size = new Size(178, 54);
+            guna2Button1.Size = new Size(156, 40);
             guna2Button1.TabIndex = 3;
             guna2Button1.Text = "Commencer";
             guna2Button1.Click += guna2Button1_Click;
@@ -126,9 +123,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Yu Gothic UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(64, 64, 64);
-            label1.Location = new Point(858, 588);
+            label1.Location = new Point(751, 441);
             label1.Name = "label1";
-            label1.Size = new Size(37, 17);
+            label1.Size = new Size(31, 13);
             label1.TabIndex = 5;
             label1.Text = "V 1.0";
             label1.Click += label1_Click;
@@ -140,11 +137,11 @@
             guna2ControlBox1.FillColor = Color.Transparent;
             guna2ControlBox1.HoverState.FillColor = Color.FromArgb(192, 0, 0);
             guna2ControlBox1.IconColor = Color.FromArgb(224, 224, 224);
-            guna2ControlBox1.Location = new Point(880, -2);
+            guna2ControlBox1.Location = new Point(770, -2);
             guna2ControlBox1.Margin = new Padding(3, 2, 3, 2);
             guna2ControlBox1.Name = "guna2ControlBox1";
             guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2ControlBox1.Size = new Size(45, 50);
+            guna2ControlBox1.Size = new Size(39, 38);
             guna2ControlBox1.TabIndex = 21;
             guna2ControlBox1.Click += guna2ControlBox1_Click;
             // 
@@ -152,7 +149,7 @@
             // 
             TelephoneTextBox.AutoRoundedCorners = true;
             TelephoneTextBox.BorderColor = Color.Gray;
-            TelephoneTextBox.BorderRadius = 24;
+            TelephoneTextBox.BorderRadius = 18;
             TelephoneTextBox.Cursor = Cursors.IBeam;
             TelephoneTextBox.CustomizableEdges = customizableEdges7;
             TelephoneTextBox.DefaultText = "";
@@ -166,15 +163,15 @@
             TelephoneTextBox.HoverState.BorderColor = Color.FromArgb(255, 128, 0);
             TelephoneTextBox.IconLeft = (Image)resources.GetObject("TelephoneTextBox.IconLeft");
             TelephoneTextBox.IconLeftOffset = new Point(5, 0);
-            TelephoneTextBox.Location = new Point(534, 324);
-            TelephoneTextBox.Margin = new Padding(3, 5, 3, 5);
+            TelephoneTextBox.Location = new Point(467, 243);
+            TelephoneTextBox.Margin = new Padding(3, 4, 3, 4);
             TelephoneTextBox.Name = "TelephoneTextBox";
             TelephoneTextBox.PasswordChar = '\0';
             TelephoneTextBox.PlaceholderForeColor = Color.Gray;
             TelephoneTextBox.PlaceholderText = "Phone Number";
             TelephoneTextBox.SelectedText = "";
             TelephoneTextBox.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            TelephoneTextBox.Size = new Size(325, 50);
+            TelephoneTextBox.Size = new Size(284, 38);
             TelephoneTextBox.TabIndex = 2;
             TelephoneTextBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -187,7 +184,7 @@
             guna2CircleProgressBar2.FillThickness = 3;
             guna2CircleProgressBar2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             guna2CircleProgressBar2.ForeColor = Color.White;
-            guna2CircleProgressBar2.Location = new Point(601, 94);
+            guna2CircleProgressBar2.Location = new Point(526, 70);
             guna2CircleProgressBar2.Margin = new Padding(3, 2, 3, 2);
             guna2CircleProgressBar2.Minimum = 0;
             guna2CircleProgressBar2.Name = "guna2CircleProgressBar2";
@@ -196,7 +193,7 @@
             guna2CircleProgressBar2.ProgressThickness = 3;
             guna2CircleProgressBar2.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2CircleProgressBar2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleProgressBar2.Size = new Size(188, 188);
+            guna2CircleProgressBar2.Size = new Size(141, 141);
             guna2CircleProgressBar2.TabIndex = 22;
             guna2CircleProgressBar2.Text = "guna2CircleProgressBar2";
             guna2CircleProgressBar2.Value = 40;
@@ -211,7 +208,7 @@
             guna2CircleProgressBar1.FillThickness = 3;
             guna2CircleProgressBar1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             guna2CircleProgressBar1.ForeColor = Color.White;
-            guna2CircleProgressBar1.Location = new Point(10, 12);
+            guna2CircleProgressBar1.Location = new Point(9, 9);
             guna2CircleProgressBar1.Margin = new Padding(3, 2, 3, 2);
             guna2CircleProgressBar1.Minimum = 0;
             guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
@@ -220,7 +217,7 @@
             guna2CircleProgressBar1.ProgressThickness = 3;
             guna2CircleProgressBar1.ShadowDecoration.CustomizableEdges = customizableEdges9;
             guna2CircleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleProgressBar1.Size = new Size(162, 162);
+            guna2CircleProgressBar1.Size = new Size(122, 122);
             guna2CircleProgressBar1.TabIndex = 16;
             guna2CircleProgressBar1.Text = "guna2CircleProgressBar1";
             guna2CircleProgressBar1.Value = 33;
@@ -232,18 +229,18 @@
             guna2ControlBox3.CustomizableEdges = customizableEdges11;
             guna2ControlBox3.FillColor = Color.Transparent;
             guna2ControlBox3.IconColor = Color.White;
-            guna2ControlBox3.Location = new Point(829, -2);
+            guna2ControlBox3.Location = new Point(725, -2);
             guna2ControlBox3.Margin = new Padding(3, 2, 3, 2);
             guna2ControlBox3.Name = "guna2ControlBox3";
             guna2ControlBox3.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2ControlBox3.Size = new Size(45, 50);
+            guna2ControlBox3.Size = new Size(39, 38);
             guna2ControlBox3.TabIndex = 23;
             // 
             // PasswordTextBox
             // 
             PasswordTextBox.AutoRoundedCorners = true;
             PasswordTextBox.BorderColor = Color.Gray;
-            PasswordTextBox.BorderRadius = 24;
+            PasswordTextBox.BorderRadius = 18;
             PasswordTextBox.Cursor = Cursors.IBeam;
             PasswordTextBox.CustomizableEdges = customizableEdges13;
             PasswordTextBox.DefaultText = "";
@@ -257,15 +254,15 @@
             PasswordTextBox.HoverState.BorderColor = Color.FromArgb(255, 128, 0);
             PasswordTextBox.IconLeft = (Image)resources.GetObject("PasswordTextBox.IconLeft");
             PasswordTextBox.IconLeftOffset = new Point(5, 0);
-            PasswordTextBox.Location = new Point(534, 410);
-            PasswordTextBox.Margin = new Padding(3, 5, 3, 5);
+            PasswordTextBox.Location = new Point(467, 308);
+            PasswordTextBox.Margin = new Padding(3, 4, 3, 4);
             PasswordTextBox.Name = "PasswordTextBox";
             PasswordTextBox.PasswordChar = '●';
             PasswordTextBox.PlaceholderForeColor = Color.Gray;
             PasswordTextBox.PlaceholderText = "Password";
             PasswordTextBox.SelectedText = "";
             PasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            PasswordTextBox.Size = new Size(325, 50);
+            PasswordTextBox.Size = new Size(284, 38);
             PasswordTextBox.TabIndex = 24;
             PasswordTextBox.TextAlign = HorizontalAlignment.Center;
             PasswordTextBox.UseSystemPasswordChar = true;
@@ -278,10 +275,10 @@
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(17, 22, 32);
-            ClientSize = new Size(925, 625);
+            ClientSize = new Size(809, 469);
             Controls.Add(PasswordTextBox);
             Controls.Add(guna2ControlBox3);
             Controls.Add(guna2CircleProgressBar2);
@@ -292,7 +289,6 @@
             Controls.Add(guna2GradientPanel1);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";

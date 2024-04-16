@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using Socket_Projet_Client.Sockets;
 using Socket_Projet_Server.Models;
+using Socket_Projet_Server.Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,13 +41,16 @@ namespace SocketsProject
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            //bool a = UsersRepository.InsererUtilisateurAvecImage("0444444444", "kadi", "1234", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\myimg.png", "mo kadi piratage");
+            //bool c = UsersRepository.InsererUtilisateurAvecImage("1", "manini", "1", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\myimg.png", "cccccccc");
+            //bool a = UsersRepository.InsererUtilisateurAvecImage("2", "pitos","2", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\p2.jpg", "aaaaaa");
+            //bool b = UsersRepository.InsererUtilisateurAvecImage("3", "camavinga", "3", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\p3.jpg", "bbbbbbb");
+            //bool f = UsersRepository.InsererUtilisateurAvecImage("4", "manini", "4", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\p4.jpg", "cccccccc");
+            
             try
             {
                 // recuperer telephone et password
                 string Telephone = TelephoneTextBox.Text;
                 string Password = PasswordTextBox.Text;
-
 
                 // Connexion au serveur si nécessaire
                 clientSocket = SocketSingleton.GetInstance();
@@ -64,7 +68,7 @@ namespace SocketsProject
                 // Réception de l'utilisateur depuis le serveur
                 user = (Utilisateur)formatter.Deserialize(networkStream);
 
-                if (user != null && user.UserID != -1)
+                if (user != null && user.Id != -1)
                 {
                     f1 = new Form1();
                     f1.Show();
@@ -74,13 +78,12 @@ namespace SocketsProject
                 {
                     MessageBox.Show("Numéro de téléphone ou mot de passe incorrect. Veuillez réessayer.", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Une ereur s'est produite. Veuillez réessayer.", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            
         }
 
         private void label2_Click(object sender, EventArgs e)

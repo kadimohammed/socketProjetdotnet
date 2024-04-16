@@ -49,12 +49,12 @@
             lbl_notification.FocusedColor = Color.Fuchsia;
             lbl_notification.Font = new Font("Segoe UI", 6F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_notification.ForeColor = Color.Silver;
-            lbl_notification.Location = new Point(209, 26);
+            lbl_notification.Location = new Point(225, 32);
             lbl_notification.Margin = new Padding(3, 2, 3, 2);
             lbl_notification.Name = "lbl_notification";
             lbl_notification.ShadowDecoration.CustomizableEdges = customizableEdges1;
             lbl_notification.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            lbl_notification.Size = new Size(24, 20);
+            lbl_notification.Size = new Size(20, 20);
             lbl_notification.TabIndex = 17;
             lbl_notification.Text = "5";
             // 
@@ -64,7 +64,7 @@
             lbl_dateconnect.BackColor = Color.Transparent;
             lbl_dateconnect.Font = new Font("Franklin Gothic Medium Cond", 7.2F, FontStyle.Regular, GraphicsUnit.Point);
             lbl_dateconnect.ForeColor = Color.Silver;
-            lbl_dateconnect.Location = new Point(174, 8);
+            lbl_dateconnect.Location = new Point(189, 8);
             lbl_dateconnect.Name = "lbl_dateconnect";
             lbl_dateconnect.Size = new Size(57, 14);
             lbl_dateconnect.TabIndex = 21;
@@ -76,7 +76,7 @@
             lbl_msg.BackColor = Color.Transparent;
             lbl_msg.Font = new Font("Franklin Gothic Medium Cond", 9F, FontStyle.Regular, GraphicsUnit.Point);
             lbl_msg.ForeColor = Color.Gray;
-            lbl_msg.Location = new Point(71, 26);
+            lbl_msg.Location = new Point(67, 26);
             lbl_msg.Name = "lbl_msg";
             lbl_msg.Size = new Size(25, 16);
             lbl_msg.TabIndex = 20;
@@ -88,7 +88,7 @@
             lbl_name.BackColor = Color.Transparent;
             lbl_name.Font = new Font("Franklin Gothic Medium Cond", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
             lbl_name.ForeColor = Color.Silver;
-            lbl_name.Location = new Point(62, 8);
+            lbl_name.Location = new Point(60, 8);
             lbl_name.Name = "lbl_name";
             lbl_name.Size = new Size(51, 15);
             lbl_name.TabIndex = 19;
@@ -99,13 +99,13 @@
             image.BackColor = Color.Transparent;
             image.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Horizontal;
             image.ImageRotate = 0F;
-            image.Location = new Point(16, 9);
+            image.Location = new Point(10, 9);
             image.Margin = new Padding(3, 2, 3, 2);
             image.Name = "image";
             image.ShadowDecoration.Color = Color.Fuchsia;
             image.ShadowDecoration.CustomizableEdges = customizableEdges2;
             image.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            image.Size = new Size(42, 36);
+            image.Size = new Size(42, 42);
             image.SizeMode = PictureBoxSizeMode.StretchImage;
             image.TabIndex = 22;
             image.TabStop = false;
@@ -114,7 +114,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(17, 22, 32);
+            BackColor = Color.FromArgb(26, 32, 47);
             Controls.Add(image);
             Controls.Add(lbl_notification);
             Controls.Add(lbl_dateconnect);
@@ -122,7 +122,7 @@
             Controls.Add(lbl_name);
             Margin = new Padding(3, 2, 3, 2);
             Name = "ContactUC";
-            Size = new Size(258, 56);
+            Size = new Size(258, 59);
             Load += ContactUC_Load;
             MouseEnter += ContactUC_MouseEnter;
             MouseLeave += ContactUC_MouseLeave;

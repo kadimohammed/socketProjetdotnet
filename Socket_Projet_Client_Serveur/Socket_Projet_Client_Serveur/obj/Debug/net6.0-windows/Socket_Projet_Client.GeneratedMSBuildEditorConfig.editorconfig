@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Socket_Projet_Client
-build_property.ProjectDir = C:\Users\MO KADI\Desktop\Socket_Projet_Client_Serveur\Socket_Projet_Client_Serveur\
+build_property.ProjectDir = C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Client_Serveur\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

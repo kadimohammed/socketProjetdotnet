@@ -1,6 +1,8 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic.ApplicationServices;
 using Socket_Projet_Client;
 using Socket_Projet_Client.Sockets;
+using Socket_Projet_Server.Factory;
 using Socket_Projet_Server.Models;
 using System;
 using System.Collections.Generic;
@@ -23,108 +25,61 @@ namespace SocketsProject
         private List<Form> childFormsList = new List<Form>();
         Socket clientSocket;
         private List<ContactUC> contactList;
+        MyContext _context;
+
 
         public void loadcontact()
         {
             
-            contactList = new List<ContactUC>()
+            Utilisateur user = Login.user;
+            if (user != null && user.Contacts != null)
             {
-                new ContactUC()
+                contactList = new List<ContactUC>();
+                foreach (var contact in user.Contacts)
                 {
-                    Name = "kadi",
-                    Notification = 1,
-                    DateConnection = "1/1/1111",
-                    Image = Image.FromFile("C:\\Users\\MO KADI\\Desktop\\Med kadi\\myimg.png")
-                },
-                new ContactUC()
-                {
-                    Name = "tgv",
-                    Notification = 2,
-                    DateConnection = "2/2/2222",
-                    Image = Image.FromFile("C:\\Users\\MO KADI\\Desktop\\Med kadi\\myimg.png")
-                },
-                new ContactUC()
-                {
-                    Name = "tgv",
-                    Notification = 2,
-                    DateConnection = "2/2/2222",
-                    Image = Image.FromFile("C:\\Users\\MO KADI\\Desktop\\Med kadi\\myimg.png")
-                },
-                new ContactUC()
-                {
-                    Name = "tgv",
-                    Notification = 2,
-                    DateConnection = "2/2/2222",
-                    Image = Image.FromFile("C:\\Users\\MO KADI\\Desktop\\Med kadi\\myimg.png")
-                },
-                new ContactUC()
-                {
-                    Name = "tgv",
-                    Notification = 2,
-                    DateConnection = "2/2/2222",
-                    Image = Image.FromFile("C:\\Users\\MO KADI\\Desktop\\Med kadi\\myimg.png")
-                },
-                new ContactUC()
-                {
-                    Name = "tgv",
-                    Notification = 2,
-                    DateConnection = "2/2/2222",
-                    Image = Image.FromFile("C:\\Users\\MO KADI\\Desktop\\Med kadi\\myimg.png")
-                },
-                new ContactUC()
-                {
-                    Name = "tgv",
-                    Notification = 2,
-                    DateConnection = "2/2/2222",
-                    Image = Image.FromFile("C:\\Users\\MO KADI\\Desktop\\Med kadi\\myimg.png")
-                },
-                new ContactUC()
-                {
-                    Name = "tgv",
-                    Notification = 2,
-                    DateConnection = "2/2/2222",
-                    Image = Image.FromFile("C:\\Users\\MO KADI\\Desktop\\Med kadi\\myimg.png")
-                },
-                new ContactUC()
-                {
-                    Name = "tgv",
-                    Notification = 2,
-                    DateConnection = "2/2/2222",
-                    Image = Image.FromFile("C:\\Users\\MO KADI\\Desktop\\Med kadi\\myimg.png")
-                },
-                new ContactUC()
-                {
-                    Name = "tgv",
-                    Notification = 2,
-                    DateConnection = "2/2/2222",
-                    Image = Image.FromFile("C:\\Users\\MO KADI\\Desktop\\Med kadi\\myimg.png")
-                },
-                new ContactUC()
-                {
-                    Name = "tgv",
-                    Notification = 2,
-                    DateConnection = "2/2/2222",
-                    Image = Image.FromFile("C:\\Users\\MO KADI\\Desktop\\Med kadi\\myimg.png")
-                },
-                new ContactUC()
-                {
-                    Name = "prtg",
-                    Notification = 3,
-                    DateConnection = "3/3/3333",
-                    Image = Image.FromFile("C:\\Users\\MO KADI\\Desktop\\Med kadi\\myimg.png")
+                    ContactUC contactUC = new ContactUC();
+                    contactUC.Name = contact.ContactUser.FullName;
+                    contactUC.Notification = 0;
+                    contactUC.DateConnection = DateTime.Now.ToShortDateString();
+
+
+                    byte[] photoBytes = contact.ContactUser.Photo;
+
+                    if (photoBytes != null && photoBytes.Length > 0)
+                    {
+                        try
+                        {
+                            using (MemoryStream ms = new MemoryStream(photoBytes))
+                            {
+                                contactUC.Image = Image.FromStream(ms);
+                            }
+                        }
+                        catch (ArgumentException ex)
+                        {
+                            Console.WriteLine("Erreur lors de la conversion des données de l'image : " + ex.Message);
+                        }
+                    }
+                    else
+                    {
+                        contactUC.Image = null;
+                    }
+
+                    contactList.Add(contactUC);
+
                 }
-            };
+            }   
         }
 
         public Form1()
         {
             InitializeComponent();
+            _context = ContextFactory.getContext();
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
             flowLayoutPanel1.Controls.Clear();
 
             loadcontact();
