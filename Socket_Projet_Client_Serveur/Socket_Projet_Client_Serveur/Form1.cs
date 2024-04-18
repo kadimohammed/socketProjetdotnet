@@ -24,7 +24,7 @@ namespace SocketsProject
     {
         private List<Form> childFormsList = new List<Form>();
         Socket clientSocket;
-        private List<ContactUC> contactList;
+        public static  List<ContactUC> contactList;
         MyContext _context;
 
 

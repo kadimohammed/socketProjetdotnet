@@ -587,7 +587,7 @@
             label17.BackColor = Color.Transparent;
             label17.Font = new Font("Franklin Gothic Demi", 6F, FontStyle.Regular, GraphicsUnit.Point);
             label17.ForeColor = Color.FromArgb(0, 192, 192);
-            label17.Location = new Point(111, 253);
+            label17.Location = new Point(109, 249);
             label17.Name = "label17";
             label17.Size = new Size(44, 11);
             label17.TabIndex = 19;
@@ -599,11 +599,13 @@
             label16.BackColor = Color.Transparent;
             label16.Font = new Font("Franklin Gothic Medium Cond", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label16.ForeColor = Color.Silver;
-            label16.Location = new Point(98, 224);
+            label16.Location = new Point(3, 224);
+            label16.MinimumSize = new Size(255, 0);
             label16.Name = "label16";
-            label16.Size = new Size(73, 21);
+            label16.Size = new Size(255, 21);
             label16.TabIndex = 18;
             label16.Text = "Jane Lopez";
+            label16.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // guna2CircleProgressBar2
             // 
@@ -1480,7 +1482,6 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox12;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar2;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
@@ -1531,6 +1532,7 @@
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton3;
+        public static Label label16;
     }
 }
 

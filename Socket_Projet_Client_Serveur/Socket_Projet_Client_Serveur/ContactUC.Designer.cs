@@ -124,6 +124,7 @@
             Name = "ContactUC";
             Size = new Size(258, 59);
             Load += ContactUC_Load;
+            Click += ContactUC_Click;
             MouseEnter += ContactUC_MouseEnter;
             MouseLeave += ContactUC_MouseLeave;
             ((System.ComponentModel.ISupportInitialize)image).EndInit();

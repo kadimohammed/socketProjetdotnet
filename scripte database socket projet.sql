@@ -25,43 +25,34 @@ CREATE TABLE Contacts (
     FOREIGN KEY (contactUserID) REFERENCES Utilisateurs(userID)
 );
 
-
-
-
+-- Table Conversations
 CREATE TABLE Conversations (
     conversationID INT PRIMARY KEY,
-    conversationName NVARCHAR(100),
-    createDate DATETIME DEFAULT GETDATE()
+    user1ID INT,
+    user2ID INT,
+    createDate DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (user1ID) REFERENCES Utilisateurs(userID),
+    FOREIGN KEY (user2ID) REFERENCES Utilisateurs(userID)
 );
 
--- Création de la table Messages
+-- Table Messages
 CREATE TABLE Messages (
     messageID INT PRIMARY KEY,
     content NVARCHAR(MAX) NOT NULL,
-    userID INT,
+    senderID INT,
+    receiverID INT,
     conversationID INT,
     sendDate DATETIME DEFAULT GETDATE(),
-    FOREIGN KEY (userID) REFERENCES Utilisateurs(userID),
+    FOREIGN KEY (senderID) REFERENCES Utilisateurs(userID),
+    FOREIGN KEY (receiverID) REFERENCES Utilisateurs(userID),
     FOREIGN KEY (conversationID) REFERENCES Conversations(conversationID)
 );
 
 
 
--- Création de la table Groupes
-CREATE TABLE Groupes (
-    groupID INT PRIMARY KEY,
-    groupName NVARCHAR(100),
-    groupDescription NVARCHAR(255)
-);
 
--- Création de la table Group_Members
-CREATE TABLE Group_Members (
-    groupID INT,
-    userID INT,
-    PRIMARY KEY (groupID, userID),
-    FOREIGN KEY (groupID) REFERENCES Groupes(groupID),
-    FOREIGN KEY (userID) REFERENCES Utilisateurs(userID)
-);
+
+
 
 
 insert into Contacts values(1,2),(1,3),(1,4);

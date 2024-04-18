@@ -21,7 +21,7 @@ namespace Socket_Projet_Server.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Contact>()
-                .HasKey(c => new { c.UtilisateurId, c.ContactUserId }); // Définir une clé composite
+                .HasKey(c => new { c.UtilisateurId, c.ContactUserId });
 
             modelBuilder.Entity<Contact>()
                 .HasOne(c => c.Utilisateur)
@@ -34,6 +34,20 @@ namespace Socket_Projet_Server.Models
                 .WithMany()
                 .HasForeignKey(c => c.ContactUserId)
                 .OnDelete(DeleteBehavior.NoAction);
+
+
+            modelBuilder.Entity<Message>()
+            .HasOne(m => m.Sender)
+            .WithMany(u => u.MessagesSent)
+            .HasForeignKey(m => m.SenderId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+
+            modelBuilder.Entity<Message>()
+                .HasOne(m => m.Receiver)
+                .WithMany(u => u.MessagesReceived)
+                .HasForeignKey(m => m.ReceiverId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
 
 
