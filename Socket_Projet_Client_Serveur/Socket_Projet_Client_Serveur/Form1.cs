@@ -114,7 +114,7 @@ namespace SocketsProject
 
                 // Calculer la position de la fenêtre enfant dans le coin inférieur gauche du formulaire parent
                 int childX = this.Left + 10;
-                int childY = this.Bottom - childHeight - 70;
+                int childY = this.Bottom - childHeight - 50;
 
                 // Positionner la fenêtre enfant
                 formChild.StartPosition = FormStartPosition.Manual;

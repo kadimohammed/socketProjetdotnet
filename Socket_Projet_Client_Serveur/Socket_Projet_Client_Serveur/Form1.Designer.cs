@@ -34,7 +34,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -42,6 +41,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -246,19 +246,19 @@
             guna2Panel1.Margin = new Padding(3, 2, 3, 2);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges13;
-            guna2Panel1.Size = new Size(59, 650);
+            guna2Panel1.Size = new Size(50, 650);
             guna2Panel1.TabIndex = 0;
             // 
             // guna2PictureBox10
             // 
             guna2PictureBox10.CustomizableEdges = customizableEdges1;
-            guna2PictureBox10.Image = Socket_Projet_Client.Properties.Resources.logo;
+            guna2PictureBox10.Image = Socket_Projet_Client.Properties.Resources.chat__7_;
             guna2PictureBox10.ImageRotate = 0F;
-            guna2PictureBox10.Location = new Point(9, 6);
+            guna2PictureBox10.Location = new Point(10, 12);
             guna2PictureBox10.Margin = new Padding(3, 2, 3, 2);
             guna2PictureBox10.Name = "guna2PictureBox10";
             guna2PictureBox10.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2PictureBox10.Size = new Size(42, 42);
+            guna2PictureBox10.Size = new Size(30, 30);
             guna2PictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox10.TabIndex = 11;
             guna2PictureBox10.TabStop = false;
@@ -274,13 +274,13 @@
             guna2Button5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2Button5.ForeColor = Color.White;
             guna2Button5.HoverState.FillColor = Color.FromArgb(26, 32, 47);
-            guna2Button5.Image = (Image)resources.GetObject("guna2Button5.Image");
-            guna2Button5.ImageSize = new Size(25, 25);
-            guna2Button5.Location = new Point(0, 368);
+            guna2Button5.Image = Socket_Projet_Client.Properties.Resources.aider;
+            guna2Button5.ImageSize = new Size(22, 22);
+            guna2Button5.Location = new Point(0, 583);
             guna2Button5.Margin = new Padding(3, 2, 3, 2);
             guna2Button5.Name = "guna2Button5";
             guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button5.Size = new Size(60, 34);
+            guna2Button5.Size = new Size(50, 34);
             guna2Button5.TabIndex = 10;
             // 
             // guna2Button4
@@ -294,13 +294,12 @@
             guna2Button4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2Button4.ForeColor = Color.White;
             guna2Button4.HoverState.FillColor = Color.FromArgb(26, 32, 47);
-            guna2Button4.Image = (Image)resources.GetObject("guna2Button4.Image");
-            guna2Button4.ImageSize = new Size(25, 25);
-            guna2Button4.Location = new Point(-1, 329);
+            guna2Button4.Image = Socket_Projet_Client.Properties.Resources.statut;
+            guna2Button4.Location = new Point(-1, 162);
             guna2Button4.Margin = new Padding(3, 2, 3, 2);
             guna2Button4.Name = "guna2Button4";
             guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button4.Size = new Size(60, 34);
+            guna2Button4.Size = new Size(51, 34);
             guna2Button4.TabIndex = 9;
             // 
             // guna2Button3
@@ -314,13 +313,12 @@
             guna2Button3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2Button3.ForeColor = Color.White;
             guna2Button3.HoverState.FillColor = Color.FromArgb(26, 32, 47);
-            guna2Button3.Image = (Image)resources.GetObject("guna2Button3.Image");
-            guna2Button3.ImageSize = new Size(25, 25);
-            guna2Button3.Location = new Point(0, 290);
+            guna2Button3.Image = Socket_Projet_Client.Properties.Resources.appel_telephonique__1_;
+            guna2Button3.Location = new Point(0, 118);
             guna2Button3.Margin = new Padding(3, 2, 3, 2);
             guna2Button3.Name = "guna2Button3";
             guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button3.Size = new Size(60, 34);
+            guna2Button3.Size = new Size(50, 34);
             guna2Button3.TabIndex = 8;
             // 
             // guna2Button2
@@ -334,13 +332,12 @@
             guna2Button2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2Button2.ForeColor = Color.White;
             guna2Button2.HoverState.FillColor = Color.FromArgb(26, 32, 47);
-            guna2Button2.Image = Socket_Projet_Client.Properties.Resources.ajouter_contact;
-            guna2Button2.ImageSize = new Size(23, 23);
-            guna2Button2.Location = new Point(0, 250);
+            guna2Button2.Image = Socket_Projet_Client.Properties.Resources.ajouter_un_utilisateur;
+            guna2Button2.Location = new Point(0, 75);
             guna2Button2.Margin = new Padding(3, 2, 3, 2);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Button2.Size = new Size(60, 34);
+            guna2Button2.Size = new Size(50, 34);
             guna2Button2.TabIndex = 7;
             guna2Button2.Click += guna2Button2_Click;
             // 
@@ -351,7 +348,7 @@
             UserPicture.Image = (Image)resources.GetObject("UserPicture.Image");
             UserPicture.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Horizontal;
             UserPicture.ImageRotate = 0F;
-            UserPicture.Location = new Point(10, 610);
+            UserPicture.Location = new Point(9, 629);
             UserPicture.Margin = new Padding(3, 2, 3, 2);
             UserPicture.Name = "UserPicture";
             UserPicture.ShadowDecoration.Color = Color.Silver;
@@ -359,7 +356,7 @@
             UserPicture.ShadowDecoration.Depth = 10;
             UserPicture.ShadowDecoration.Enabled = true;
             UserPicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            UserPicture.Size = new Size(39, 39);
+            UserPicture.Size = new Size(30, 30);
             UserPicture.SizeMode = PictureBoxSizeMode.StretchImage;
             UserPicture.TabIndex = 5;
             UserPicture.TabStop = false;
@@ -687,11 +684,11 @@
             guna2Panel_top.CustomBorderThickness = new Padding(0, 0, 0, 1);
             guna2Panel_top.CustomizableEdges = customizableEdges52;
             guna2Panel_top.Dock = DockStyle.Top;
-            guna2Panel_top.Location = new Point(59, 0);
+            guna2Panel_top.Location = new Point(50, 0);
             guna2Panel_top.Margin = new Padding(3, 2, 3, 2);
             guna2Panel_top.Name = "guna2Panel_top";
             guna2Panel_top.ShadowDecoration.CustomizableEdges = customizableEdges53;
-            guna2Panel_top.Size = new Size(843, 54);
+            guna2Panel_top.Size = new Size(852, 54);
             guna2Panel_top.TabIndex = 2;
             // 
             // guna2Button9
@@ -1253,7 +1250,7 @@
             guna2Panel4.Controls.Add(flowLayoutPanel1);
             guna2Panel4.CustomizableEdges = customizableEdges84;
             guna2Panel4.Dock = DockStyle.Left;
-            guna2Panel4.Location = new Point(59, 54);
+            guna2Panel4.Location = new Point(50, 54);
             guna2Panel4.Margin = new Padding(3, 2, 3, 2);
             guna2Panel4.Name = "guna2Panel4";
             guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges85;
@@ -1284,11 +1281,11 @@
             guna2Panel3.CustomBorderThickness = new Padding(0, 1, 0, 0);
             guna2Panel3.CustomizableEdges = customizableEdges91;
             guna2Panel3.Dock = DockStyle.Bottom;
-            guna2Panel3.Location = new Point(356, 604);
+            guna2Panel3.Location = new Point(347, 604);
             guna2Panel3.Margin = new Padding(3, 2, 3, 2);
             guna2Panel3.Name = "guna2Panel3";
             guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges92;
-            guna2Panel3.Size = new Size(546, 46);
+            guna2Panel3.Size = new Size(555, 46);
             guna2Panel3.TabIndex = 36;
             // 
             // guna2CircleButton1

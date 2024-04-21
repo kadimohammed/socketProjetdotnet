@@ -101,6 +101,62 @@ namespace Socket_Projet_Server
                             formatter.Serialize(networkStream, UtilisateurMapper.GetLoginClFromUtilisateur(newuser));
                             formatter.Serialize(networkStream, message_ajout_contact);
                             break;
+                        case ModifierNameCl request:
+                            Console.WriteLine("Tâche modifier full name :");
+                            string message_modifier_fullname = "";
+                            if (request != null)
+                            {
+                                try
+                                {
+                                    message_modifier_fullname = UsersRepository.EditNameUtilisateur(request.UtilisateurId, request.NewName);
+                                }
+                                catch (IOException)
+                                {
+                                    Console.WriteLine("Erreur d'entrée/sortie lors de la communication avec le client.");
+                                    message_modifier_fullname = "Erreur d'entrée/sortie lors de la communication avec le client.";
+                                    break;
+                                }
+                                catch (Exception ex)
+                                {
+                                    Console.WriteLine("Une erreur s'est produite lors du traitement de la demande du client : " + ex.Message);
+                                    message_modifier_fullname = "Une erreur s'est produite lors du traitement de la demande du client : ";
+                                    break;
+                                }
+                            }
+                            else
+                            {
+                                message_modifier_fullname = "Ce Utilisateur n'exist pas !!!";
+                            }
+                            formatter.Serialize(networkStream, message_modifier_fullname);
+                            break;
+                        case ModifierInfosCl request:
+                            Console.WriteLine("Tâche modifier infos :");
+                            string message_modifier_infos = "";
+                            if (request != null)
+                            {
+                                try
+                                {
+                                    message_modifier_infos = UsersRepository.EditInfosUtilisateur(request.UtilisateurId, request.NewInfos);
+                                }
+                                catch (IOException)
+                                {
+                                    Console.WriteLine("Erreur d'entrée/sortie lors de la communication avec le client.");
+                                    message_modifier_infos = "Erreur d'entrée/sortie lors de la communication avec le client.";
+                                    break;
+                                }
+                                catch (Exception ex)
+                                {
+                                    Console.WriteLine("Une erreur s'est produite lors du traitement de la demande du client : " + ex.Message);
+                                    message_modifier_infos = "Une erreur s'est produite lors du traitement de la demande du client : ";
+                                    break;
+                                }
+                            }
+                            else
+                            {
+                                message_modifier_fullname = "Ce Utilisateur n'exist pas !!!";
+                            }
+                            formatter.Serialize(networkStream, message_modifier_infos);
+                            break;
                         default:
                             Console.WriteLine("Type de requête non pris en charge.");
                             break;

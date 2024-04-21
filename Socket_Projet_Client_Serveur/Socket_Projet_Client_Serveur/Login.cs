@@ -36,7 +36,7 @@ namespace SocketsProject
         }
 
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private async void guna2Button1_Click(object sender, EventArgs e)
         {
             //bool c = UsersRepository.InsererUtilisateurAvecImage("1", "manini", "1", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\myimg.png", "cccccccc");
             //bool a = UsersRepository.InsererUtilisateurAvecImage("2", "pitos","2", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\p2.jpg", "aaaaaa");
@@ -45,7 +45,8 @@ namespace SocketsProject
 
             try
             {
-                // recuperer telephone et password
+                guna2Button1.Enabled = false;
+                // Récupérer le téléphone et le mot de passe
                 string Telephone = TelephoneTextBox.Text;
                 string Password = PasswordTextBox.Text;
 
@@ -54,33 +55,53 @@ namespace SocketsProject
                 SocketSingleton.Connect(clientSocket);
 
                 LoginCl utilisateurToSend = new LoginCl { Telephone = Telephone, Password = Password };
-                NetworkStream networkStream = new NetworkStream(clientSocket);
 
-                // Création du BinaryFormatter
-                BinaryFormatter formatter = new BinaryFormatter();
-
-                // Envoi de l'utilisateur au serveur
-                formatter.Serialize(networkStream, utilisateurToSend);
-
-                // Réception de l'utilisateur depuis le serveur
-                user = (LoginCl)formatter.Deserialize(networkStream);
+                // Envoi de l'utilisateur au serveur de manière asynchrone
+                await Task.Run(() =>
+                {
+                    NetworkStream networkStream = new NetworkStream(clientSocket);
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    formatter.Serialize(networkStream, utilisateurToSend);
+                    user = (LoginCl)formatter.Deserialize(networkStream);
+                });
 
                 if (user != null && user.Id != -1)
                 {
+                    // Si l'utilisateur est authentifié avec succès, afficher la nouvelle forme
                     f1 = new Form1();
                     f1.Show();
                     this.Hide();
                 }
                 else
                 {
+                    // Afficher un message d'erreur si l'authentification échoue
                     MessageBox.Show("Numéro de téléphone ou mot de passe incorrect. Veuillez réessayer.", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Une ereur s'est produite. Veuillez réessayer.", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Gérer toute exception qui pourrait survenir pendant le processus d'authentification
+                MessageBox.Show("Une erreur s'est produite. Veuillez réessayer.", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+            finally
+            {
+                guna2Button1.Enabled = true;
+            }
+
+        }
+
+
+        
+
+
+        private LoginCl SendAndReceiveUser(LoginCl utilisateur)
+        {
+            using (NetworkStream networkStream = new NetworkStream(clientSocket))
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+                formatter.Serialize(networkStream, utilisateur);
+                return (LoginCl)formatter.Deserialize(networkStream);
+            }
         }
     }
 }

@@ -173,6 +173,47 @@ namespace Socket_Projet_Server.Repository
 
 
 
+        public static string EditNameUtilisateur(int userId, string newFullName)
+        {
+            using (var context = ContextFactory.getContext())
+            {
+                var utilisateur = context.Utilisateurs.FirstOrDefault(u => u.Id == userId);
+
+                if (utilisateur != null)
+                {
+                    utilisateur.FullName = newFullName;
+                    context.SaveChanges();
+                    return "FullName Bien Modifier.";
+                }
+                else
+                {
+                    return "Utilisateur non trouvé.";
+                }
+            }
+        }
+
+
+
+        public static string EditInfosUtilisateur(int userId, string newInfos)
+        {
+            using (var context = ContextFactory.getContext())
+            {
+                var utilisateur = context.Utilisateurs.FirstOrDefault(u => u.Id == userId);
+
+                if (utilisateur != null)
+                {
+                    utilisateur.Infos = newInfos;
+                    context.SaveChanges();
+                    return "Infos Bien Modifier.";
+                }
+                else
+                {
+                    return "Utilisateur non trouvé.";
+                }
+            }
+        }
+
+
 
 
     }
