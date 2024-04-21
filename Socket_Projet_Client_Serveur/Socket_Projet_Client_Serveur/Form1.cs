@@ -22,74 +22,35 @@ namespace SocketsProject
 {
     public partial class Form1 : Form
     {
-        private List<Form> childFormsList = new List<Form>();
         Socket clientSocket;
-        public static  List<ContactUC> contactList;
+        public static List<ContactUC> contactList;
         MyContext _context;
+        private bool OpenFormInfo = false;
+        UsersInfos formChild;
 
-
-        public void loadcontact()
-        {
-            
-            Utilisateur user = Login.user;
-            if (user != null && user.Contacts != null)
-            {
-                contactList = new List<ContactUC>();
-                foreach (var contact in user.Contacts)
-                {
-                    ContactUC contactUC = new ContactUC();
-                    contactUC.Name = contact.ContactUser.FullName;
-                    contactUC.Notification = 0;
-                    contactUC.DateConnection = DateTime.Now.ToShortDateString();
-
-
-                    byte[] photoBytes = contact.ContactUser.Photo;
-
-                    if (photoBytes != null && photoBytes.Length > 0)
-                    {
-                        try
-                        {
-                            using (MemoryStream ms = new MemoryStream(photoBytes))
-                            {
-                                contactUC.Image = Image.FromStream(ms);
-                            }
-                        }
-                        catch (ArgumentException ex)
-                        {
-                            Console.WriteLine("Erreur lors de la conversion des données de l'image : " + ex.Message);
-                        }
-                    }
-                    else
-                    {
-                        contactUC.Image = null;
-                    }
-
-                    contactList.Add(contactUC);
-
-                }
-            }   
-        }
 
         public Form1()
         {
             InitializeComponent();
             _context = ContextFactory.getContext();
-
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
             flowLayoutPanel1.Controls.Clear();
 
             loadcontact();
+
+            if (contactList != null && contactList.Count > 0)
+            {
+                contactList[0].ContactUC_Click(sender, e);
+            }
 
             foreach (ContactUC c in contactList)
             {
                 flowLayoutPanel1.Controls.Add(c);
             }
-
-
 
             if (Login.user != null)
             {
@@ -114,7 +75,6 @@ namespace SocketsProject
                     UserPicture.Image = null;
                 }
             }
-
         }
 
 
@@ -134,46 +94,36 @@ namespace SocketsProject
             this.Close();
         }
 
-        private void Form1_Click(object sender, EventArgs e)
-        {
-            foreach (Form childForm in childFormsList.ToList())
-            {
-                childForm.Close();
-            }
-        }
-
-        private void Form1_MouseClick(object sender, MouseEventArgs e)
-        {
-
-            foreach (Form childForm in childFormsList.ToList())
-            {
-                childForm.Close();
-            }
-
-        }
-
         private void UserPicture_Click(object sender, EventArgs e)
         {
-            UsersInfos formChild = new UsersInfos();
-            childFormsList.Add(formChild);
-            // Obtenir les dimensions du formulaire parent
-            int parentWidth = this.Width;
-            int parentHeight = this.Height;
+            if(OpenFormInfo)
+            {
+                formChild.Close();
+                OpenFormInfo = false;
+            }
+            else
+            {
+                formChild = new UsersInfos();
+                // Obtenir les dimensions du formulaire parent
+                int parentWidth = this.Width;
+                int parentHeight = this.Height;
 
-            // Obtenir les dimensions de la fenêtre enfant
-            int childWidth = formChild.Width;
-            int childHeight = formChild.Height;
+                // Obtenir les dimensions de la fenêtre enfant
+                int childWidth = formChild.Width;
+                int childHeight = formChild.Height;
 
-            // Calculer la position de la fenêtre enfant dans le coin inférieur gauche du formulaire parent
-            int childX = this.Left + 10;
-            int childY = this.Bottom - childHeight - 10;
+                // Calculer la position de la fenêtre enfant dans le coin inférieur gauche du formulaire parent
+                int childX = this.Left + 10;
+                int childY = this.Bottom - childHeight - 70;
 
-            // Positionner la fenêtre enfant
-            formChild.StartPosition = FormStartPosition.Manual;
-            formChild.Location = new Point(childX, childY);
+                // Positionner la fenêtre enfant
+                formChild.StartPosition = FormStartPosition.Manual;
+                formChild.Location = new Point(childX, childY);
 
-            // Afficher la fenêtre enfant
-            formChild.Show();
+                // Afficher la fenêtre enfant
+                formChild.Show();
+                OpenFormInfo = true;
+            }
         }
 
         private void UserPicture_MouseEnter(object sender, EventArgs e)
@@ -186,54 +136,179 @@ namespace SocketsProject
             UserPicture.ShadowDecoration.Enabled = false;
         }
 
-        private void guna2CircleButton6_Click(object sender, EventArgs e)
+        private void guna2Button2_Click(object sender, EventArgs e)
         {
-            /*
-            string message = messageTextBox2.Text;
-            if (message != "")
+            new AjouterContact().ShowDialog();
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+
+            string textderecherche = guna2TextBox1.Text;
+            if (textderecherche != "")
             {
-                try
-                {
-                    // Connexion au serveur si nécessaire
-                    clientSocket = SocketSingleton.GetInstance();
-                    SocketSingleton.Connect(clientSocket);
-
-                    
-                    Utilisateur utilisateurToSend = new Utilisateur { Telephone = Telephone, Password = Password };
-                    NetworkStream networkStream = new NetworkStream(clientSocket);
-
-                    // Création du BinaryFormatter
-                    BinaryFormatter formatter = new BinaryFormatter();
-
-                    // Envoi de l'utilisateur au serveur
-                    formatter.Serialize(networkStream, utilisateurToSend);
-
-                    // Réception de l'utilisateur depuis le serveur
-                    user = (Utilisateur)formatter.Deserialize(networkStream);
-
-                    if (user != null && user.UserID != -1)
-                    {
-                        f1 = new Form1();
-                        f1.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Numéro de téléphone ou mot de passe incorrect. Veuillez réessayer.", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    
-
+                loadcontact(guna2TextBox1.Text);
             }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Une ereur s'est produite. Veuillez réessayer.", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            */
+            else
+            {
+                loadcontact();
+            }
+            
+
+            if (contactList != null && contactList.Count > 0)
+            {
+                contactList[0].ContactUC_Click(sender, e);
+            }
+
+            foreach (ContactUC c in contactList)
+            {
+                flowLayoutPanel1.Controls.Add(c);
+            }
         }
 
 
-        
 
-        
+
+
+
+
+
+
+
+
+        // function ///////////////////////////////////////////////////////////////
+
+
+        public void loadcontact(string TextRecherche)
+        {
+
+            LoginCl user = Login.user;
+
+            if (user != null && user.Contacts != null)
+            {
+                contactList = new List<ContactUC>();
+                foreach (var contact in user.Contacts)
+                {
+                    ContactUC contactUC = new ContactUC();
+                    contactUC.Name = contact.ContactUser.FullName;
+                    contactUC.Notification = 0;
+
+                    if (contact.ContactUser.FullName.Contains(TextRecherche))
+                    {
+                        if (user != null && contact != null && contact.ContactUser != null &&
+                            user.MessagesSent != null && contact.ContactUser.MessagesReceived != null &&
+                            contact.ContactUser.MessagesSent != null && user.MessagesReceived != null)
+                        {
+                            var allMessages = user.MessagesSent
+                                .Concat(contact.ContactUser.MessagesReceived)
+                                .Concat(contact.ContactUser.MessagesSent)
+                                .Concat(user.MessagesReceived);
+
+                            var lastMessage = allMessages
+                                .Where(m => (m.SenderId == user.Id && m.ReceiverId == contact.ContactUser.Id) ||
+                                            (m.SenderId == contact.ContactUser.Id && m.ReceiverId == user.Id))
+                                .OrderByDescending(m => m.SendDate)
+                                .FirstOrDefault();
+
+
+                            contactUC.Message = lastMessage?.Content ?? "";
+                            contactUC.DateConnection = lastMessage?.SendDate.ToShortDateString() ?? "";
+                        }
+                        else
+                        {
+                            contactUC.Message = "";
+                            contactUC.DateConnection = "";
+                        }
+
+                        byte[] photoBytes = contact.ContactUser.Photo;
+
+                        if (photoBytes != null && photoBytes.Length > 0)
+                        {
+                            try
+                            {
+                                using (MemoryStream ms = new MemoryStream(photoBytes))
+                                {
+                                    contactUC.Image = Image.FromStream(ms);
+                                }
+                            }
+                            catch (ArgumentException ex)
+                            {
+                                Console.WriteLine("Erreur lors de la conversion des données de l'image : " + ex.Message);
+                            }
+                        }
+                        else
+                        {
+                            contactUC.Image = null;
+                        }
+
+                        contactList.Add(contactUC);
+                    }
+                }
+            }
+        }
+
+
+
+
+        public void loadcontact()
+        {
+
+            LoginCl user = Login.user;
+
+            if (user != null && user.Contacts != null)
+            {
+                contactList = new List<ContactUC>();
+                foreach (var contact in user.Contacts)
+                {
+                    ContactUC contactUC = new ContactUC();
+
+                    if (user != null && contact != null && contact.ContactUser != null &&
+                        user.MessagesSent != null && contact.ContactUser.MessagesReceived != null &&
+                        contact.ContactUser.MessagesSent != null && user.MessagesReceived != null)
+                    {
+                        var allMessages = user.MessagesSent
+                            .Concat(contact.ContactUser.MessagesReceived)
+                            .Concat(contact.ContactUser.MessagesSent)
+                            .Concat(user.MessagesReceived);
+
+                        var lastMessage = allMessages
+                            .Where(m => (m.SenderId == user.Id && m.ReceiverId == contact.ContactUser.Id) ||
+                                        (m.SenderId == contact.ContactUser.Id && m.ReceiverId == user.Id))
+                            .OrderByDescending(m => m.SendDate)
+                            .FirstOrDefault();
+
+                        contactUC.Name = contact.ContactUser.FullName;
+                        contactUC.Notification = 0;
+                        contactUC.Message = lastMessage?.Content ?? "";
+                        contactUC.DateConnection = lastMessage?.SendDate.ToShortDateString() ?? "";
+                        byte[] photoBytes = contact.ContactUser.Photo;
+
+                        if (photoBytes != null && photoBytes.Length > 0)
+                        {
+                            try
+                            {
+                                using (MemoryStream ms = new MemoryStream(photoBytes))
+                                {
+                                    contactUC.Image = Image.FromStream(ms);
+                                }
+                            }
+                            catch (ArgumentException ex)
+                            {
+                                Console.WriteLine("Erreur lors de la conversion des données de l'image : " + ex.Message);
+                            }
+                        }
+                        else
+                        {
+                            contactUC.Image = null;
+                        }
+
+                        contactList.Add(contactUC);
+                    }
+                }
+            }
+        }
+
+
     }
 }

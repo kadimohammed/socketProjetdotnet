@@ -1,6 +1,8 @@
 ﻿
 using System.Net.Sockets;
 using System.Net;
+using System.Runtime.Serialization.Formatters.Binary;
+using Socket_Projet_Server.Models;
 
 namespace Socket_Projet_Server
 {
@@ -20,7 +22,7 @@ namespace Socket_Projet_Server
                 {
                     Socket clientSocket = serverSocket.Accept();
                     Console.WriteLine("nouveux Client Connecter");
-                    MonThread th = new MonThread(clientSocket);
+                    ThreadClient th = new ThreadClient(clientSocket);
                     Thread t = new Thread(new ThreadStart(th.Run));
                     t.Start();
                 }
@@ -34,5 +36,6 @@ namespace Socket_Projet_Server
                 serverSocket.Close();
             }
         }
+
     }
 }

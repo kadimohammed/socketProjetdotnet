@@ -18,8 +18,8 @@ namespace Socket_Projet_Server.Models
         public byte[]? Photo { get; set; } 
         public string? Infos { get; set; } 
         public IList<Contact>? Contacts { get; set; } = new List<Contact>();
-        public ICollection<Message> MessagesSent { get; set; }
-        public ICollection<Message> MessagesReceived { get; set; }
+        public IList<Message> MessagesSent { get; set; }
+        public IList<Message> MessagesReceived { get; set; }
     }
 
 }

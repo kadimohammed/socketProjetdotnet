@@ -9,6 +9,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
@@ -19,7 +20,7 @@ namespace SocketsProject
 {
     public partial class Login : Form
     {
-        public static Utilisateur user;
+        public static LoginCl user;
         public static Form1 f1;
         Socket clientSocket;
 
@@ -34,18 +35,14 @@ namespace SocketsProject
             this.Close();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             //bool c = UsersRepository.InsererUtilisateurAvecImage("1", "manini", "1", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\myimg.png", "cccccccc");
             //bool a = UsersRepository.InsererUtilisateurAvecImage("2", "pitos","2", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\p2.jpg", "aaaaaa");
             //bool b = UsersRepository.InsererUtilisateurAvecImage("3", "camavinga", "3", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\p3.jpg", "bbbbbbb");
-            //bool f = UsersRepository.InsererUtilisateurAvecImage("4", "manini", "4", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\p4.jpg", "cccccccc");
-            
+            //bool f = UsersRepository.InsererUtilisateurAvecImage("4", "manini", "4", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\p4.jpg", "cccccccc");  
+
             try
             {
                 // recuperer telephone et password
@@ -56,7 +53,7 @@ namespace SocketsProject
                 clientSocket = SocketSingleton.GetInstance();
                 SocketSingleton.Connect(clientSocket);
 
-                Utilisateur utilisateurToSend = new Utilisateur { Telephone = Telephone, Password = Password };
+                LoginCl utilisateurToSend = new LoginCl { Telephone = Telephone, Password = Password };
                 NetworkStream networkStream = new NetworkStream(clientSocket);
 
                 // Création du BinaryFormatter
@@ -66,7 +63,7 @@ namespace SocketsProject
                 formatter.Serialize(networkStream, utilisateurToSend);
 
                 // Réception de l'utilisateur depuis le serveur
-                user = (Utilisateur)formatter.Deserialize(networkStream);
+                user = (LoginCl)formatter.Deserialize(networkStream);
 
                 if (user != null && user.Id != -1)
                 {
@@ -76,7 +73,7 @@ namespace SocketsProject
                 }
                 else
                 {
-                    MessageBox.Show("Numéro de téléphone ou mot de passe incorrect. Veuillez réessayer.", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Numéro de téléphone ou mot de passe incorrect. Veuillez réessayer.", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception ex)
@@ -84,21 +81,6 @@ namespace SocketsProject
                 MessageBox.Show("Une ereur s'est produite. Veuillez réessayer.", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

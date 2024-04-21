@@ -1,4 +1,5 @@
-﻿using SocketsProject;
+﻿using Socket_Projet_Server.Models;
+using SocketsProject;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -49,11 +50,6 @@ namespace Socket_Projet_Client
             InitializeComponent();
         }
 
-        private void ContactUC_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void ContactUC_MouseEnter(object sender, EventArgs e)
         {
             BackColor = Color.FromArgb(17, 22, 32);
@@ -71,7 +67,7 @@ namespace Socket_Projet_Client
             }
         }
 
-        private void ContactUC_Click(object sender, EventArgs e)
+        public void ContactUC_Click(object sender, EventArgs e)
         {
             foreach (ContactUC uc in Form1.contactList)
             {
@@ -82,8 +78,16 @@ namespace Socket_Projet_Client
             BackColor = Color.FromArgb(17, 22, 32);
             ForeColor = SystemColors.ControlText;
             handleMouseLeave = false;
-            Form1.label16.Text = this.Name;
+
+            Login.f1.label16.Text = Name;
+            Login.f1.label30.Text = Name;
+            Login.f1.guna2CirclePictureBox13.Image = Image;
+            Login.f1.guna2CirclePictureBox14.Image = Image;
+
         }
+
+
+
 
     }
 }

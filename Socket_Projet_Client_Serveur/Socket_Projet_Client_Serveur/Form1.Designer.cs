@@ -334,14 +334,15 @@
             guna2Button2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2Button2.ForeColor = Color.White;
             guna2Button2.HoverState.FillColor = Color.FromArgb(26, 32, 47);
-            guna2Button2.Image = (Image)resources.GetObject("guna2Button2.Image");
-            guna2Button2.ImageSize = new Size(25, 25);
-            guna2Button2.Location = new Point(0, 251);
+            guna2Button2.Image = Socket_Projet_Client.Properties.Resources.ajouter_contact;
+            guna2Button2.ImageSize = new Size(23, 23);
+            guna2Button2.Location = new Point(0, 250);
             guna2Button2.Margin = new Padding(3, 2, 3, 2);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2Button2.Size = new Size(60, 34);
             guna2Button2.TabIndex = 7;
+            guna2Button2.Click += guna2Button2_Click;
             // 
             // UserPicture
             // 
@@ -825,6 +826,7 @@
             guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges51;
             guna2TextBox1.Size = new Size(235, 37);
             guna2TextBox1.TabIndex = 0;
+            guna2TextBox1.TextChanged += guna2TextBox1_TextChanged;
             // 
             // guna2GradientPanel6
             // 
@@ -1410,8 +1412,6 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "form";
             Load += Form1_Load;
-            Click += Form1_Click;
-            MouseClick += Form1_MouseClick;
             guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)UserPicture).EndInit();
@@ -1476,7 +1476,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel11;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel11;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox13;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox10;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox11;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox12;
@@ -1503,8 +1502,6 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private System.Windows.Forms.Label label30;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox14;
         private System.Windows.Forms.Label label31;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
@@ -1532,7 +1529,12 @@
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton3;
-        public static Label label16;
+
+
+        public Label label16;
+        public Label label30;
+        public Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox13;
+        public Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox14;
     }
 }
 

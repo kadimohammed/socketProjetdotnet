@@ -86,7 +86,6 @@
             label2.Size = new Size(233, 78);
             label2.TabIndex = 0;
             label2.Text = "MAO";
-            label2.Click += label2_Click;
             // 
             // pictureBox1
             // 
@@ -97,7 +96,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // guna2Button1
             // 
@@ -128,7 +126,6 @@
             label1.Size = new Size(31, 13);
             label1.TabIndex = 5;
             label1.Text = "V 1.0";
-            label1.Click += label1_Click;
             // 
             // guna2ControlBox1
             // 
@@ -161,7 +158,7 @@
             TelephoneTextBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             TelephoneTextBox.ForeColor = Color.Black;
             TelephoneTextBox.HoverState.BorderColor = Color.FromArgb(255, 128, 0);
-            TelephoneTextBox.IconLeft = (Image)resources.GetObject("TelephoneTextBox.IconLeft");
+            TelephoneTextBox.IconLeft = Socket_Projet_Client.Properties.Resources.telephone1;
             TelephoneTextBox.IconLeftOffset = new Point(5, 0);
             TelephoneTextBox.Location = new Point(467, 243);
             TelephoneTextBox.Margin = new Padding(3, 4, 3, 4);
@@ -252,7 +249,7 @@
             PasswordTextBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             PasswordTextBox.ForeColor = Color.Black;
             PasswordTextBox.HoverState.BorderColor = Color.FromArgb(255, 128, 0);
-            PasswordTextBox.IconLeft = (Image)resources.GetObject("PasswordTextBox.IconLeft");
+            PasswordTextBox.IconLeft = Socket_Projet_Client.Properties.Resources.password;
             PasswordTextBox.IconLeftOffset = new Point(5, 0);
             PasswordTextBox.Location = new Point(467, 308);
             PasswordTextBox.Margin = new Padding(3, 4, 3, 4);
@@ -292,7 +289,6 @@
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
-            Load += Login_Load;
             guna2GradientPanel1.ResumeLayout(false);
             guna2GradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

@@ -61,6 +61,7 @@
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(components);
+            guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(components);
             ((System.ComponentModel.ISupportInitialize)UserPicture).BeginInit();
             SuspendLayout();
             // 
@@ -70,7 +71,7 @@
             UserPicture.Image = (Image)resources.GetObject("UserPicture.Image");
             UserPicture.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Horizontal;
             UserPicture.ImageRotate = 0F;
-            UserPicture.Location = new Point(29, 24);
+            UserPicture.Location = new Point(25, 11);
             UserPicture.Margin = new Padding(3, 2, 3, 2);
             UserPicture.Name = "UserPicture";
             UserPicture.ShadowDecoration.BorderRadius = 0;
@@ -103,7 +104,7 @@
             EditNameTextBox.ForeColor = Color.FromArgb(224, 224, 224);
             EditNameTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             EditNameTextBox.IconLeftOffset = new Point(2, 0);
-            EditNameTextBox.Location = new Point(29, 164);
+            EditNameTextBox.Location = new Point(25, 151);
             EditNameTextBox.Margin = new Padding(4, 3, 4, 3);
             EditNameTextBox.Name = "EditNameTextBox";
             EditNameTextBox.PasswordChar = '\0';
@@ -131,7 +132,7 @@
             EditNameButton.HoverState.FillColor = Color.FromArgb(26, 32, 47);
             EditNameButton.Image = (Image)resources.GetObject("EditNameButton.Image");
             EditNameButton.ImageSize = new Size(15, 15);
-            EditNameButton.Location = new Point(336, 164);
+            EditNameButton.Location = new Point(332, 151);
             EditNameButton.Margin = new Padding(3, 2, 3, 2);
             EditNameButton.Name = "EditNameButton";
             EditNameButton.ShadowDecoration.CustomizableEdges = customizableEdges5;
@@ -156,7 +157,7 @@
             EditInfosButton.HoverState.FillColor = Color.FromArgb(26, 32, 47);
             EditInfosButton.Image = (Image)resources.GetObject("EditInfosButton.Image");
             EditInfosButton.ImageSize = new Size(15, 15);
-            EditInfosButton.Location = new Point(336, 251);
+            EditInfosButton.Location = new Point(332, 238);
             EditInfosButton.Margin = new Padding(3, 2, 3, 2);
             EditInfosButton.Name = "EditInfosButton";
             EditInfosButton.ShadowDecoration.CustomizableEdges = customizableEdges7;
@@ -170,7 +171,7 @@
             label30.BackColor = Color.Transparent;
             label30.Font = new Font("Franklin Gothic Book", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             label30.ForeColor = Color.Silver;
-            label30.Location = new Point(30, 334);
+            label30.Location = new Point(26, 321);
             label30.Name = "label30";
             label30.Size = new Size(160, 20);
             label30.TabIndex = 29;
@@ -182,7 +183,7 @@
             Telephonelabel.BackColor = Color.Transparent;
             Telephonelabel.Font = new Font("Franklin Gothic Medium Cond", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             Telephonelabel.ForeColor = Color.White;
-            Telephonelabel.Location = new Point(30, 366);
+            Telephonelabel.Location = new Point(26, 353);
             Telephonelabel.Name = "Telephonelabel";
             Telephonelabel.Size = new Size(89, 20);
             Telephonelabel.TabIndex = 30;
@@ -199,7 +200,7 @@
             DeconnexionButton.FillColor = Color.FromArgb(26, 32, 47);
             DeconnexionButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             DeconnexionButton.ForeColor = Color.IndianRed;
-            DeconnexionButton.Location = new Point(31, 434);
+            DeconnexionButton.Location = new Point(27, 421);
             DeconnexionButton.Name = "DeconnexionButton";
             DeconnexionButton.ShadowDecoration.CustomizableEdges = customizableEdges9;
             DeconnexionButton.Size = new Size(131, 40);
@@ -211,7 +212,7 @@
             // 
             guna2Panel1.BackColor = Color.FromArgb(64, 64, 64);
             guna2Panel1.CustomizableEdges = customizableEdges10;
-            guna2Panel1.Location = new Point(31, 411);
+            guna2Panel1.Location = new Point(27, 398);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges11;
             guna2Panel1.Size = new Size(350, 1);
@@ -223,7 +224,7 @@
             label24.BackColor = Color.Transparent;
             label24.Font = new Font("Franklin Gothic Book", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label24.ForeColor = Color.Silver;
-            label24.Location = new Point(27, 488);
+            label24.Location = new Point(23, 475);
             label24.Name = "label24";
             label24.Size = new Size(275, 32);
             label24.TabIndex = 34;
@@ -236,7 +237,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Franklin Gothic Book", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Silver;
-            label1.Location = new Point(35, 224);
+            label1.Location = new Point(31, 211);
             label1.Name = "label1";
             label1.Size = new Size(45, 20);
             label1.TabIndex = 35;
@@ -261,7 +262,7 @@
             EditInfosTextBox.ForeColor = Color.FromArgb(224, 224, 224);
             EditInfosTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             EditInfosTextBox.IconLeftOffset = new Point(2, 0);
-            EditInfosTextBox.Location = new Point(29, 251);
+            EditInfosTextBox.Location = new Point(25, 238);
             EditInfosTextBox.Margin = new Padding(3, 2, 3, 2);
             EditInfosTextBox.Name = "EditInfosTextBox";
             EditInfosTextBox.PasswordChar = '\0';
@@ -283,7 +284,7 @@
             guna2Button1.FillColor = Color.SeaGreen;
             guna2Button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             guna2Button1.ForeColor = Color.FromArgb(17, 22, 32);
-            guna2Button1.Location = new Point(235, 201);
+            guna2Button1.Location = new Point(231, 188);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges15;
             guna2Button1.Size = new Size(86, 28);
@@ -303,7 +304,7 @@
             guna2Button2.FillColor = Color.SeaGreen;
             guna2Button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             guna2Button2.ForeColor = Color.FromArgb(17, 22, 32);
-            guna2Button2.Location = new Point(235, 290);
+            guna2Button2.Location = new Point(231, 277);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges17;
             guna2Button2.Size = new Size(86, 28);
@@ -316,12 +317,17 @@
             // 
             guna2ShadowForm1.TargetForm = this;
             // 
+            // guna2AnimateWindow1
+            // 
+            guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_VER_NEGATIVE;
+            guna2AnimateWindow1.TargetForm = this;
+            // 
             // UsersInfos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(19, 25, 40);
-            ClientSize = new Size(402, 559);
+            ClientSize = new Size(391, 531);
             Controls.Add(guna2Button2);
             Controls.Add(guna2Button1);
             Controls.Add(EditInfosTextBox);
@@ -362,5 +368,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
     }
 }
