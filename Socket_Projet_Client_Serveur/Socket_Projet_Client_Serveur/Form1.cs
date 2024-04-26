@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualBasic.ApplicationServices;
 using Socket_Projet_Client;
+using Socket_Projet_Client.Outiles;
 using Socket_Projet_Client.Sockets;
+using Socket_Projet_Server.Classes;
 using Socket_Projet_Server.Factory;
 using Socket_Projet_Server.Models;
 using System;
@@ -55,25 +57,8 @@ namespace SocketsProject
             if (Login.user != null)
             {
                 byte[] photoBytes = Login.user.Photo;
-
-                if (photoBytes != null && photoBytes.Length > 0)
-                {
-                    try
-                    {
-                        using (MemoryStream ms = new MemoryStream(photoBytes))
-                        {
-                            UserPicture.Image = Image.FromStream(ms);
-                        }
-                    }
-                    catch (ArgumentException ex)
-                    {
-                        Console.WriteLine("Erreur lors de la conversion des données de l'image : " + ex.Message);
-                    }
-                }
-                else
-                {
-                    UserPicture.Image = null;
-                }
+                UserPicture.Image = MyUtility.GetImageFromByte(photoBytes);
+                
             }
         }
 
@@ -96,7 +81,7 @@ namespace SocketsProject
 
         private void UserPicture_Click(object sender, EventArgs e)
         {
-            if(OpenFormInfo)
+            if (OpenFormInfo)
             {
                 formChild.Close();
                 OpenFormInfo = false;
@@ -154,7 +139,7 @@ namespace SocketsProject
             {
                 loadcontact();
             }
-            
+
 
             if (contactList != null && contactList.Count > 0)
             {
@@ -191,6 +176,7 @@ namespace SocketsProject
                 foreach (var contact in user.Contacts)
                 {
                     ContactUC contactUC = new ContactUC();
+                    contactUC.Id = contact.ContactUser.Id;
                     contactUC.Name = contact.ContactUser.FullName;
                     contactUC.Notification = 0;
 
@@ -222,25 +208,9 @@ namespace SocketsProject
                         }
 
                         byte[] photoBytes = contact.ContactUser.Photo;
+                        contactUC.Image = MyUtility.GetImageFromByte(photoBytes);
 
-                        if (photoBytes != null && photoBytes.Length > 0)
-                        {
-                            try
-                            {
-                                using (MemoryStream ms = new MemoryStream(photoBytes))
-                                {
-                                    contactUC.Image = Image.FromStream(ms);
-                                }
-                            }
-                            catch (ArgumentException ex)
-                            {
-                                Console.WriteLine("Erreur lors de la conversion des données de l'image : " + ex.Message);
-                            }
-                        }
-                        else
-                        {
-                            contactUC.Image = null;
-                        }
+                      
 
                         contactList.Add(contactUC);
                     }
@@ -278,30 +248,14 @@ namespace SocketsProject
                             .OrderByDescending(m => m.SendDate)
                             .FirstOrDefault();
 
+                        contactUC.Id = contact.ContactUser.Id;
                         contactUC.Name = contact.ContactUser.FullName;
                         contactUC.Notification = 0;
                         contactUC.Message = lastMessage?.Content ?? "";
                         contactUC.DateConnection = lastMessage?.SendDate.ToShortDateString() ?? "";
                         byte[] photoBytes = contact.ContactUser.Photo;
+                        contactUC.Image = MyUtility.GetImageFromByte(photoBytes);
 
-                        if (photoBytes != null && photoBytes.Length > 0)
-                        {
-                            try
-                            {
-                                using (MemoryStream ms = new MemoryStream(photoBytes))
-                                {
-                                    contactUC.Image = Image.FromStream(ms);
-                                }
-                            }
-                            catch (ArgumentException ex)
-                            {
-                                Console.WriteLine("Erreur lors de la conversion des données de l'image : " + ex.Message);
-                            }
-                        }
-                        else
-                        {
-                            contactUC.Image = null;
-                        }
 
                         contactList.Add(contactUC);
                     }
@@ -309,6 +263,20 @@ namespace SocketsProject
             }
         }
 
-
+        private void SendMesgCircleButton_Click(object sender, EventArgs e)
+        {
+            string message = MessageTextBox.Text;
+            if (!string.IsNullOrEmpty(message))
+            {
+                MessageSenderUC msgSender = new MessageSenderUC();
+                msgSender.Message = message;
+                msgSender.DateTimeMessage = DateTime.Now.ToString();
+                msgSender.Dock = DockStyle.Right;
+                msgSender.Image_user = MyUtility.GetImageFromByte(Login.user.Photo);
+                Login.f1.Messages_flowLayoutPanel2.Controls.Add(msgSender);
+                Login.f1.Messages_flowLayoutPanel2.Controls.SetChildIndex(msgSender, 0);                
+                //Login.f1.Messages_flowLayoutPanel2.ScrollControlIntoView(msgSender);
+            }
+        }
     }
 }

@@ -13,6 +13,12 @@
     <Compile Update="Login.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="MessageReceverUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="MessageSenderUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="test.cs">
       <SubType>Form</SubType>
     </Compile>

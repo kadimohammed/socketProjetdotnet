@@ -108,3 +108,5 @@ C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_
 C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Client_Serveur\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
 C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Client_Serveur\bin\Debug\net6.0-windows\Microsoft.Extensions.Hosting.Abstractions.dll
 C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Client_Serveur\obj\Debug\net6.0-windows\Socket_Projet_Client.AjouterContact.resources
+C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Client_Serveur\obj\Debug\net6.0-windows\Socket_Projet_Client.MessageReceverUC.resources
+C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Client_Serveur\obj\Debug\net6.0-windows\Socket_Projet_Client.MessageSenderUC.resources

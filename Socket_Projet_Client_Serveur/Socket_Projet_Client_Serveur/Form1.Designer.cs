@@ -83,45 +83,16 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges56 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges57 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges55 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges60 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges61 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges62 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges63 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges56 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges57 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges58 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges59 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges62 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges65 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges66 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges63 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges64 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges69 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges70 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges67 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges68 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges71 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges72 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges73 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges74 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges77 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges78 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges75 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges76 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges79 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges82 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges83 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges80 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges81 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges84 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges85 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges91 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges92 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges86 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges87 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges88 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges89 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges90 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges60 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges61 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(components);
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             guna2PictureBox10 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -159,44 +130,16 @@
             guna2CirclePictureBox14 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2AnimateWindow2 = new Guna.UI2.WinForms.Guna2AnimateWindow(components);
-            guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            label18 = new Label();
-            guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2GradientPanel7 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            label19 = new Label();
-            guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2CirclePictureBox10 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            guna2GradientPanel9 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            label21 = new Label();
-            guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2GradientPanel11 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            label23 = new Label();
-            guna2Panel11 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2CirclePictureBox11 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            guna2CirclePictureBox12 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            label22 = new Label();
-            guna2CirclePictureBox7 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            guna2CirclePictureBox8 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            guna2GradientPanel12 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            label24 = new Label();
-            guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2CirclePictureBox9 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            guna2GradientPanel8 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
-            label20 = new Label();
-            label25 = new Label();
-            label26 = new Label();
-            label27 = new Label();
-            label28 = new Label();
-            label29 = new Label();
             guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(components);
             guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             flowLayoutPanel1 = new FlowLayoutPanel();
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            SendMesgCircleButton = new Guna.UI2.WinForms.Guna2CircleButton();
             guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
-            guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            MessageTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             guna2CircleButton3 = new Guna.UI2.WinForms.Guna2CircleButton();
+            Messages_flowLayoutPanel2 = new FlowLayoutPanel();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)UserPicture).BeginInit();
@@ -215,18 +158,6 @@
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox13).BeginInit();
             guna2Panel_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox14).BeginInit();
-            guna2GradientPanel6.SuspendLayout();
-            guna2GradientPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox10).BeginInit();
-            guna2GradientPanel9.SuspendLayout();
-            guna2GradientPanel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox11).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox12).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox8).BeginInit();
-            guna2GradientPanel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox9).BeginInit();
-            guna2GradientPanel8.SuspendLayout();
             guna2Panel4.SuspendLayout();
             guna2Panel3.SuspendLayout();
             SuspendLayout();
@@ -276,7 +207,7 @@
             guna2Button5.HoverState.FillColor = Color.FromArgb(26, 32, 47);
             guna2Button5.Image = Socket_Projet_Client.Properties.Resources.aider;
             guna2Button5.ImageSize = new Size(22, 22);
-            guna2Button5.Location = new Point(0, 583);
+            guna2Button5.Location = new Point(0, 565);
             guna2Button5.Margin = new Padding(3, 2, 3, 2);
             guna2Button5.Name = "guna2Button5";
             guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -348,7 +279,7 @@
             UserPicture.Image = (Image)resources.GetObject("UserPicture.Image");
             UserPicture.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Horizontal;
             UserPicture.ImageRotate = 0F;
-            UserPicture.Location = new Point(9, 629);
+            UserPicture.Location = new Point(9, 611);
             UserPicture.Margin = new Padding(3, 2, 3, 2);
             UserPicture.Name = "UserPicture";
             UserPicture.ShadowDecoration.Color = Color.Silver;
@@ -706,8 +637,7 @@
             guna2Button9.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2Button9.ForeColor = Color.White;
             guna2Button9.HoverState.FillColor = Color.FromArgb(26, 32, 47);
-            guna2Button9.Image = (Image)resources.GetObject("guna2Button9.Image");
-            guna2Button9.ImageSize = new Size(15, 15);
+            guna2Button9.Image = Socket_Projet_Client.Properties.Resources.appel_telephonique__2_;
             guna2Button9.Location = new Point(792, 9);
             guna2Button9.Margin = new Padding(3, 2, 3, 2);
             guna2Button9.Name = "guna2Button9";
@@ -730,8 +660,8 @@
             guna2Button8.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2Button8.ForeColor = Color.White;
             guna2Button8.HoverState.FillColor = Color.FromArgb(26, 32, 47);
-            guna2Button8.Image = (Image)resources.GetObject("guna2Button8.Image");
-            guna2Button8.ImageSize = new Size(15, 15);
+            guna2Button8.Image = Socket_Projet_Client.Properties.Resources.appel_video;
+            guna2Button8.ImageSize = new Size(22, 22);
             guna2Button8.Location = new Point(743, 9);
             guna2Button8.Margin = new Padding(3, 2, 3, 2);
             guna2Button8.Name = "guna2Button8";
@@ -825,420 +755,6 @@
             guna2TextBox1.TabIndex = 0;
             guna2TextBox1.TextChanged += guna2TextBox1_TextChanged;
             // 
-            // guna2GradientPanel6
-            // 
-            guna2GradientPanel6.BorderRadius = 15;
-            guna2GradientPanel6.Controls.Add(label18);
-            guna2GradientPanel6.Controls.Add(guna2Panel6);
-            guna2GradientPanel6.CustomizableEdges = customizableEdges56;
-            guna2GradientPanel6.FillColor = Color.FromArgb(255, 152, 93);
-            guna2GradientPanel6.FillColor2 = Color.FromArgb(255, 61, 87);
-            guna2GradientPanel6.Location = new Point(399, 81);
-            guna2GradientPanel6.Margin = new Padding(3, 2, 3, 2);
-            guna2GradientPanel6.Name = "guna2GradientPanel6";
-            guna2GradientPanel6.ShadowDecoration.CustomizableEdges = customizableEdges57;
-            guna2GradientPanel6.Size = new Size(234, 64);
-            guna2GradientPanel6.TabIndex = 5;
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.BackColor = Color.Transparent;
-            label18.Font = new Font("Franklin Gothic Medium Cond", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label18.ForeColor = Color.White;
-            label18.Location = new Point(41, 15);
-            label18.Name = "label18";
-            label18.Size = new Size(88, 36);
-            label18.TabIndex = 16;
-            label18.Text = "Wee atmane cv \r\nwacha fiha";
-            // 
-            // guna2Panel6
-            // 
-            guna2Panel6.BackColor = Color.Transparent;
-            guna2Panel6.BorderRadius = 22;
-            guna2Panel6.CustomizableEdges = customizableEdges54;
-            guna2Panel6.FillColor = Color.FromArgb(26, 32, 47);
-            guna2Panel6.Location = new Point(-52, -29);
-            guna2Panel6.Margin = new Padding(3, 2, 3, 2);
-            guna2Panel6.Name = "guna2Panel6";
-            guna2Panel6.ShadowDecoration.CustomizableEdges = customizableEdges55;
-            guna2Panel6.Size = new Size(73, 58);
-            guna2Panel6.TabIndex = 6;
-            // 
-            // guna2GradientPanel7
-            // 
-            guna2GradientPanel7.BorderRadius = 15;
-            guna2GradientPanel7.Controls.Add(label19);
-            guna2GradientPanel7.Controls.Add(guna2Panel7);
-            guna2GradientPanel7.CustomizableEdges = customizableEdges60;
-            guna2GradientPanel7.FillColor = Color.FromArgb(250, 48, 90);
-            guna2GradientPanel7.FillColor2 = Color.FromArgb(128, 36, 206);
-            guna2GradientPanel7.Location = new Point(551, 176);
-            guna2GradientPanel7.Margin = new Padding(3, 2, 3, 2);
-            guna2GradientPanel7.Name = "guna2GradientPanel7";
-            guna2GradientPanel7.ShadowDecoration.CustomizableEdges = customizableEdges61;
-            guna2GradientPanel7.Size = new Size(311, 64);
-            guna2GradientPanel7.TabIndex = 6;
-            // 
-            // label19
-            // 
-            label19.AutoSize = true;
-            label19.BackColor = Color.Transparent;
-            label19.Font = new Font("Franklin Gothic Medium Cond", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label19.ForeColor = Color.White;
-            label19.Location = new Point(28, 14);
-            label19.Name = "label19";
-            label19.Size = new Size(198, 36);
-            label19.TabIndex = 17;
-            label19.Text = "wach khoya cv hamdullh wenta bikhir \r\nfirrak";
-            // 
-            // guna2Panel7
-            // 
-            guna2Panel7.BackColor = Color.Transparent;
-            guna2Panel7.BorderRadius = 25;
-            guna2Panel7.CustomizableEdges = customizableEdges58;
-            guna2Panel7.FillColor = Color.FromArgb(26, 32, 47);
-            guna2Panel7.Location = new Point(277, -16);
-            guna2Panel7.Margin = new Padding(3, 2, 3, 2);
-            guna2Panel7.Name = "guna2Panel7";
-            guna2Panel7.ShadowDecoration.CustomizableEdges = customizableEdges59;
-            guna2Panel7.Size = new Size(49, 46);
-            guna2Panel7.TabIndex = 6;
-            // 
-            // guna2CirclePictureBox10
-            // 
-            guna2CirclePictureBox10.BackColor = Color.Transparent;
-            guna2CirclePictureBox10.Image = (Image)resources.GetObject("guna2CirclePictureBox10.Image");
-            guna2CirclePictureBox10.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Horizontal;
-            guna2CirclePictureBox10.ImageRotate = 0F;
-            guna2CirclePictureBox10.Location = new Point(835, 164);
-            guna2CirclePictureBox10.Margin = new Padding(3, 2, 3, 2);
-            guna2CirclePictureBox10.Name = "guna2CirclePictureBox10";
-            guna2CirclePictureBox10.ShadowDecoration.Color = Color.Fuchsia;
-            guna2CirclePictureBox10.ShadowDecoration.CustomizableEdges = customizableEdges62;
-            guna2CirclePictureBox10.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CirclePictureBox10.Size = new Size(33, 33);
-            guna2CirclePictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
-            guna2CirclePictureBox10.TabIndex = 17;
-            guna2CirclePictureBox10.TabStop = false;
-            // 
-            // guna2GradientPanel9
-            // 
-            guna2GradientPanel9.BorderRadius = 15;
-            guna2GradientPanel9.Controls.Add(label21);
-            guna2GradientPanel9.Controls.Add(guna2Panel9);
-            guna2GradientPanel9.CustomizableEdges = customizableEdges65;
-            guna2GradientPanel9.FillColor = Color.FromArgb(250, 48, 90);
-            guna2GradientPanel9.FillColor2 = Color.FromArgb(128, 36, 206);
-            guna2GradientPanel9.Location = new Point(607, 353);
-            guna2GradientPanel9.Margin = new Padding(3, 2, 3, 2);
-            guna2GradientPanel9.Name = "guna2GradientPanel9";
-            guna2GradientPanel9.ShadowDecoration.CustomizableEdges = customizableEdges66;
-            guna2GradientPanel9.Size = new Size(255, 61);
-            guna2GradientPanel9.TabIndex = 7;
-            // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.BackColor = Color.Transparent;
-            label21.Font = new Font("Franklin Gothic Medium Cond", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label21.ForeColor = Color.White;
-            label21.Location = new Point(27, 10);
-            label21.Name = "label21";
-            label21.Size = new Size(153, 36);
-            label21.TabIndex = 18;
-            label21.Text = "iwa mli7 wacha tkhrej bellati\r\nnemchiw lmdina";
-            // 
-            // guna2Panel9
-            // 
-            guna2Panel9.BackColor = Color.Transparent;
-            guna2Panel9.BorderRadius = 25;
-            guna2Panel9.CustomizableEdges = customizableEdges63;
-            guna2Panel9.FillColor = Color.FromArgb(26, 32, 47);
-            guna2Panel9.Location = new Point(227, -15);
-            guna2Panel9.Margin = new Padding(3, 2, 3, 2);
-            guna2Panel9.Name = "guna2Panel9";
-            guna2Panel9.ShadowDecoration.CustomizableEdges = customizableEdges64;
-            guna2Panel9.Size = new Size(49, 46);
-            guna2Panel9.TabIndex = 6;
-            // 
-            // guna2GradientPanel11
-            // 
-            guna2GradientPanel11.BorderRadius = 15;
-            guna2GradientPanel11.Controls.Add(label23);
-            guna2GradientPanel11.Controls.Add(guna2Panel11);
-            guna2GradientPanel11.CustomizableEdges = customizableEdges69;
-            guna2GradientPanel11.FillColor = Color.FromArgb(250, 48, 90);
-            guna2GradientPanel11.FillColor2 = Color.FromArgb(128, 36, 206);
-            guna2GradientPanel11.Location = new Point(564, 514);
-            guna2GradientPanel11.Margin = new Padding(3, 2, 3, 2);
-            guna2GradientPanel11.Name = "guna2GradientPanel11";
-            guna2GradientPanel11.ShadowDecoration.CustomizableEdges = customizableEdges70;
-            guna2GradientPanel11.Size = new Size(298, 62);
-            guna2GradientPanel11.TabIndex = 8;
-            // 
-            // label23
-            // 
-            label23.AutoSize = true;
-            label23.BackColor = Color.Transparent;
-            label23.Font = new Font("Franklin Gothic Medium Cond", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label23.ForeColor = Color.White;
-            label23.Location = new Point(29, 14);
-            label23.Name = "label23";
-            label23.Size = new Size(166, 36);
-            label23.TabIndex = 19;
-            label23.Text = "safi fot 3liya rani ghi hnaya fdar\r\nn7arko jmi3";
-            // 
-            // guna2Panel11
-            // 
-            guna2Panel11.BackColor = Color.Transparent;
-            guna2Panel11.BorderRadius = 25;
-            guna2Panel11.CustomizableEdges = customizableEdges67;
-            guna2Panel11.FillColor = Color.FromArgb(26, 32, 47);
-            guna2Panel11.Location = new Point(265, -16);
-            guna2Panel11.Margin = new Padding(3, 2, 3, 2);
-            guna2Panel11.Name = "guna2Panel11";
-            guna2Panel11.ShadowDecoration.CustomizableEdges = customizableEdges68;
-            guna2Panel11.Size = new Size(49, 46);
-            guna2Panel11.TabIndex = 6;
-            // 
-            // guna2CirclePictureBox11
-            // 
-            guna2CirclePictureBox11.BackColor = Color.Transparent;
-            guna2CirclePictureBox11.Image = (Image)resources.GetObject("guna2CirclePictureBox11.Image");
-            guna2CirclePictureBox11.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Horizontal;
-            guna2CirclePictureBox11.ImageRotate = 0F;
-            guna2CirclePictureBox11.Location = new Point(840, 342);
-            guna2CirclePictureBox11.Margin = new Padding(3, 2, 3, 2);
-            guna2CirclePictureBox11.Name = "guna2CirclePictureBox11";
-            guna2CirclePictureBox11.ShadowDecoration.Color = Color.Fuchsia;
-            guna2CirclePictureBox11.ShadowDecoration.CustomizableEdges = customizableEdges71;
-            guna2CirclePictureBox11.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CirclePictureBox11.Size = new Size(33, 33);
-            guna2CirclePictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
-            guna2CirclePictureBox11.TabIndex = 18;
-            guna2CirclePictureBox11.TabStop = false;
-            // 
-            // guna2CirclePictureBox12
-            // 
-            guna2CirclePictureBox12.BackColor = Color.Transparent;
-            guna2CirclePictureBox12.Image = (Image)resources.GetObject("guna2CirclePictureBox12.Image");
-            guna2CirclePictureBox12.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Horizontal;
-            guna2CirclePictureBox12.ImageRotate = 0F;
-            guna2CirclePictureBox12.Location = new Point(835, 501);
-            guna2CirclePictureBox12.Margin = new Padding(3, 2, 3, 2);
-            guna2CirclePictureBox12.Name = "guna2CirclePictureBox12";
-            guna2CirclePictureBox12.ShadowDecoration.Color = Color.Fuchsia;
-            guna2CirclePictureBox12.ShadowDecoration.CustomizableEdges = customizableEdges72;
-            guna2CirclePictureBox12.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CirclePictureBox12.Size = new Size(33, 33);
-            guna2CirclePictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
-            guna2CirclePictureBox12.TabIndex = 19;
-            guna2CirclePictureBox12.TabStop = false;
-            // 
-            // label22
-            // 
-            label22.AutoSize = true;
-            label22.BackColor = Color.Transparent;
-            label22.Font = new Font("Franklin Gothic Medium Cond", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label22.ForeColor = Color.White;
-            label22.Location = new Point(41, 10);
-            label22.Name = "label22";
-            label22.Size = new Size(64, 18);
-            label22.TabIndex = 19;
-            label22.Text = "safi wakha ";
-            // 
-            // guna2CirclePictureBox7
-            // 
-            guna2CirclePictureBox7.BackColor = Color.Transparent;
-            guna2CirclePictureBox7.Image = (Image)resources.GetObject("guna2CirclePictureBox7.Image");
-            guna2CirclePictureBox7.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Horizontal;
-            guna2CirclePictureBox7.ImageRotate = 0F;
-            guna2CirclePictureBox7.Location = new Point(380, 69);
-            guna2CirclePictureBox7.Margin = new Padding(3, 2, 3, 2);
-            guna2CirclePictureBox7.Name = "guna2CirclePictureBox7";
-            guna2CirclePictureBox7.ShadowDecoration.Color = Color.Fuchsia;
-            guna2CirclePictureBox7.ShadowDecoration.CustomizableEdges = customizableEdges73;
-            guna2CirclePictureBox7.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CirclePictureBox7.Size = new Size(33, 33);
-            guna2CirclePictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
-            guna2CirclePictureBox7.TabIndex = 20;
-            guna2CirclePictureBox7.TabStop = false;
-            // 
-            // guna2CirclePictureBox8
-            // 
-            guna2CirclePictureBox8.BackColor = Color.Transparent;
-            guna2CirclePictureBox8.Image = (Image)resources.GetObject("guna2CirclePictureBox8.Image");
-            guna2CirclePictureBox8.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Horizontal;
-            guna2CirclePictureBox8.ImageRotate = 0F;
-            guna2CirclePictureBox8.Location = new Point(381, 257);
-            guna2CirclePictureBox8.Margin = new Padding(3, 2, 3, 2);
-            guna2CirclePictureBox8.Name = "guna2CirclePictureBox8";
-            guna2CirclePictureBox8.ShadowDecoration.Color = Color.Fuchsia;
-            guna2CirclePictureBox8.ShadowDecoration.CustomizableEdges = customizableEdges74;
-            guna2CirclePictureBox8.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CirclePictureBox8.Size = new Size(33, 33);
-            guna2CirclePictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
-            guna2CirclePictureBox8.TabIndex = 22;
-            guna2CirclePictureBox8.TabStop = false;
-            // 
-            // guna2GradientPanel12
-            // 
-            guna2GradientPanel12.BorderRadius = 15;
-            guna2GradientPanel12.Controls.Add(label24);
-            guna2GradientPanel12.Controls.Add(guna2Panel8);
-            guna2GradientPanel12.CustomizableEdges = customizableEdges77;
-            guna2GradientPanel12.FillColor = Color.FromArgb(255, 152, 93);
-            guna2GradientPanel12.FillColor2 = Color.FromArgb(255, 61, 87);
-            guna2GradientPanel12.Location = new Point(399, 269);
-            guna2GradientPanel12.Margin = new Padding(3, 2, 3, 2);
-            guna2GradientPanel12.Name = "guna2GradientPanel12";
-            guna2GradientPanel12.ShadowDecoration.CustomizableEdges = customizableEdges78;
-            guna2GradientPanel12.Size = new Size(218, 56);
-            guna2GradientPanel12.TabIndex = 21;
-            // 
-            // label24
-            // 
-            label24.AutoSize = true;
-            label24.BackColor = Color.Transparent;
-            label24.Font = new Font("Franklin Gothic Medium Cond", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label24.ForeColor = Color.White;
-            label24.Location = new Point(41, 7);
-            label24.Name = "label24";
-            label24.Size = new Size(103, 36);
-            label24.TabIndex = 16;
-            label24.Text = "hamdullh la7afdek\r\nrani fdar";
-            // 
-            // guna2Panel8
-            // 
-            guna2Panel8.BackColor = Color.Transparent;
-            guna2Panel8.BorderRadius = 22;
-            guna2Panel8.CustomizableEdges = customizableEdges75;
-            guna2Panel8.FillColor = Color.FromArgb(26, 32, 47);
-            guna2Panel8.Location = new Point(-52, -29);
-            guna2Panel8.Margin = new Padding(3, 2, 3, 2);
-            guna2Panel8.Name = "guna2Panel8";
-            guna2Panel8.ShadowDecoration.CustomizableEdges = customizableEdges76;
-            guna2Panel8.Size = new Size(73, 58);
-            guna2Panel8.TabIndex = 6;
-            // 
-            // guna2CirclePictureBox9
-            // 
-            guna2CirclePictureBox9.BackColor = Color.Transparent;
-            guna2CirclePictureBox9.Image = (Image)resources.GetObject("guna2CirclePictureBox9.Image");
-            guna2CirclePictureBox9.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Horizontal;
-            guna2CirclePictureBox9.ImageRotate = 0F;
-            guna2CirclePictureBox9.Location = new Point(379, 423);
-            guna2CirclePictureBox9.Margin = new Padding(3, 2, 3, 2);
-            guna2CirclePictureBox9.Name = "guna2CirclePictureBox9";
-            guna2CirclePictureBox9.ShadowDecoration.Color = Color.Fuchsia;
-            guna2CirclePictureBox9.ShadowDecoration.CustomizableEdges = customizableEdges79;
-            guna2CirclePictureBox9.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CirclePictureBox9.Size = new Size(33, 33);
-            guna2CirclePictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
-            guna2CirclePictureBox9.TabIndex = 24;
-            guna2CirclePictureBox9.TabStop = false;
-            // 
-            // guna2GradientPanel8
-            // 
-            guna2GradientPanel8.BorderRadius = 15;
-            guna2GradientPanel8.Controls.Add(label22);
-            guna2GradientPanel8.Controls.Add(guna2Panel10);
-            guna2GradientPanel8.CustomizableEdges = customizableEdges82;
-            guna2GradientPanel8.FillColor = Color.FromArgb(255, 152, 93);
-            guna2GradientPanel8.FillColor2 = Color.FromArgb(255, 61, 87);
-            guna2GradientPanel8.Location = new Point(399, 436);
-            guna2GradientPanel8.Margin = new Padding(3, 2, 3, 2);
-            guna2GradientPanel8.Name = "guna2GradientPanel8";
-            guna2GradientPanel8.ShadowDecoration.CustomizableEdges = customizableEdges83;
-            guna2GradientPanel8.Size = new Size(193, 45);
-            guna2GradientPanel8.TabIndex = 23;
-            // 
-            // guna2Panel10
-            // 
-            guna2Panel10.BackColor = Color.Transparent;
-            guna2Panel10.BorderRadius = 22;
-            guna2Panel10.CustomizableEdges = customizableEdges80;
-            guna2Panel10.FillColor = Color.FromArgb(26, 32, 47);
-            guna2Panel10.Location = new Point(-52, -29);
-            guna2Panel10.Margin = new Padding(3, 2, 3, 2);
-            guna2Panel10.Name = "guna2Panel10";
-            guna2Panel10.ShadowDecoration.CustomizableEdges = customizableEdges81;
-            guna2Panel10.Size = new Size(73, 58);
-            guna2Panel10.TabIndex = 6;
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.BackColor = Color.Transparent;
-            label20.Font = new Font("Franklin Gothic Medium Cond", 7.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label20.ForeColor = Color.Silver;
-            label20.Location = new Point(584, 148);
-            label20.Name = "label20";
-            label20.Size = new Size(43, 14);
-            label20.TabIndex = 25;
-            label20.Text = "12:45 PM";
-            // 
-            // label25
-            // 
-            label25.AutoSize = true;
-            label25.BackColor = Color.Transparent;
-            label25.Font = new Font("Franklin Gothic Medium Cond", 7.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label25.ForeColor = Color.Silver;
-            label25.Location = new Point(548, 242);
-            label25.Name = "label25";
-            label25.Size = new Size(43, 14);
-            label25.TabIndex = 26;
-            label25.Text = "12:45 PM";
-            // 
-            // label26
-            // 
-            label26.AutoSize = true;
-            label26.BackColor = Color.Transparent;
-            label26.Font = new Font("Franklin Gothic Medium Cond", 7.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label26.ForeColor = Color.Silver;
-            label26.Location = new Point(569, 328);
-            label26.Name = "label26";
-            label26.Size = new Size(43, 14);
-            label26.TabIndex = 27;
-            label26.Text = "12:45 PM";
-            // 
-            // label27
-            // 
-            label27.AutoSize = true;
-            label27.BackColor = Color.Transparent;
-            label27.Font = new Font("Franklin Gothic Medium Cond", 7.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label27.ForeColor = Color.Silver;
-            label27.Location = new Point(604, 418);
-            label27.Name = "label27";
-            label27.Size = new Size(43, 14);
-            label27.TabIndex = 28;
-            label27.Text = "12:45 PM";
-            // 
-            // label28
-            // 
-            label28.AutoSize = true;
-            label28.BackColor = Color.Transparent;
-            label28.Font = new Font("Franklin Gothic Medium Cond", 7.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label28.ForeColor = Color.Silver;
-            label28.Location = new Point(545, 484);
-            label28.Name = "label28";
-            label28.Size = new Size(43, 14);
-            label28.TabIndex = 29;
-            label28.Text = "12:45 PM";
-            // 
-            // label29
-            // 
-            label29.AutoSize = true;
-            label29.BackColor = Color.Transparent;
-            label29.Font = new Font("Franklin Gothic Medium Cond", 7.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label29.ForeColor = Color.Silver;
-            label29.Location = new Point(560, 579);
-            label29.Name = "label29";
-            label29.Size = new Size(43, 14);
-            label29.TabIndex = 30;
-            label29.Text = "12:45 PM";
-            // 
             // guna2DragControl1
             // 
             guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
@@ -1248,12 +764,12 @@
             // guna2Panel4
             // 
             guna2Panel4.Controls.Add(flowLayoutPanel1);
-            guna2Panel4.CustomizableEdges = customizableEdges84;
+            guna2Panel4.CustomizableEdges = customizableEdges54;
             guna2Panel4.Dock = DockStyle.Left;
             guna2Panel4.Location = new Point(50, 54);
             guna2Panel4.Margin = new Padding(3, 2, 3, 2);
             guna2Panel4.Name = "guna2Panel4";
-            guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges85;
+            guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges55;
             guna2Panel4.Size = new Size(297, 596);
             guna2Panel4.TabIndex = 35;
             // 
@@ -1273,23 +789,46 @@
             // 
             guna2Panel3.BackColor = Color.FromArgb(19, 25, 40);
             guna2Panel3.BorderColor = Color.FromArgb(64, 64, 64);
+            guna2Panel3.Controls.Add(SendMesgCircleButton);
             guna2Panel3.Controls.Add(guna2CircleButton1);
             guna2Panel3.Controls.Add(guna2CircleButton2);
-            guna2Panel3.Controls.Add(guna2TextBox2);
+            guna2Panel3.Controls.Add(MessageTextBox);
             guna2Panel3.Controls.Add(guna2CircleButton3);
             guna2Panel3.CustomBorderColor = Color.FromArgb(64, 64, 64);
             guna2Panel3.CustomBorderThickness = new Padding(0, 1, 0, 0);
-            guna2Panel3.CustomizableEdges = customizableEdges91;
+            guna2Panel3.CustomizableEdges = customizableEdges62;
             guna2Panel3.Dock = DockStyle.Bottom;
             guna2Panel3.Location = new Point(347, 604);
             guna2Panel3.Margin = new Padding(3, 2, 3, 2);
             guna2Panel3.Name = "guna2Panel3";
-            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges92;
+            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges63;
             guna2Panel3.Size = new Size(555, 46);
             guna2Panel3.TabIndex = 36;
             // 
+            // SendMesgCircleButton
+            // 
+            SendMesgCircleButton.BackColor = Color.Transparent;
+            SendMesgCircleButton.DisabledState.BorderColor = Color.DarkGray;
+            SendMesgCircleButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            SendMesgCircleButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            SendMesgCircleButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            SendMesgCircleButton.FillColor = Color.Transparent;
+            SendMesgCircleButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            SendMesgCircleButton.ForeColor = Color.White;
+            SendMesgCircleButton.HoverState.Image = Socket_Projet_Client.Properties.Resources.envoyer_le_message;
+            SendMesgCircleButton.Image = Socket_Projet_Client.Properties.Resources.envoyer;
+            SendMesgCircleButton.Location = new Point(477, 5);
+            SendMesgCircleButton.Margin = new Padding(3, 2, 3, 2);
+            SendMesgCircleButton.Name = "SendMesgCircleButton";
+            SendMesgCircleButton.ShadowDecoration.CustomizableEdges = customizableEdges56;
+            SendMesgCircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            SendMesgCircleButton.Size = new Size(36, 36);
+            SendMesgCircleButton.TabIndex = 4;
+            SendMesgCircleButton.Click += SendMesgCircleButton_Click;
+            // 
             // guna2CircleButton1
             // 
+            guna2CircleButton1.BackColor = Color.Transparent;
             guna2CircleButton1.DisabledState.BorderColor = Color.DarkGray;
             guna2CircleButton1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2CircleButton1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -1297,18 +836,18 @@
             guna2CircleButton1.FillColor = Color.Transparent;
             guna2CircleButton1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2CircleButton1.ForeColor = Color.White;
-            guna2CircleButton1.HoverState.Image = (Image)resources.GetObject("resource.Image");
-            guna2CircleButton1.Image = (Image)resources.GetObject("guna2CircleButton1.Image");
-            guna2CircleButton1.Location = new Point(52, 4);
+            guna2CircleButton1.Image = Socket_Projet_Client.Properties.Resources.attacher;
+            guna2CircleButton1.Location = new Point(43, 5);
             guna2CircleButton1.Margin = new Padding(3, 2, 3, 2);
             guna2CircleButton1.Name = "guna2CircleButton1";
-            guna2CircleButton1.ShadowDecoration.CustomizableEdges = customizableEdges86;
+            guna2CircleButton1.ShadowDecoration.CustomizableEdges = customizableEdges57;
             guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleButton1.Size = new Size(32, 36);
+            guna2CircleButton1.Size = new Size(36, 36);
             guna2CircleButton1.TabIndex = 3;
             // 
             // guna2CircleButton2
             // 
+            guna2CircleButton2.BackColor = Color.Transparent;
             guna2CircleButton2.DisabledState.BorderColor = Color.DarkGray;
             guna2CircleButton2.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2CircleButton2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -1316,45 +855,46 @@
             guna2CircleButton2.FillColor = Color.Transparent;
             guna2CircleButton2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2CircleButton2.ForeColor = Color.White;
-            guna2CircleButton2.HoverState.Image = (Image)resources.GetObject("resource.Image1");
             guna2CircleButton2.Image = (Image)resources.GetObject("guna2CircleButton2.Image");
-            guna2CircleButton2.Location = new Point(10, 4);
+            guna2CircleButton2.Location = new Point(5, 5);
             guna2CircleButton2.Margin = new Padding(3, 2, 3, 2);
             guna2CircleButton2.Name = "guna2CircleButton2";
-            guna2CircleButton2.ShadowDecoration.CustomizableEdges = customizableEdges87;
+            guna2CircleButton2.ShadowDecoration.CustomizableEdges = customizableEdges58;
             guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleButton2.Size = new Size(32, 36);
+            guna2CircleButton2.Size = new Size(36, 36);
             guna2CircleButton2.TabIndex = 2;
             // 
-            // guna2TextBox2
+            // MessageTextBox
             // 
-            guna2TextBox2.BorderColor = Color.Transparent;
-            guna2TextBox2.BorderThickness = 0;
-            guna2TextBox2.Cursor = Cursors.IBeam;
-            guna2TextBox2.CustomizableEdges = customizableEdges88;
-            guna2TextBox2.DefaultText = "";
-            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.FillColor = Color.FromArgb(19, 25, 40);
-            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.IconLeftSize = new Size(16, 16);
-            guna2TextBox2.Location = new Point(92, 2);
-            guna2TextBox2.Margin = new Padding(3, 4, 3, 4);
-            guna2TextBox2.Name = "guna2TextBox2";
-            guna2TextBox2.PasswordChar = '\0';
-            guna2TextBox2.PlaceholderText = "Tapper un message";
-            guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges89;
-            guna2TextBox2.Size = new Size(410, 44);
-            guna2TextBox2.TabIndex = 1;
-            guna2TextBox2.TextOffset = new Point(8, 0);
+            MessageTextBox.BackColor = Color.FromArgb(19, 25, 40);
+            MessageTextBox.BorderColor = Color.Transparent;
+            MessageTextBox.BorderThickness = 0;
+            MessageTextBox.Cursor = Cursors.IBeam;
+            MessageTextBox.CustomizableEdges = customizableEdges59;
+            MessageTextBox.DefaultText = "";
+            MessageTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            MessageTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            MessageTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            MessageTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            MessageTextBox.FillColor = Color.FromArgb(19, 25, 40);
+            MessageTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            MessageTextBox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            MessageTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            MessageTextBox.IconLeftSize = new Size(16, 16);
+            MessageTextBox.Location = new Point(85, 4);
+            MessageTextBox.Margin = new Padding(3, 4, 3, 4);
+            MessageTextBox.Name = "MessageTextBox";
+            MessageTextBox.PasswordChar = '\0';
+            MessageTextBox.PlaceholderText = "Tapper un message";
+            MessageTextBox.SelectedText = "";
+            MessageTextBox.ShadowDecoration.CustomizableEdges = customizableEdges60;
+            MessageTextBox.Size = new Size(386, 38);
+            MessageTextBox.TabIndex = 1;
+            MessageTextBox.TextOffset = new Point(8, 0);
             // 
             // guna2CircleButton3
             // 
+            guna2CircleButton3.BackColor = Color.Transparent;
             guna2CircleButton3.DisabledState.BorderColor = Color.DarkGray;
             guna2CircleButton3.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2CircleButton3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -1362,15 +902,26 @@
             guna2CircleButton3.FillColor = Color.Transparent;
             guna2CircleButton3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2CircleButton3.ForeColor = Color.White;
-            guna2CircleButton3.HoverState.Image = (Image)resources.GetObject("resource.Image2");
-            guna2CircleButton3.Image = (Image)resources.GetObject("guna2CircleButton3.Image");
-            guna2CircleButton3.Location = new Point(506, 4);
+            guna2CircleButton3.Image = Socket_Projet_Client.Properties.Resources.microphone;
+            guna2CircleButton3.Location = new Point(515, 5);
             guna2CircleButton3.Margin = new Padding(3, 2, 3, 2);
             guna2CircleButton3.Name = "guna2CircleButton3";
-            guna2CircleButton3.ShadowDecoration.CustomizableEdges = customizableEdges90;
+            guna2CircleButton3.ShadowDecoration.CustomizableEdges = customizableEdges61;
             guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleButton3.Size = new Size(32, 36);
+            guna2CircleButton3.Size = new Size(36, 36);
             guna2CircleButton3.TabIndex = 0;
+            // 
+            // Messages_flowLayoutPanel2
+            // 
+            Messages_flowLayoutPanel2.AutoScroll = true;
+            Messages_flowLayoutPanel2.AutoScrollMinSize = new Size(0, 3000);
+            Messages_flowLayoutPanel2.Dock = DockStyle.Fill;
+            Messages_flowLayoutPanel2.FlowDirection = FlowDirection.BottomUp;
+            Messages_flowLayoutPanel2.Location = new Point(347, 54);
+            Messages_flowLayoutPanel2.Name = "Messages_flowLayoutPanel2";
+            Messages_flowLayoutPanel2.Padding = new Padding(10, 0, 10, 0);
+            Messages_flowLayoutPanel2.Size = new Size(555, 550);
+            Messages_flowLayoutPanel2.TabIndex = 37;
             // 
             // Form1
             // 
@@ -1379,26 +930,9 @@
             AutoScroll = true;
             BackColor = Color.FromArgb(26, 32, 47);
             ClientSize = new Size(1164, 650);
-            Controls.Add(guna2CirclePictureBox10);
+            Controls.Add(Messages_flowLayoutPanel2);
             Controls.Add(guna2Panel3);
             Controls.Add(guna2Panel4);
-            Controls.Add(label29);
-            Controls.Add(label28);
-            Controls.Add(label27);
-            Controls.Add(label26);
-            Controls.Add(label25);
-            Controls.Add(label20);
-            Controls.Add(guna2CirclePictureBox9);
-            Controls.Add(guna2GradientPanel8);
-            Controls.Add(guna2CirclePictureBox8);
-            Controls.Add(guna2GradientPanel12);
-            Controls.Add(guna2CirclePictureBox7);
-            Controls.Add(guna2CirclePictureBox12);
-            Controls.Add(guna2CirclePictureBox11);
-            Controls.Add(guna2GradientPanel11);
-            Controls.Add(guna2GradientPanel9);
-            Controls.Add(guna2GradientPanel7);
-            Controls.Add(guna2GradientPanel6);
             Controls.Add(guna2Panel_top);
             Controls.Add(guna2Panel2);
             Controls.Add(guna2Panel1);
@@ -1429,28 +963,9 @@
             guna2Panel_top.ResumeLayout(false);
             guna2Panel_top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox14).EndInit();
-            guna2GradientPanel6.ResumeLayout(false);
-            guna2GradientPanel6.PerformLayout();
-            guna2GradientPanel7.ResumeLayout(false);
-            guna2GradientPanel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox10).EndInit();
-            guna2GradientPanel9.ResumeLayout(false);
-            guna2GradientPanel9.PerformLayout();
-            guna2GradientPanel11.ResumeLayout(false);
-            guna2GradientPanel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox11).EndInit();
-            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox12).EndInit();
-            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox8).EndInit();
-            guna2GradientPanel12.ResumeLayout(false);
-            guna2GradientPanel12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox9).EndInit();
-            guna2GradientPanel8.ResumeLayout(false);
-            guna2GradientPanel8.PerformLayout();
             guna2Panel4.ResumeLayout(false);
             guna2Panel3.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -1465,39 +980,9 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow2;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel6;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel7;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel9;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel11;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel11;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox10;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox11;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox12;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar2;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox7;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox8;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel12;
-        private System.Windows.Forms.Label label24;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox9;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel8;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel10;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Label label31;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
@@ -1524,7 +1009,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox MessageTextBox;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton3;
 
 
@@ -1532,6 +1017,8 @@
         public Label label30;
         public Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox13;
         public Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox14;
+        private Guna.UI2.WinForms.Guna2CircleButton SendMesgCircleButton;
+        public FlowLayoutPanel Messages_flowLayoutPanel2;
     }
 }
 

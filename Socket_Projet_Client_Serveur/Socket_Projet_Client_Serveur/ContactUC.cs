@@ -1,19 +1,20 @@
-﻿using Socket_Projet_Server.Models;
+﻿
+using Socket_Projet_Client.Outiles;
+using Socket_Projet_Server.Models;
 using SocketsProject;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
+
 
 namespace Socket_Projet_Client
 {
     public partial class ContactUC : UserControl
     {
+        public static int Receiver;
+        public int Id
+        {
+            get;
+            set;
+        }
         public string Name
         {
             get => lbl_name.Text;
@@ -69,6 +70,7 @@ namespace Socket_Projet_Client
 
         public void ContactUC_Click(object sender, EventArgs e)
         {
+            Receiver = Id;
             foreach (ContactUC uc in Form1.contactList)
             {
                 uc.BackColor = Color.FromArgb(26, 32, 47);
@@ -83,6 +85,52 @@ namespace Socket_Projet_Client
             Login.f1.label30.Text = Name;
             Login.f1.guna2CirclePictureBox13.Image = Image;
             Login.f1.guna2CirclePictureBox14.Image = Image;
+
+
+
+
+            Login.f1.Messages_flowLayoutPanel2.Controls.Clear();
+            LoginCl user = Login.user;
+            List<Socket_Projet_Server.Models.Message> allMessages = new List<Socket_Projet_Server.Models.Message>();
+
+
+            if (user != null && user.MessagesSent != null)
+            {
+                allMessages.AddRange(user.MessagesSent);
+            }
+
+            if (user != null && user.MessagesReceived != null)
+            {
+                allMessages.AddRange(user.MessagesReceived);
+            }
+
+
+            allMessages = allMessages.OrderByDescending(msg => msg.SendDate).ToList();
+
+            foreach (var message in allMessages)
+            {
+                if (message.SenderId == user.Id && message.ReceiverId == Id)
+                {
+                    MessageSenderUC msgSender = new MessageSenderUC();
+                    msgSender.Message = message.Content;
+                    msgSender.DateTimeMessage = message.SendDate.ToString();
+                    msgSender.Dock = DockStyle.Right;
+                    msgSender.Image_user = MyUtility.GetImageFromByte(Login.user.Photo);
+                    Login.f1.Messages_flowLayoutPanel2.Controls.Add(msgSender);
+                }
+                else if (message.SenderId == Id && message.ReceiverId == user.Id)
+                {
+                    MessageReceverUC msgReceiver = new MessageReceverUC();
+                    msgReceiver.Message = message.Content;
+                    msgReceiver.DateTimeMessage = message.SendDate.ToString();
+                    msgReceiver.Dock = DockStyle.Left;
+                    msgReceiver.Image_user = Image;
+                    Login.f1.Messages_flowLayoutPanel2.Controls.Add(msgReceiver);
+                }
+
+
+            }
+
 
         }
 
