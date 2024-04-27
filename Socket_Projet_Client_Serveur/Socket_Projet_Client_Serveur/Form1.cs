@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Guna.UI2.WinForms;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualBasic.ApplicationServices;
 using Socket_Projet_Client;
 using Socket_Projet_Client.Outiles;
@@ -24,22 +25,28 @@ namespace SocketsProject
 {
     public partial class Form1 : Form
     {
-        Socket clientSocket;
         public static List<ContactUC> contactList;
-        MyContext _context;
         private bool OpenFormInfo = false;
-        UsersInfos formChild;
+        public UsersInfos formChild;
 
 
         public Form1()
         {
             InitializeComponent();
-            _context = ContextFactory.getContext();
         }
+
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            Task.Run(() => ReadMessageReceiver.ReceiveMessages());
+
+
+
+            Messages_flowLayoutPanel2.VerticalScroll.Value = 2500;
+
+
             flowLayoutPanel1.Controls.Clear();
 
             loadcontact();
@@ -58,7 +65,6 @@ namespace SocketsProject
             {
                 byte[] photoBytes = Login.user.Photo;
                 UserPicture.Image = MyUtility.GetImageFromByte(photoBytes);
-                
             }
         }
 
@@ -210,7 +216,7 @@ namespace SocketsProject
                         byte[] photoBytes = contact.ContactUser.Photo;
                         contactUC.Image = MyUtility.GetImageFromByte(photoBytes);
 
-                      
+
 
                         contactList.Add(contactUC);
                     }
@@ -274,8 +280,26 @@ namespace SocketsProject
                 msgSender.Dock = DockStyle.Right;
                 msgSender.Image_user = MyUtility.GetImageFromByte(Login.user.Photo);
                 Login.f1.Messages_flowLayoutPanel2.Controls.Add(msgSender);
-                Login.f1.Messages_flowLayoutPanel2.Controls.SetChildIndex(msgSender, 0);                
+                Login.f1.Messages_flowLayoutPanel2.Controls.SetChildIndex(msgSender, 0);
                 //Login.f1.Messages_flowLayoutPanel2.ScrollControlIntoView(msgSender);
+
+                try
+                {
+                    Socket clientSocket = SocketSingleton.GetInstance();
+                    SocketSingleton.Connect(clientSocket);
+
+                    MessageEnvoyerCL messageReceverUC = new MessageEnvoyerCL();
+                    messageReceverUC.Content = message;
+                    NetworkStream networkStream = new NetworkStream(clientSocket);
+                    BinaryFormatter formatter = new BinaryFormatter();
+
+                    formatter.Serialize(networkStream, messageReceverUC);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Une ereur s'est produite. Veuillez réessayer.", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
         }
     }

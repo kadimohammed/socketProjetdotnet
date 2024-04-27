@@ -47,25 +47,6 @@ namespace Socket_Projet_Client
 
                 // Envoi de l'utilisateur au serveur
                 formatter.Serialize(networkStream, utilisateurToSend);
-
-                // Réception de l'utilisateur depuis le serveur
-                LoginCl newuser = (LoginCl)formatter.Deserialize(networkStream);
-                if(newuser != null && newuser.Id != -1)
-                {
-                    Login.user = newuser;
-                }
-
-                string message = (string)formatter.Deserialize(networkStream);
-
-                if (message != "")
-                {
-                    this.Hide();
-                    MessageBox.Show(message, "Erreur Ajout d'un Contact", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Numéro de téléphone Nexist pas. Veuillez réessayer.", "Erreur Ajout d'un Contact", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
             }
             catch (Exception ex)
             {

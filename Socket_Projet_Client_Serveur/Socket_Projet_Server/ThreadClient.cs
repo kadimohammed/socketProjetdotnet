@@ -91,15 +91,15 @@ namespace Socket_Projet_Server
                                 }
 
                                 newuser = UsersRepository.GetUserById(request.UtilisateurId);
-                                
-
                             }
                             else
                             {
                                 message_ajout_contact = "Ce Contact n'exist pas !!!";
                             }
-                            formatter.Serialize(networkStream, UtilisateurMapper.GetLoginClFromUtilisateur(newuser));
-                            formatter.Serialize(networkStream, message_ajout_contact);
+                            AjouterContactResp ajouterContactResp = new AjouterContactResp();
+                            ajouterContactResp.Messsage = message_ajout_contact;
+                            ajouterContactResp.loginCl = UtilisateurMapper.GetLoginClFromUtilisateur(newuser);
+                            formatter.Serialize(networkStream, ajouterContactResp);
                             break;
                         case ModifierNameCl request:
                             Console.WriteLine("Tâche modifier full name :");
@@ -127,7 +127,10 @@ namespace Socket_Projet_Server
                             {
                                 message_modifier_fullname = "Ce Utilisateur n'exist pas !!!";
                             }
-                            formatter.Serialize(networkStream, message_modifier_fullname);
+                            ModifierFullNameResp mfl = new ModifierFullNameResp();
+                            mfl.Messsage = message_modifier_fullname;
+                            mfl.NewName = request.NewName;
+                            formatter.Serialize(networkStream, mfl);
                             break;
                         case ModifierInfosCl request:
                             Console.WriteLine("Tâche modifier infos :");
@@ -153,9 +156,25 @@ namespace Socket_Projet_Server
                             }
                             else
                             {
-                                message_modifier_fullname = "Ce Utilisateur n'exist pas !!!";
+                                message_modifier_infos = "Ce Utilisateur n'exist pas !!!";
                             }
-                            formatter.Serialize(networkStream, message_modifier_infos);
+                            ModifierInfosResp mInfos = new ModifierInfosResp();
+                            mInfos.Messsage = message_modifier_infos;
+                            mInfos.NewInfos = request.NewInfos;
+                            formatter.Serialize(networkStream, mInfos);
+                            break;
+                        case MessageEnvoyerCL request:
+                            foreach(var socket in Program.List_Sockets_Client)
+                            {
+                                if (socket.Equals(clientSocket))
+                                {
+                                    MessageRecuCL messageRecuCL = new MessageRecuCL();
+                                    messageRecuCL.Content = "salam server khddam";
+                                    formatter.Serialize(networkStream, messageRecuCL);
+                                }
+                            }
+                            Console.WriteLine("Tâche modifier infos :");
+                            
                             break;
                         default:
                             Console.WriteLine("Type de requête non pris en charge.");

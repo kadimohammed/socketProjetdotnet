@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Socket_Projet_Server.Classes
 {
+    [Serializable]
     public class MessageEnvoyerCL
     {
         public string Content { get; set; }

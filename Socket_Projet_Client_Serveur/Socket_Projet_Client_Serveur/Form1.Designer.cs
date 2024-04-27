@@ -913,8 +913,10 @@
             // 
             // Messages_flowLayoutPanel2
             // 
+            Messages_flowLayoutPanel2.AccessibleRole = AccessibleRole.ScrollBar;
             Messages_flowLayoutPanel2.AutoScroll = true;
             Messages_flowLayoutPanel2.AutoScrollMinSize = new Size(0, 3000);
+            Messages_flowLayoutPanel2.AutoSize = true;
             Messages_flowLayoutPanel2.Dock = DockStyle.Fill;
             Messages_flowLayoutPanel2.FlowDirection = FlowDirection.BottomUp;
             Messages_flowLayoutPanel2.Location = new Point(347, 54);
@@ -966,6 +968,7 @@
             guna2Panel4.ResumeLayout(false);
             guna2Panel3.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

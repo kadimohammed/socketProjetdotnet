@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MessageReceverUC));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DateTime_label = new Label();
             Image_guna2CirclePictureBox7 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             BackMessage_guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -49,7 +49,7 @@
             DateTime_label.BackColor = Color.Transparent;
             DateTime_label.Font = new Font("Franklin Gothic Medium Cond", 7.2F, FontStyle.Regular, GraphicsUnit.Point);
             DateTime_label.ForeColor = Color.Silver;
-            DateTime_label.Location = new Point(286, 81);
+            DateTime_label.Location = new Point(288, 81);
             DateTime_label.Name = "DateTime_label";
             DateTime_label.Size = new Size(43, 14);
             DateTime_label.TabIndex = 28;
@@ -65,7 +65,7 @@
             Image_guna2CirclePictureBox7.Margin = new Padding(3, 2, 3, 2);
             Image_guna2CirclePictureBox7.Name = "Image_guna2CirclePictureBox7";
             Image_guna2CirclePictureBox7.ShadowDecoration.Color = Color.Fuchsia;
-            Image_guna2CirclePictureBox7.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            Image_guna2CirclePictureBox7.ShadowDecoration.CustomizableEdges = customizableEdges1;
             Image_guna2CirclePictureBox7.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             Image_guna2CirclePictureBox7.Size = new Size(33, 33);
             Image_guna2CirclePictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -77,13 +77,13 @@
             BackMessage_guna2GradientPanel6.BorderRadius = 15;
             BackMessage_guna2GradientPanel6.Controls.Add(Message_label);
             BackMessage_guna2GradientPanel6.Controls.Add(guna2Panel6);
-            BackMessage_guna2GradientPanel6.CustomizableEdges = customizableEdges9;
+            BackMessage_guna2GradientPanel6.CustomizableEdges = customizableEdges4;
             BackMessage_guna2GradientPanel6.FillColor = Color.FromArgb(255, 152, 93);
             BackMessage_guna2GradientPanel6.FillColor2 = Color.FromArgb(255, 61, 87);
             BackMessage_guna2GradientPanel6.Location = new Point(25, 15);
             BackMessage_guna2GradientPanel6.Margin = new Padding(3, 2, 3, 2);
             BackMessage_guna2GradientPanel6.Name = "BackMessage_guna2GradientPanel6";
-            BackMessage_guna2GradientPanel6.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            BackMessage_guna2GradientPanel6.ShadowDecoration.CustomizableEdges = customizableEdges5;
             BackMessage_guna2GradientPanel6.Size = new Size(316, 64);
             BackMessage_guna2GradientPanel6.TabIndex = 26;
             // 
@@ -103,12 +103,12 @@
             // 
             guna2Panel6.BackColor = Color.Transparent;
             guna2Panel6.BorderRadius = 22;
-            guna2Panel6.CustomizableEdges = customizableEdges7;
+            guna2Panel6.CustomizableEdges = customizableEdges2;
             guna2Panel6.FillColor = Color.FromArgb(26, 32, 47);
             guna2Panel6.Location = new Point(-52, -29);
             guna2Panel6.Margin = new Padding(3, 2, 3, 2);
             guna2Panel6.Name = "guna2Panel6";
-            guna2Panel6.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Panel6.ShadowDecoration.CustomizableEdges = customizableEdges3;
             guna2Panel6.Size = new Size(73, 58);
             guna2Panel6.TabIndex = 6;
             // 

@@ -355,18 +355,18 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2CirclePictureBox UserPicture;
-        private Guna.UI2.WinForms.Guna2TextBox EditNameTextBox;
-        private Guna.UI2.WinForms.Guna2Button EditNameButton;
-        private Guna.UI2.WinForms.Guna2Button EditInfosButton;
+        public Guna.UI2.WinForms.Guna2TextBox EditNameTextBox;
+        public Guna.UI2.WinForms.Guna2Button EditNameButton;
+        public Guna.UI2.WinForms.Guna2Button EditInfosButton;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label Telephonelabel;
         private Guna.UI2.WinForms.Guna2Button DeconnexionButton;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox EditInfosTextBox;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        public Guna.UI2.WinForms.Guna2TextBox EditInfosTextBox;
+        public Guna.UI2.WinForms.Guna2Button guna2Button1;
+        public Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
     }

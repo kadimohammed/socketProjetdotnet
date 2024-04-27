@@ -105,31 +105,55 @@ namespace Socket_Projet_Client
             }
 
 
-            allMessages = allMessages.OrderByDescending(msg => msg.SendDate).ToList();
-
             foreach (var message in allMessages)
             {
                 if (message.SenderId == user.Id && message.ReceiverId == Id)
                 {
                     MessageSenderUC msgSender = new MessageSenderUC();
                     msgSender.Message = message.Content;
-                    msgSender.DateTimeMessage = message.SendDate.ToString();
                     msgSender.Dock = DockStyle.Right;
                     msgSender.Image_user = MyUtility.GetImageFromByte(Login.user.Photo);
+
+                    // Vérifier la date d'envoi du message
+                    if (message.SendDate.Date == DateTime.Now.Date)
+                    {
+                        msgSender.DateTimeMessage = message.SendDate.ToString("HH:mm"); 
+                    }
+                    else if (message.SendDate.Date.AddDays(1) == DateTime.Now.Date)
+                    {
+                        msgSender.DateTimeMessage = "Hier,  " + message.SendDate.ToString("HH:mm");
+                    }
+                    else
+                    {
+                        msgSender.DateTimeMessage = message.SendDate.ToString("dd/MM/yyyy HH:mm"); 
+                    }
+
                     Login.f1.Messages_flowLayoutPanel2.Controls.Add(msgSender);
                 }
                 else if (message.SenderId == Id && message.ReceiverId == user.Id)
                 {
                     MessageReceverUC msgReceiver = new MessageReceverUC();
                     msgReceiver.Message = message.Content;
-                    msgReceiver.DateTimeMessage = message.SendDate.ToString();
                     msgReceiver.Dock = DockStyle.Left;
                     msgReceiver.Image_user = Image;
+
+                    if (message.SendDate.Date == DateTime.Now.Date)
+                    {
+                        msgReceiver.DateTimeMessage = message.SendDate.ToString("HH:mm");
+                    }
+                    else if (message.SendDate.Date == DateTime.Now.Date.AddDays(-1))
+                    {
+                        msgReceiver.DateTimeMessage = "Hier,   " + message.SendDate.ToString("HH:mm"); 
+                    }
+                    else
+                    {
+                        msgReceiver.DateTimeMessage = message.SendDate.ToString("dd/MM/yyyy HH:mm"); 
+                    }
+
                     Login.f1.Messages_flowLayoutPanel2.Controls.Add(msgReceiver);
                 }
-
-
             }
+
 
 
         }
