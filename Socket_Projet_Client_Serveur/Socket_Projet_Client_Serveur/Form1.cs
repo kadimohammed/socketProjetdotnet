@@ -28,6 +28,7 @@ namespace SocketsProject
         public static List<ContactUC> contactList;
         private bool OpenFormInfo = false;
         public UsersInfos formChild;
+        public static ContactUC contact_selected;
 
 
         public Form1()
@@ -54,6 +55,7 @@ namespace SocketsProject
             if (contactList != null && contactList.Count > 0)
             {
                 contactList[0].ContactUC_Click(sender, e);
+                contact_selected = contactList[0];
             }
 
             foreach (ContactUC c in contactList)
@@ -160,7 +162,46 @@ namespace SocketsProject
 
 
 
+        private void SendMesgCircleButton_Click(object sender, EventArgs e)
+        {
+            string message = MessageTextBox.Text;
+            if (!string.IsNullOrEmpty(message))
+            {
+                MessageSenderUC msgSender = new MessageSenderUC();
+                msgSender.Message = message;
+                msgSender.DateTimeMessage = DateTime.Now.ToString();
+                msgSender.Dock = DockStyle.Right;
+                msgSender.Image_user = MyUtility.GetImageFromByte(Login.user.Photo);
+                Login.f1.Messages_flowLayoutPanel2.Controls.Add(msgSender);
+                Login.f1.Messages_flowLayoutPanel2.Controls.SetChildIndex(msgSender, 0);
+                MessageTextBox.Text = "";
+                //Login.f1.Messages_flowLayoutPanel2.ScrollControlIntoView(msgSender);
 
+                contact_selected.Message = message;
+
+
+                try
+                {
+                    Socket clientSocket = SocketSingleton.GetInstance();
+                    SocketSingleton.Connect(clientSocket);
+
+                    MessageEnvoyerCL messageReceverUC = new MessageEnvoyerCL();
+                    messageReceverUC.Content = message;
+                    messageReceverUC.ReceiverId = ContactUC.Receiver;
+                    messageReceverUC.SenderId = Login.user.Id;
+                    messageReceverUC.SendDate = DateTime.Now;
+                    NetworkStream networkStream = new NetworkStream(clientSocket);
+                    BinaryFormatter formatter = new BinaryFormatter();
+
+                    formatter.Serialize(networkStream, messageReceverUC);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Une ereur s'est produite. Veuillez réessayer.", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
 
 
 
@@ -269,38 +310,6 @@ namespace SocketsProject
             }
         }
 
-        private void SendMesgCircleButton_Click(object sender, EventArgs e)
-        {
-            string message = MessageTextBox.Text;
-            if (!string.IsNullOrEmpty(message))
-            {
-                MessageSenderUC msgSender = new MessageSenderUC();
-                msgSender.Message = message;
-                msgSender.DateTimeMessage = DateTime.Now.ToString();
-                msgSender.Dock = DockStyle.Right;
-                msgSender.Image_user = MyUtility.GetImageFromByte(Login.user.Photo);
-                Login.f1.Messages_flowLayoutPanel2.Controls.Add(msgSender);
-                Login.f1.Messages_flowLayoutPanel2.Controls.SetChildIndex(msgSender, 0);
-                //Login.f1.Messages_flowLayoutPanel2.ScrollControlIntoView(msgSender);
-
-                try
-                {
-                    Socket clientSocket = SocketSingleton.GetInstance();
-                    SocketSingleton.Connect(clientSocket);
-
-                    MessageEnvoyerCL messageReceverUC = new MessageEnvoyerCL();
-                    messageReceverUC.Content = message;
-                    NetworkStream networkStream = new NetworkStream(clientSocket);
-                    BinaryFormatter formatter = new BinaryFormatter();
-
-                    formatter.Serialize(networkStream, messageReceverUC);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Une ereur s'est produite. Veuillez réessayer.", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-            }
-        }
+        
     }
 }

@@ -70,6 +70,7 @@ namespace Socket_Projet_Client
 
         public void ContactUC_Click(object sender, EventArgs e)
         {
+            Form1.contact_selected = this;
             Receiver = Id;
             foreach (ContactUC uc in Form1.contactList)
             {
@@ -103,6 +104,8 @@ namespace Socket_Projet_Client
             {
                 allMessages.AddRange(user.MessagesReceived);
             }
+
+            allMessages = allMessages.OrderByDescending(m => m.SendDate).ToList();
 
 
             foreach (var message in allMessages)

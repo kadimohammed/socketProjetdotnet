@@ -92,7 +92,7 @@ namespace Socket_Projet_Client.Outiles
                             MessageReceverUC msgRecever = new MessageReceverUC();
                             msgRecever.Message = request.Content;
                             msgRecever.DateTimeMessage = DateTime.Now.ToString();
-                            msgRecever.Dock = DockStyle.Right;
+                            msgRecever.Dock = DockStyle.Left;
                             msgRecever.Image_user = MyUtility.GetImageFromByte(Login.user.Photo);
                             Login.f1.Invoke((MethodInvoker)delegate {
                                 Login.f1.Messages_flowLayoutPanel2.Controls.Add(msgRecever);

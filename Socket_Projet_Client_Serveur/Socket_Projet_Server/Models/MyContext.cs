@@ -10,6 +10,8 @@ namespace Socket_Projet_Server.Models
         public DbSet<Utilisateur> Utilisateurs { get; set; }
         public DbSet<Contact> Contacts { get; set; }
 
+        public DbSet<Message> Messages { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

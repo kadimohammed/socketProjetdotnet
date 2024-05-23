@@ -45,6 +45,7 @@ namespace Socket_Projet_Server
                                 {
                                     LoginCl loginCl = UtilisateurMapper.GetLoginClFromUtilisateur(user);
                                     Console.WriteLine("Client bien Connecter");
+                                    Program.Dict_Sockets_Client.Add(user.Id, clientSocket);
                                     formatter.Serialize(networkStream, loginCl);
                                 }
                                 catch (IOException)
@@ -164,16 +165,20 @@ namespace Socket_Projet_Server
                             formatter.Serialize(networkStream, mInfos);
                             break;
                         case MessageEnvoyerCL request:
-                            foreach(var socket in Program.List_Sockets_Client)
+                            foreach(var socket in Program.Dict_Sockets_Client)
                             {
-                                if (socket.Equals(clientSocket))
+                                if (socket.Key == request.ReceiverId)
                                 {
+                                    NetworkStream networkStream1 = new NetworkStream(socket.Value);
+                                    BinaryFormatter formatter1 = new BinaryFormatter(); ;
                                     MessageRecuCL messageRecuCL = new MessageRecuCL();
-                                    messageRecuCL.Content = "salam server khddam";
-                                    formatter.Serialize(networkStream, messageRecuCL);
+                                    messageRecuCL.Content = request.Content;
+
+                                    formatter1.Serialize(networkStream1, messageRecuCL);
                                 }
+                                MessageRepository.AddMessage(request);
                             }
-                            Console.WriteLine("Tâche modifier infos :");
+                            Console.WriteLine("Tâche envoyer message");
                             
                             break;
                         default:

@@ -75,7 +75,7 @@ namespace Socket_Projet_Server.Migrations
 
                     b.HasIndex("SenderId");
 
-                    b.ToTable("Message");
+                    b.ToTable("Messages");
                 });
 
             modelBuilder.Entity("Socket_Projet_Server.Models.Utilisateur", b =>
