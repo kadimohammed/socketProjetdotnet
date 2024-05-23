@@ -89,16 +89,28 @@ namespace Socket_Projet_Client.Outiles
                             break;
 
                         case MessageRecuCL request:
-                            MessageReceverUC msgRecever = new MessageReceverUC();
-                            msgRecever.Message = request.Content;
-                            msgRecever.DateTimeMessage = DateTime.Now.ToString();
-                            msgRecever.Dock = DockStyle.Left;
-                            msgRecever.Image_user = MyUtility.GetImageFromByte(Login.user.Photo);
-                            Login.f1.Invoke((MethodInvoker)delegate {
-                                Login.f1.Messages_flowLayoutPanel2.Controls.Add(msgRecever);
-                                Login.f1.Messages_flowLayoutPanel2.Controls.SetChildIndex(msgRecever, 0);
-                            });
-                            
+                            if (Form1.contact_selected.Id == request.SenderId)
+                            {
+                                MessageReceverUC msgRecever = new MessageReceverUC();
+                                msgRecever.Message = request.Content;
+                                msgRecever.DateTimeMessage = DateTime.Now.ToString("HH:mm");
+                                msgRecever.Dock = DockStyle.Left;
+                                msgRecever.Image_user = MyUtility.GetImageFromByte(Login.user.Photo);
+                                Login.f1.Invoke((MethodInvoker)delegate {
+                                    Login.f1.Messages_flowLayoutPanel2.Controls.Add(msgRecever);
+                                    Login.f1.Messages_flowLayoutPanel2.Controls.SetChildIndex(msgRecever, 0);
+                                });
+                            }
+                            else
+                            {
+                                foreach(var contact in Form1.contactList)
+                                {
+                                    if (contact.Id == request.SenderId)
+                                    {
+                                        contact.Notification = 11;
+                                    }
+                                }
+                            }
                             break;
 
                         default:

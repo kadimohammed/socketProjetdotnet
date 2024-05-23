@@ -169,7 +169,7 @@ namespace SocketsProject
             {
                 MessageSenderUC msgSender = new MessageSenderUC();
                 msgSender.Message = message;
-                msgSender.DateTimeMessage = DateTime.Now.ToString();
+                msgSender.DateTimeMessage = DateTime.Now.ToString("HH:mm");
                 msgSender.Dock = DockStyle.Right;
                 msgSender.Image_user = MyUtility.GetImageFromByte(Login.user.Photo);
                 Login.f1.Messages_flowLayoutPanel2.Controls.Add(msgSender);

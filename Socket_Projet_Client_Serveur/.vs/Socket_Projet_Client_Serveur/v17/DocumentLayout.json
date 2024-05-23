@@ -1,86 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{E24857FB-E72A-4FA2-B9AD-0ADE1B0D0AE3}|Socket_Projet_Client_Serveur\\Socket_Projet_Client.csproj|c:\\users\\mo kadi\\desktop\\socketprojetdotnet\\socket_projet_client_serveur\\socket_projet_client_serveur\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E24857FB-E72A-4FA2-B9AD-0ADE1B0D0AE3}|Socket_Projet_Client_Serveur\\Socket_Projet_Client.csproj|solutionrelative:socket_projet_client_serveur\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E24857FB-E72A-4FA2-B9AD-0ADE1B0D0AE3}|Socket_Projet_Client_Serveur\\Socket_Projet_Client.csproj|c:\\users\\mo kadi\\desktop\\socketprojetdotnet\\socket_projet_client_serveur\\socket_projet_client_serveur\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E24857FB-E72A-4FA2-B9AD-0ADE1B0D0AE3}|Socket_Projet_Client_Serveur\\Socket_Projet_Client.csproj|solutionrelative:socket_projet_client_serveur\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E24857FB-E72A-4FA2-B9AD-0ADE1B0D0AE3}|Socket_Projet_Client_Serveur\\Socket_Projet_Client.csproj|c:\\users\\mo kadi\\desktop\\socketprojetdotnet\\socket_projet_client_serveur\\socket_projet_client_serveur\\contactuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E24857FB-E72A-4FA2-B9AD-0ADE1B0D0AE3}|Socket_Projet_Client_Serveur\\Socket_Projet_Client.csproj|solutionrelative:socket_projet_client_serveur\\contactuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8600DFBE-25A0-40AA-B73B-BE896EEAB1E3}|Socket_Projet_Server\\Socket_Projet_Server.csproj|c:\\users\\mo kadi\\desktop\\socketprojetdotnet\\socket_projet_client_serveur\\socket_projet_server\\threadclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8600DFBE-25A0-40AA-B73B-BE896EEAB1E3}|Socket_Projet_Server\\Socket_Projet_Server.csproj|solutionrelative:socket_projet_server\\threadclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ContactUC.cs [Conception]",
-              "DocumentMoniker": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Client_Serveur\\ContactUC.cs",
-              "RelativeDocumentMoniker": "Socket_Projet_Client_Serveur\\ContactUC.cs",
-              "ToolTip": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Client_Serveur\\ContactUC.cs [Conception]",
-              "RelativeToolTip": "Socket_Projet_Client_Serveur\\ContactUC.cs [Conception]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T20:54:00.258Z",
-              "EditorCaption": " [Conception]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Client_Serveur\\Form1.cs",
-              "RelativeDocumentMoniker": "Socket_Projet_Client_Serveur\\Form1.cs",
-              "ToolTip": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Client_Serveur\\Form1.cs",
-              "RelativeToolTip": "Socket_Projet_Client_Serveur\\Form1.cs",
-              "ViewState": "AQIAAJ8AAAAAAAAAAAAAAK0AAABUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T20:51:07.62Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ThreadClient.cs",
-              "DocumentMoniker": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Server\\ThreadClient.cs",
-              "RelativeDocumentMoniker": "Socket_Projet_Server\\ThreadClient.cs",
-              "ToolTip": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Server\\ThreadClient.cs",
-              "RelativeToolTip": "Socket_Projet_Server\\ThreadClient.cs",
-              "ViewState": "AQIAAJwAAAAAAAAAAAAowLQAAABEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T20:24:09.494Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs [Conception]",
-              "DocumentMoniker": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Client_Serveur\\Form1.cs",
-              "RelativeDocumentMoniker": "Socket_Projet_Client_Serveur\\Form1.cs",
-              "ToolTip": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Client_Serveur\\Form1.cs [Conception]",
-              "RelativeToolTip": "Socket_Projet_Client_Serveur\\Form1.cs [Conception]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T20:10:45.974Z",
-              "EditorCaption": " [Conception]"
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

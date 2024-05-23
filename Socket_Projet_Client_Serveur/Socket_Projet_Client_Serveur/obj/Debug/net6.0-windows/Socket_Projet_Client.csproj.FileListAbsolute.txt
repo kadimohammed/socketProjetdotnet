@@ -100,12 +100,3 @@ C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_
 C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Client_Serveur\obj\Debug\net6.0-windows\Socket_Projet_Client.dll
 C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Client_Serveur\obj\Debug\net6.0-windows\refint\Socket_Projet_Client.dll
 C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Client_Serveur\obj\Debug\net6.0-windows\Socket_Projet_Client.pdb
-C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Client_Serveur\bin\Debug\net6.0-windows\Socket_Projet_Server.deps.json
-C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Client_Serveur\bin\Debug\net6.0-windows\Socket_Projet_Server.runtimeconfig.json
-C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Client_Serveur\bin\Debug\net6.0-windows\Socket_Projet_Server.exe
-C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Client_Serveur\bin\Debug\net6.0-windows\Socket_Projet_Client.deps.json
-C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Client_Serveur\bin\Debug\net6.0-windows\Socket_Projet_Client.runtimeconfig.json
-C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Client_Serveur\bin\Debug\net6.0-windows\Socket_Projet_Client.pdb
-C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Client_Serveur\obj\Debug\net6.0-windows\Socket_P.0FFA8BF1.Up2Date
-C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Client_Serveur\obj\Debug\net6.0-windows\Socket_Projet_Client.genruntimeconfig.cache
-C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Client_Serveur\obj\Debug\net6.0-windows\ref\Socket_Projet_Client.dll

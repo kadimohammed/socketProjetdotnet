@@ -48,13 +48,13 @@
             lbl_notification.FillColor = Color.Fuchsia;
             lbl_notification.FocusedColor = Color.Fuchsia;
             lbl_notification.Font = new Font("Segoe UI", 6F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_notification.ForeColor = Color.Silver;
-            lbl_notification.Location = new Point(225, 32);
+            lbl_notification.ForeColor = Color.Black;
+            lbl_notification.Location = new Point(221, 26);
             lbl_notification.Margin = new Padding(3, 2, 3, 2);
             lbl_notification.Name = "lbl_notification";
             lbl_notification.ShadowDecoration.CustomizableEdges = customizableEdges1;
             lbl_notification.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            lbl_notification.Size = new Size(20, 20);
+            lbl_notification.Size = new Size(30, 30);
             lbl_notification.TabIndex = 17;
             lbl_notification.Text = "5";
             // 
