@@ -46,7 +46,8 @@ namespace SocketsProject
             Task.Run(() =>
             {
                 ReadMessageReceiver.ReceiveMessages();
-                this.Invoke((MethodInvoker)delegate {
+                this.Invoke((MethodInvoker)delegate
+                {
                     Login.user = null;
                     formChild.Close();
                     Login.f1.Close();
@@ -85,7 +86,7 @@ namespace SocketsProject
 
 
 
-        
+
 
         private void UserPicture_Click(object sender, EventArgs e)
         {
@@ -119,7 +120,7 @@ namespace SocketsProject
             }
         }
 
-        
+
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -177,7 +178,7 @@ namespace SocketsProject
                     Login.user.MessagesSent.Add(m);
 
 
-                    
+
                     Socket clientSocket = SocketSingleton.GetInstance();
                     SocketSingleton.Connect(clientSocket);
 
@@ -214,8 +215,8 @@ namespace SocketsProject
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
-            
-            
+
+
         }
 
         private void UserPicture_MouseEnter(object sender, EventArgs e)
@@ -337,6 +338,10 @@ namespace SocketsProject
             }
         }
 
-        
+        private void guna2Button9_Click(object sender, EventArgs e)
+        {
+            AppelAudio appel = new AppelAudio();
+            appel.ShowDialog();
+        }
     }
 }

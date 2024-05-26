@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Socket_Projet_Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39764f8c75f29f21b3380d1d199bbecdc3050f58")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9e92168085c14492d4d624f37b742dac471944a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Socket_Projet_Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Socket_Projet_Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

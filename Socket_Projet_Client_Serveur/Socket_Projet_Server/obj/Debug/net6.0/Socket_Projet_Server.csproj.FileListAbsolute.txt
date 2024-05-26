@@ -90,3 +90,9 @@ C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_
 C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Server\obj\Debug\net6.0\Socket_Projet_Server.pdb
 C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Server\obj\Debug\net6.0\Socket_Projet_Server.genruntimeconfig.cache
 C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Server\obj\Debug\net6.0\ref\Socket_Projet_Server.dll
+C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Server\bin\Debug\net6.0\NAudio.dll
+C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Server\bin\Debug\net6.0\NAudio.Asio.dll
+C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Server\bin\Debug\net6.0\NAudio.Core.dll
+C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Server\bin\Debug\net6.0\NAudio.Midi.dll
+C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Server\bin\Debug\net6.0\NAudio.Wasapi.dll
+C:\Users\MO KADI\Desktop\socketProjetdotnet\Socket_Projet_Client_Serveur\Socket_Projet_Server\bin\Debug\net6.0\NAudio.WinMM.dll

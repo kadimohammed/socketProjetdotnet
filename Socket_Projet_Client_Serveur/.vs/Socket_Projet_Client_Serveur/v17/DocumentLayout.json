@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E24857FB-E72A-4FA2-B9AD-0ADE1B0D0AE3}|Socket_Projet_Client_Serveur\\Socket_Projet_Client.csproj|c:\\users\\mo kadi\\desktop\\socketprojetdotnet\\socket_projet_client_serveur\\socket_projet_client_serveur\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E24857FB-E72A-4FA2-B9AD-0ADE1B0D0AE3}|Socket_Projet_Client_Serveur\\Socket_Projet_Client.csproj|solutionrelative:socket_projet_client_serveur\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8600DFBE-25A0-40AA-B73B-BE896EEAB1E3}|Socket_Projet_Server\\Socket_Projet_Server.csproj|c:\\users\\mo kadi\\desktop\\socketprojetdotnet\\socket_projet_client_serveur\\socket_projet_server\\udpclienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8600DFBE-25A0-40AA-B73B-BE896EEAB1E3}|Socket_Projet_Server\\Socket_Projet_Server.csproj|solutionrelative:socket_projet_server\\udpclienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E24857FB-E72A-4FA2-B9AD-0ADE1B0D0AE3}|Socket_Projet_Client_Serveur\\Socket_Projet_Client.csproj|c:\\users\\mo kadi\\desktop\\socketprojetdotnet\\socket_projet_client_serveur\\socket_projet_client_serveur\\appelaudio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E24857FB-E72A-4FA2-B9AD-0ADE1B0D0AE3}|Socket_Projet_Client_Serveur\\Socket_Projet_Client.csproj|solutionrelative:socket_projet_client_serveur\\appelaudio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8600DFBE-25A0-40AA-B73B-BE896EEAB1E3}|Socket_Projet_Server\\Socket_Projet_Server.csproj|c:\\users\\mo kadi\\desktop\\socketprojetdotnet\\socket_projet_client_serveur\\socket_projet_server\\udpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8600DFBE-25A0-40AA-B73B-BE896EEAB1E3}|Socket_Projet_Server\\Socket_Projet_Server.csproj|solutionrelative:socket_projet_server\\udpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8600DFBE-25A0-40AA-B73B-BE896EEAB1E3}|Socket_Projet_Server\\Socket_Projet_Server.csproj|c:\\users\\mo kadi\\desktop\\socketprojetdotnet\\socket_projet_client_serveur\\socket_projet_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8600DFBE-25A0-40AA-B73B-BE896EEAB1E3}|Socket_Projet_Server\\Socket_Projet_Server.csproj|solutionrelative:socket_projet_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E24857FB-E72A-4FA2-B9AD-0ADE1B0D0AE3}|Socket_Projet_Client_Serveur\\Socket_Projet_Client.csproj|c:\\users\\mo kadi\\desktop\\socketprojetdotnet\\socket_projet_client_serveur\\socket_projet_client_serveur\\sockets\\socketsingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E24857FB-E72A-4FA2-B9AD-0ADE1B0D0AE3}|Socket_Projet_Client_Serveur\\Socket_Projet_Client.csproj|solutionrelative:socket_projet_client_serveur\\sockets\\socketsingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8600DFBE-25A0-40AA-B73B-BE896EEAB1E3}|Socket_Projet_Server\\Socket_Projet_Server.csproj|c:\\users\\mo kadi\\desktop\\socketprojetdotnet\\socket_projet_client_serveur\\socket_projet_server\\threadclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8600DFBE-25A0-40AA-B73B-BE896EEAB1E3}|Socket_Projet_Server\\Socket_Projet_Server.csproj|solutionrelative:socket_projet_server\\threadclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E24857FB-E72A-4FA2-B9AD-0ADE1B0D0AE3}|Socket_Projet_Client_Serveur\\Socket_Projet_Client.csproj|c:\\users\\mo kadi\\desktop\\socketprojetdotnet\\socket_projet_client_serveur\\socket_projet_client_serveur\\outiles\\readmessagereceiver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E24857FB-E72A-4FA2-B9AD-0ADE1B0D0AE3}|Socket_Projet_Client_Serveur\\Socket_Projet_Client.csproj|solutionrelative:socket_projet_client_serveur\\outiles\\readmessagereceiver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,66 +35,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SocketSingleton.cs",
-              "DocumentMoniker": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Client_Serveur\\Sockets\\SocketSingleton.cs",
-              "RelativeDocumentMoniker": "Socket_Projet_Client_Serveur\\Sockets\\SocketSingleton.cs",
-              "ToolTip": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Client_Serveur\\Sockets\\SocketSingleton.cs",
-              "RelativeToolTip": "Socket_Projet_Client_Serveur\\Sockets\\SocketSingleton.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAAA0AAAApAAAA",
+              "Title": "UdpServer.cs",
+              "DocumentMoniker": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Server\\UdpServer.cs",
+              "RelativeDocumentMoniker": "Socket_Projet_Server\\UdpServer.cs",
+              "ToolTip": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Server\\UdpServer.cs",
+              "RelativeToolTip": "Socket_Projet_Server\\UdpServer.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAABcAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T14:24:03.431Z",
+              "WhenOpened": "2024-05-26T21:34:43.81Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Server\\Program.cs",
-              "RelativeDocumentMoniker": "Socket_Projet_Server\\Program.cs",
-              "ToolTip": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Server\\Program.cs",
-              "RelativeToolTip": "Socket_Projet_Server\\Program.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "AppelAudio.cs",
+              "DocumentMoniker": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Client_Serveur\\AppelAudio.cs",
+              "RelativeDocumentMoniker": "Socket_Projet_Client_Serveur\\AppelAudio.cs",
+              "ToolTip": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Client_Serveur\\AppelAudio.cs",
+              "RelativeToolTip": "Socket_Projet_Client_Serveur\\AppelAudio.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAADcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T14:22:43.26Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ThreadClient.cs",
-              "DocumentMoniker": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Server\\ThreadClient.cs",
-              "RelativeDocumentMoniker": "Socket_Projet_Server\\ThreadClient.cs",
-              "ToolTip": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Server\\ThreadClient.cs",
-              "RelativeToolTip": "Socket_Projet_Server\\ThreadClient.cs",
-              "ViewState": "AQIAAL8AAAAAAAAAAAAAAMAAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T12:36:08.329Z",
+              "WhenOpened": "2024-05-26T21:09:25.736Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Client_Serveur\\Form1.cs",
-              "RelativeDocumentMoniker": "Socket_Projet_Client_Serveur\\Form1.cs",
-              "ToolTip": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Client_Serveur\\Form1.cs",
-              "RelativeToolTip": "Socket_Projet_Client_Serveur\\Form1.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAADgAAAAPAAAA",
+              "Title": "UdpClientHandler.cs",
+              "DocumentMoniker": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Server\\UdpClientHandler.cs",
+              "RelativeDocumentMoniker": "Socket_Projet_Server\\UdpClientHandler.cs",
+              "ToolTip": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Server\\UdpClientHandler.cs",
+              "RelativeToolTip": "Socket_Projet_Server\\UdpClientHandler.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAiwCUAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T12:32:14.492Z",
+              "WhenOpened": "2024-05-26T20:55:51.094Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ReadMessageReceiver.cs",
-              "DocumentMoniker": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Client_Serveur\\Outiles\\ReadMessageReceiver.cs",
-              "RelativeDocumentMoniker": "Socket_Projet_Client_Serveur\\Outiles\\ReadMessageReceiver.cs",
-              "ToolTip": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Client_Serveur\\Outiles\\ReadMessageReceiver.cs",
-              "RelativeToolTip": "Socket_Projet_Client_Serveur\\Outiles\\ReadMessageReceiver.cs",
-              "ViewState": "AQIAAG8AAAAAAAAAAAAAAIQAAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Server\\Program.cs",
+              "RelativeDocumentMoniker": "Socket_Projet_Server\\Program.cs",
+              "ToolTip": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Server\\Program.cs",
+              "RelativeToolTip": "Socket_Projet_Server\\Program.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACcAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T12:30:51.267Z",
+              "WhenOpened": "2024-05-26T20:35:16.203Z",
               "EditorCaption": ""
             }
           ]

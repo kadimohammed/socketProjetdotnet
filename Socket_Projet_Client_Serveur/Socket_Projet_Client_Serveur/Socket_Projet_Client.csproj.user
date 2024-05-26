@@ -4,6 +4,9 @@
     <Compile Update="AjouterContact.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="AppelAudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ContactUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
