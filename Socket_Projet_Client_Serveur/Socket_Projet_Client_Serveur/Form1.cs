@@ -4,6 +4,7 @@ using Microsoft.VisualBasic.ApplicationServices;
 using Socket_Projet_Client;
 using Socket_Projet_Client.Outiles;
 using Socket_Projet_Client.Sockets;
+using Socket_Projet_Client_Serveur;
 using Socket_Projet_Server.Classes;
 using Socket_Projet_Server.Factory;
 using Socket_Projet_Server.Models;
@@ -20,6 +21,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Message = Socket_Projet_Server.Models.Message;
 
 namespace SocketsProject
 {
@@ -41,7 +43,18 @@ namespace SocketsProject
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            Task.Run(() => ReadMessageReceiver.ReceiveMessages());
+            Task.Run(() =>
+            {
+                ReadMessageReceiver.ReceiveMessages();
+                this.Invoke((MethodInvoker)delegate {
+                    Login.user = null;
+                    formChild.Close();
+                    Login.f1.Close();
+                    SocketSingleton.clientSocket = null;
+                    Program.login = new Login();
+                    Program.login.Show();
+                });
+            });
 
 
 
@@ -72,20 +85,7 @@ namespace SocketsProject
 
 
 
-        private void guna2GradientPanel1_MouseEnter(object sender, EventArgs e)
-        {
-            ((Guna.UI2.WinForms.Guna2GradientPanel)sender).ShadowDecoration.Color = Color.DeepPink;
-        }
-
-        private void guna2GradientPanel1_MouseLeave(object sender, EventArgs e)
-        {
-            ((Guna.UI2.WinForms.Guna2GradientPanel)sender).ShadowDecoration.Color = Color.FromArgb(17, 22, 32);
-        }
-
-        private void guna2ControlBox1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
 
         private void UserPicture_Click(object sender, EventArgs e)
         {
@@ -119,20 +119,7 @@ namespace SocketsProject
             }
         }
 
-        private void UserPicture_MouseEnter(object sender, EventArgs e)
-        {
-            UserPicture.ShadowDecoration.Enabled = true;
-        }
-
-        private void UserPicture_MouseLeave(object sender, EventArgs e)
-        {
-            UserPicture.ShadowDecoration.Enabled = false;
-        }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-            new AjouterContact().ShowDialog();
-        }
+        
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -182,6 +169,15 @@ namespace SocketsProject
 
                 try
                 {
+
+                    Message m = new Message();
+                    m.Content = message;
+                    m.ReceiverId = ContactUC.Receiver;
+                    m.SenderId = Login.user.Id;
+                    Login.user.MessagesSent.Add(m);
+
+
+                    
                     Socket clientSocket = SocketSingleton.GetInstance();
                     SocketSingleton.Connect(clientSocket);
 
@@ -206,6 +202,37 @@ namespace SocketsProject
 
 
 
+        private void guna2GradientPanel1_MouseEnter(object sender, EventArgs e)
+        {
+            ((Guna.UI2.WinForms.Guna2GradientPanel)sender).ShadowDecoration.Color = Color.DeepPink;
+        }
+
+        private void guna2GradientPanel1_MouseLeave(object sender, EventArgs e)
+        {
+            ((Guna.UI2.WinForms.Guna2GradientPanel)sender).ShadowDecoration.Color = Color.FromArgb(17, 22, 32);
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void UserPicture_MouseEnter(object sender, EventArgs e)
+        {
+            UserPicture.ShadowDecoration.Enabled = true;
+        }
+
+        private void UserPicture_MouseLeave(object sender, EventArgs e)
+        {
+            UserPicture.ShadowDecoration.Enabled = false;
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            new AjouterContact().ShowDialog();
+        }
+
 
 
 
@@ -220,9 +247,10 @@ namespace SocketsProject
             if (user != null && user.Contacts != null)
             {
                 contactList = new List<ContactUC>();
+                ContactUC contactUC;
                 foreach (var contact in user.Contacts)
                 {
-                    ContactUC contactUC = new ContactUC();
+                    contactUC = new ContactUC();
                     contactUC.Id = contact.ContactUser.Id;
                     contactUC.Name = contact.ContactUser.FullName;
                     contactUC.Notification = 0;
@@ -257,8 +285,6 @@ namespace SocketsProject
                         byte[] photoBytes = contact.ContactUser.Photo;
                         contactUC.Image = MyUtility.GetImageFromByte(photoBytes);
 
-
-
                         contactList.Add(contactUC);
                     }
                 }
@@ -276,9 +302,10 @@ namespace SocketsProject
             if (user != null && user.Contacts != null)
             {
                 contactList = new List<ContactUC>();
+                ContactUC contactUC;
                 foreach (var contact in user.Contacts)
                 {
-                    ContactUC contactUC = new ContactUC();
+                    contactUC = new ContactUC();
 
                     if (user != null && contact != null && contact.ContactUser != null &&
                         user.MessagesSent != null && contact.ContactUser.MessagesReceived != null &&

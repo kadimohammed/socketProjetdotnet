@@ -12,6 +12,7 @@ using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+using Message = Socket_Projet_Server.Models.Message;
 
 namespace Socket_Projet_Client.Outiles
 {
@@ -29,7 +30,9 @@ namespace Socket_Projet_Client.Outiles
                 NetworkStream networkStream = new NetworkStream(clientSocket);
                 BinaryFormatter formatter = new BinaryFormatter();
 
-                while (true)
+                bool lireMessages = true;
+
+                while (lireMessages)
                 {
                     receivedObject = formatter.Deserialize(networkStream);
 
@@ -95,7 +98,7 @@ namespace Socket_Projet_Client.Outiles
                                 msgRecever.Message = request.Content;
                                 msgRecever.DateTimeMessage = DateTime.Now.ToString("HH:mm");
                                 msgRecever.Dock = DockStyle.Left;
-                                msgRecever.Image_user = MyUtility.GetImageFromByte(Login.user.Photo);
+                                msgRecever.Image_user = Form1.contact_selected.Image;
                                 Login.f1.Invoke((MethodInvoker)delegate {
                                     Login.f1.Messages_flowLayoutPanel2.Controls.Add(msgRecever);
                                     Login.f1.Messages_flowLayoutPanel2.Controls.SetChildIndex(msgRecever, 0);
@@ -107,15 +110,27 @@ namespace Socket_Projet_Client.Outiles
                                 {
                                     if (contact.Id == request.SenderId)
                                     {
-                                        contact.Notification = 11;
+                                        contact.AfficherNotification();
+                                        contact.Notification = contact.Notification + 1;
                                     }
                                 }
                             }
+                            Message m = new Message();
+                            m.SenderId = request.SenderId;
+                            m.ReceiverId = request.ReceiverId;
+                            m.Content = request.Content;
+                            Login.user.MessagesReceived.Add(m);
                             break;
-
+                        case DeconnexionCL request:
+                            if (request.etat)
+                            {
+                                lireMessages = false;
+                            }
+                            break;
                         default:
                             Console.WriteLine("Type de requête non pris en charge.");
                             break;
+
                     }
                 }
             }

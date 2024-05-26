@@ -22,7 +22,7 @@ namespace SocketsProject
     {
         public static LoginCl user;
         public static Form1 f1;
-        Socket clientSocket;
+        public static Socket clientSocket;
 
 
         public Login()
@@ -90,18 +90,5 @@ namespace SocketsProject
 
         }
 
-
-        
-
-
-        private LoginCl SendAndReceiveUser(LoginCl utilisateur)
-        {
-            using (NetworkStream networkStream = new NetworkStream(clientSocket))
-            {
-                BinaryFormatter formatter = new BinaryFormatter();
-                formatter.Serialize(networkStream, utilisateur);
-                return (LoginCl)formatter.Deserialize(networkStream);
-            }
-        }
     }
 }

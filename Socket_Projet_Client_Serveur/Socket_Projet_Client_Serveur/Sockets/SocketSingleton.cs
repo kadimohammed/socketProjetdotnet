@@ -11,7 +11,7 @@ namespace Socket_Projet_Client.Sockets
     {
         private static readonly object lockObject = new object();
 
-        private static Socket clientSocket;
+        public static Socket clientSocket;
 
         private SocketSingleton() { }
 

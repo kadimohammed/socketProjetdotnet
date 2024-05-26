@@ -45,11 +45,23 @@ namespace SocketsProject
 
         private void DeconnexionButton_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Login.f1.Close();
-            Login.user = null;
-            Login l = new Login();
-            l.Show();
+            try
+            {
+                DeconnexionCL deconnexion = new DeconnexionCL();
+                deconnexion.IdUser = Login.user.Id;
+                deconnexion.etat = false;
+                Socket clientSocket = SocketSingleton.GetInstance();
+                SocketSingleton.Connect(clientSocket);
+
+                NetworkStream networkStream = new NetworkStream(clientSocket);
+                BinaryFormatter formatter = new BinaryFormatter();
+
+                formatter.Serialize(networkStream, deconnexion);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Une ereur s'est produite. Veuillez réessayer.", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void EditNameButton_Click(object sender, EventArgs e)

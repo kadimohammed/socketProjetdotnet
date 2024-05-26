@@ -22,8 +22,8 @@ namespace Socket_Projet_Client
         }
         public int Notification
         {
-            get => int.Parse(lbl_notification.Text);
-            set => lbl_notification.Text = value.ToString();
+            get => int.Parse(notifText.Text);
+            set => notifText.Text = value.ToString();
         }
 
         public string Message
@@ -49,6 +49,20 @@ namespace Socket_Projet_Client
         public ContactUC()
         {
             InitializeComponent();
+            cacherNotification();
+        }
+
+
+        public void cacherNotification()
+        {
+            this.lbl_notification.Hide();
+            this.notifText.Hide();
+        }
+
+        public void AfficherNotification()
+        {
+            this.lbl_notification.Show();
+            this.notifText.Show();
         }
 
         private void ContactUC_MouseEnter(object sender, EventArgs e)
@@ -57,7 +71,7 @@ namespace Socket_Projet_Client
             ForeColor = SystemColors.ControlText;
         }
 
-       
+
 
         private void ContactUC_MouseLeave(object sender, EventArgs e)
         {
@@ -68,8 +82,12 @@ namespace Socket_Projet_Client
             }
         }
 
+       
+
         public void ContactUC_Click(object sender, EventArgs e)
         {
+            this.cacherNotification();
+            this.Notification = 0;
             Form1.contact_selected = this;
             Receiver = Id;
             foreach (ContactUC uc in Form1.contactList)
@@ -107,12 +125,13 @@ namespace Socket_Projet_Client
 
             allMessages = allMessages.OrderByDescending(m => m.SendDate).ToList();
 
-
+            MessageSenderUC msgSender;
+            MessageReceverUC msgReceiver;
             foreach (var message in allMessages)
             {
                 if (message.SenderId == user.Id && message.ReceiverId == Id)
                 {
-                    MessageSenderUC msgSender = new MessageSenderUC();
+                    msgSender = new MessageSenderUC();
                     msgSender.Message = message.Content;
                     msgSender.Dock = DockStyle.Right;
                     msgSender.Image_user = MyUtility.GetImageFromByte(Login.user.Photo);
@@ -120,7 +139,7 @@ namespace Socket_Projet_Client
                     // Vérifier la date d'envoi du message
                     if (message.SendDate.Date == DateTime.Now.Date)
                     {
-                        msgSender.DateTimeMessage = message.SendDate.ToString("HH:mm"); 
+                        msgSender.DateTimeMessage = message.SendDate.ToString("HH:mm");
                     }
                     else if (message.SendDate.Date.AddDays(1) == DateTime.Now.Date)
                     {
@@ -128,14 +147,14 @@ namespace Socket_Projet_Client
                     }
                     else
                     {
-                        msgSender.DateTimeMessage = message.SendDate.ToString("dd/MM/yyyy HH:mm"); 
+                        msgSender.DateTimeMessage = message.SendDate.ToString("dd/MM/yyyy HH:mm");
                     }
 
                     Login.f1.Messages_flowLayoutPanel2.Controls.Add(msgSender);
                 }
                 else if (message.SenderId == Id && message.ReceiverId == user.Id)
                 {
-                    MessageReceverUC msgReceiver = new MessageReceverUC();
+                    msgReceiver = new MessageReceverUC();
                     msgReceiver.Message = message.Content;
                     msgReceiver.Dock = DockStyle.Left;
                     msgReceiver.Image_user = Image;
@@ -146,11 +165,11 @@ namespace Socket_Projet_Client
                     }
                     else if (message.SendDate.Date == DateTime.Now.Date.AddDays(-1))
                     {
-                        msgReceiver.DateTimeMessage = "Hier,   " + message.SendDate.ToString("HH:mm"); 
+                        msgReceiver.DateTimeMessage = "Hier,   " + message.SendDate.ToString("HH:mm");
                     }
                     else
                     {
-                        msgReceiver.DateTimeMessage = message.SendDate.ToString("dd/MM/yyyy HH:mm"); 
+                        msgReceiver.DateTimeMessage = message.SendDate.ToString("dd/MM/yyyy HH:mm");
                     }
 
                     Login.f1.Messages_flowLayoutPanel2.Controls.Add(msgReceiver);
@@ -160,9 +179,5 @@ namespace Socket_Projet_Client
 
 
         }
-
-
-
-
     }
 }

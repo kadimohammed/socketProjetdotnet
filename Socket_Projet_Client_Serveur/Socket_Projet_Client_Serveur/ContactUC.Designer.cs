@@ -35,6 +35,7 @@
             lbl_msg = new Label();
             lbl_name = new Label();
             image = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            notifText = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)image).BeginInit();
             SuspendLayout();
             // 
@@ -47,16 +48,16 @@
             lbl_notification.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             lbl_notification.FillColor = Color.Fuchsia;
             lbl_notification.FocusedColor = Color.Fuchsia;
-            lbl_notification.Font = new Font("Segoe UI", 6F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_notification.Font = new Font("Segoe UI", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_notification.ForeColor = Color.Black;
-            lbl_notification.Location = new Point(221, 26);
-            lbl_notification.Margin = new Padding(3, 2, 3, 2);
+            lbl_notification.ImageSize = new Size(0, 0);
+            lbl_notification.Location = new Point(223, 31);
+            lbl_notification.Margin = new Padding(0);
             lbl_notification.Name = "lbl_notification";
             lbl_notification.ShadowDecoration.CustomizableEdges = customizableEdges1;
             lbl_notification.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            lbl_notification.Size = new Size(30, 30);
-            lbl_notification.TabIndex = 17;
-            lbl_notification.Text = "5";
+            lbl_notification.Size = new Size(20, 20);
+            lbl_notification.TabIndex = 0;
             // 
             // lbl_dateconnect
             // 
@@ -110,11 +111,23 @@
             image.TabIndex = 22;
             image.TabStop = false;
             // 
+            // notifText
+            // 
+            notifText.BackColor = Color.Fuchsia;
+            notifText.Font = new Font("Segoe UI", 6F, FontStyle.Regular, GraphicsUnit.Point);
+            notifText.ForeColor = Color.Transparent;
+            notifText.Location = new Point(230, 34);
+            notifText.Name = "notifText";
+            notifText.Size = new Size(7, 13);
+            notifText.TabIndex = 23;
+            notifText.Text = "0";
+            // 
             // ContactUC
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(26, 32, 47);
+            Controls.Add(notifText);
             Controls.Add(image);
             Controls.Add(lbl_notification);
             Controls.Add(lbl_dateconnect);
@@ -138,5 +151,6 @@
         private Label lbl_msg;
         private Label lbl_name;
         private Guna.UI2.WinForms.Guna2CirclePictureBox image;
+        private Guna.UI2.WinForms.Guna2HtmlLabel notifText;
     }
 }

@@ -3,6 +3,7 @@ using Socket_Projet_Server.Classes;
 using Socket_Projet_Server.Mappers;
 using Socket_Projet_Server.Models;
 using Socket_Projet_Server.Repository;
+using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
 
@@ -14,7 +15,6 @@ namespace Socket_Projet_Server
         NetworkStream networkStream;
         BinaryFormatter formatter;
         object receivedObject;
-
 
         public ThreadClient(Socket socket)
         {
@@ -28,9 +28,10 @@ namespace Socket_Projet_Server
 
         public void Run()
         {
+            bool liremessage = true;
             try
             {
-                while (true)
+                while (liremessage)
                 {
 
                     receivedObject = formatter.Deserialize(networkStream);
@@ -170,16 +171,25 @@ namespace Socket_Projet_Server
                                 if (socket.Key == request.ReceiverId)
                                 {
                                     NetworkStream networkStream1 = new NetworkStream(socket.Value);
-                                    BinaryFormatter formatter1 = new BinaryFormatter(); ;
+                                    BinaryFormatter formatter1 = new BinaryFormatter();
                                     MessageRecuCL messageRecuCL = new MessageRecuCL();
                                     messageRecuCL.Content = request.Content;
+                                    messageRecuCL.ReceiverId = request.ReceiverId;
+                                    messageRecuCL.SenderId = request.SenderId;
 
                                     formatter1.Serialize(networkStream1, messageRecuCL);
                                 }
-                                MessageRepository.AddMessage(request);
+                                //MessageRepository.AddMessage(request);
                             }
                             Console.WriteLine("Tâche envoyer message");
                             
+                            break;
+                        case DeconnexionCL request:
+                            Console.WriteLine("Tâche Deconnexion Client");
+                            request.etat = true;
+                            formatter.Serialize(networkStream, request);
+                            Program.Dict_Sockets_Client.Remove(request.IdUser);
+                            liremessage = false;
                             break;
                         default:
                             Console.WriteLine("Type de requête non pris en charge.");
