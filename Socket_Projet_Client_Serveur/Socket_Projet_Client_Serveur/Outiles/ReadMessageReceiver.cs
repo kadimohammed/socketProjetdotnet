@@ -127,6 +127,14 @@ namespace Socket_Projet_Client.Outiles
                                 lireMessages = false;
                             }
                             break;
+                        case EnLigneCL request:
+                            if (request.EnLigne)
+                            {
+                                Login.f1.enligneCircleButton9.Visible = true;
+                                Login.f1.activenowlabel1.Visible = true;
+                                Login.f1.activenowlabel2.Visible = true;
+                            }
+                            break;
                         default:
                             Console.WriteLine("Type de requête non pris en charge.");
                             break;

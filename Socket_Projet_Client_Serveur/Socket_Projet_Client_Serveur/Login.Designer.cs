@@ -77,9 +77,9 @@
             label2.ForeColor = Color.FromArgb(224, 224, 224);
             label2.Location = new Point(207, 101);
             label2.Name = "label2";
-            label2.Size = new Size(233, 78);
+            label2.Size = new Size(276, 78);
             label2.TabIndex = 0;
-            label2.Text = "MAO";
+            label2.Text = "Wonam";
             // 
             // guna2Button1
             // 

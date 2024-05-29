@@ -210,7 +210,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(26, 32, 47);
+            BackColor = Color.FromArgb(17, 22, 32);
             ClientSize = new Size(410, 164);
             Controls.Add(guna2Button2);
             Controls.Add(label30);

@@ -116,7 +116,7 @@
             guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            label17 = new Label();
+            activenowlabel2 = new Label();
             label16 = new Label();
             guna2CircleProgressBar2 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
@@ -124,8 +124,8 @@
             guna2Panel_top = new Guna.UI2.WinForms.Guna2Panel();
             guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
-            guna2CircleButton9 = new Guna.UI2.WinForms.Guna2CircleButton();
-            label31 = new Label();
+            enligneCircleButton9 = new Guna.UI2.WinForms.Guna2CircleButton();
+            activenowlabel1 = new Label();
             label30 = new Label();
             guna2CirclePictureBox14 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -213,6 +213,7 @@
             guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Button5.Size = new Size(50, 34);
             guna2Button5.TabIndex = 10;
+            guna2Button5.Click += guna2Button5_Click;
             // 
             // guna2Button4
             // 
@@ -312,7 +313,7 @@
             guna2Panel2.Controls.Add(guna2ControlBox3);
             guna2Panel2.Controls.Add(guna2ControlBox2);
             guna2Panel2.Controls.Add(guna2ControlBox1);
-            guna2Panel2.Controls.Add(label17);
+            guna2Panel2.Controls.Add(activenowlabel2);
             guna2Panel2.Controls.Add(label16);
             guna2Panel2.Controls.Add(guna2CircleProgressBar2);
             guna2Panel2.CustomBorderColor = Color.FromArgb(64, 64, 64);
@@ -510,17 +511,17 @@
             guna2ControlBox1.TabIndex = 20;
             guna2ControlBox1.Click += guna2ControlBox1_Click;
             // 
-            // label17
+            // activenowlabel2
             // 
-            label17.AutoSize = true;
-            label17.BackColor = Color.Transparent;
-            label17.Font = new Font("Franklin Gothic Demi", 6F, FontStyle.Regular, GraphicsUnit.Point);
-            label17.ForeColor = Color.FromArgb(0, 192, 192);
-            label17.Location = new Point(109, 249);
-            label17.Name = "label17";
-            label17.Size = new Size(44, 11);
-            label17.TabIndex = 19;
-            label17.Text = "Active Now";
+            activenowlabel2.AutoSize = true;
+            activenowlabel2.BackColor = Color.Transparent;
+            activenowlabel2.Font = new Font("Franklin Gothic Demi", 6F, FontStyle.Regular, GraphicsUnit.Point);
+            activenowlabel2.ForeColor = Color.FromArgb(0, 192, 192);
+            activenowlabel2.Location = new Point(109, 249);
+            activenowlabel2.Name = "activenowlabel2";
+            activenowlabel2.Size = new Size(44, 11);
+            activenowlabel2.TabIndex = 19;
+            activenowlabel2.Text = "Active Now";
             // 
             // label16
             // 
@@ -606,8 +607,8 @@
             guna2Panel_top.BackColor = Color.FromArgb(19, 25, 40);
             guna2Panel_top.Controls.Add(guna2Button9);
             guna2Panel_top.Controls.Add(guna2Button8);
-            guna2Panel_top.Controls.Add(guna2CircleButton9);
-            guna2Panel_top.Controls.Add(label31);
+            guna2Panel_top.Controls.Add(enligneCircleButton9);
+            guna2Panel_top.Controls.Add(activenowlabel1);
             guna2Panel_top.Controls.Add(label30);
             guna2Panel_top.Controls.Add(guna2CirclePictureBox14);
             guna2Panel_top.Controls.Add(guna2TextBox1);
@@ -670,34 +671,34 @@
             guna2Button8.Size = new Size(45, 34);
             guna2Button8.TabIndex = 25;
             // 
-            // guna2CircleButton9
+            // enligneCircleButton9
             // 
-            guna2CircleButton9.DisabledState.BorderColor = Color.DarkGray;
-            guna2CircleButton9.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2CircleButton9.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2CircleButton9.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2CircleButton9.FillColor = Color.Lime;
-            guna2CircleButton9.Font = new Font("Segoe UI", 6F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2CircleButton9.ForeColor = Color.Silver;
-            guna2CircleButton9.Location = new Point(439, 13);
-            guna2CircleButton9.Margin = new Padding(3, 2, 3, 2);
-            guna2CircleButton9.Name = "guna2CircleButton9";
-            guna2CircleButton9.ShadowDecoration.CustomizableEdges = customizableEdges48;
-            guna2CircleButton9.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleButton9.Size = new Size(10, 9);
-            guna2CircleButton9.TabIndex = 24;
+            enligneCircleButton9.DisabledState.BorderColor = Color.DarkGray;
+            enligneCircleButton9.DisabledState.CustomBorderColor = Color.DarkGray;
+            enligneCircleButton9.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            enligneCircleButton9.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            enligneCircleButton9.FillColor = Color.Lime;
+            enligneCircleButton9.Font = new Font("Segoe UI", 6F, FontStyle.Bold, GraphicsUnit.Point);
+            enligneCircleButton9.ForeColor = Color.Silver;
+            enligneCircleButton9.Location = new Point(439, 13);
+            enligneCircleButton9.Margin = new Padding(3, 2, 3, 2);
+            enligneCircleButton9.Name = "enligneCircleButton9";
+            enligneCircleButton9.ShadowDecoration.CustomizableEdges = customizableEdges48;
+            enligneCircleButton9.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            enligneCircleButton9.Size = new Size(10, 9);
+            enligneCircleButton9.TabIndex = 24;
             // 
-            // label31
+            // activenowlabel1
             // 
-            label31.AutoSize = true;
-            label31.BackColor = Color.Transparent;
-            label31.Font = new Font("Franklin Gothic Demi", 6F, FontStyle.Regular, GraphicsUnit.Point);
-            label31.ForeColor = Color.FromArgb(0, 192, 192);
-            label31.Location = new Point(355, 29);
-            label31.Name = "label31";
-            label31.Size = new Size(44, 11);
-            label31.TabIndex = 23;
-            label31.Text = "Active Now";
+            activenowlabel1.AutoSize = true;
+            activenowlabel1.BackColor = Color.Transparent;
+            activenowlabel1.Font = new Font("Franklin Gothic Demi", 6F, FontStyle.Regular, GraphicsUnit.Point);
+            activenowlabel1.ForeColor = Color.FromArgb(0, 192, 192);
+            activenowlabel1.Location = new Point(355, 29);
+            activenowlabel1.Name = "activenowlabel1";
+            activenowlabel1.Size = new Size(44, 11);
+            activenowlabel1.TabIndex = 23;
+            activenowlabel1.Text = "Active Now";
             // 
             // label30
             // 
@@ -986,9 +987,7 @@
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow2;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar2;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;
-        private System.Windows.Forms.Label label17;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private System.Windows.Forms.Label label31;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
@@ -1004,7 +1003,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton7;
         private System.Windows.Forms.Label label32;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton9;
+        
         private Guna.UI2.WinForms.Guna2Button guna2Button9;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox10;
@@ -1023,6 +1022,9 @@
         public Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox14;
         private Guna.UI2.WinForms.Guna2CircleButton SendMesgCircleButton;
         public FlowLayoutPanel Messages_flowLayoutPanel2;
+        public Guna.UI2.WinForms.Guna2CircleButton enligneCircleButton9;
+        public System.Windows.Forms.Label activenowlabel1;
+        public System.Windows.Forms.Label activenowlabel2;
     }
 }
 

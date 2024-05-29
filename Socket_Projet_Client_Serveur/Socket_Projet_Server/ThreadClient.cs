@@ -191,6 +191,17 @@ namespace Socket_Projet_Server
                             Program.Dict_Sockets_Client.Remove(request.IdUser);
                             liremessage = false;
                             break;
+                        case EnLigneCL request:
+                            Console.WriteLine("Tâche est client en ligne ");
+                            foreach(var socket in Program.Dict_Sockets_Client)
+                            {
+                                if (socket.Key == request.UtilisateurId)
+                                {
+                                    request.EnLigne = true;
+                                }
+                            }
+                            formatter.Serialize(networkStream, request);
+                            break;
                         default:
                             Console.WriteLine("Type de requête non pris en charge.");
                             break;

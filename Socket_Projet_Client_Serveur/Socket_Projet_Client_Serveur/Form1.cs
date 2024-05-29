@@ -42,6 +42,9 @@ namespace SocketsProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.enligneCircleButton9.Visible = false;
+            this.activenowlabel1.Visible = false;
+            this.activenowlabel2.Visible = false;
 
             Task.Run(() =>
             {
@@ -342,6 +345,11 @@ namespace SocketsProject
         {
             AppelAudio appel = new AppelAudio();
             appel.ShowDialog();
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            new Infos().ShowDialog();
         }
     }
 }

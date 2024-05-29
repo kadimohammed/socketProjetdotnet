@@ -1,7 +1,11 @@
 ﻿
 using Socket_Projet_Client.Outiles;
+using Socket_Projet_Client.Sockets;
+using Socket_Projet_Server.Classes;
 using Socket_Projet_Server.Models;
 using SocketsProject;
+using System.Net.Sockets;
+using System.Runtime.Serialization.Formatters.Binary;
 
 
 
@@ -86,6 +90,10 @@ namespace Socket_Projet_Client
 
         public void ContactUC_Click(object sender, EventArgs e)
         {
+
+
+
+
             this.cacherNotification();
             this.Notification = 0;
             Form1.contact_selected = this;
@@ -174,6 +182,29 @@ namespace Socket_Projet_Client
 
                     Login.f1.Messages_flowLayoutPanel2.Controls.Add(msgReceiver);
                 }
+            }
+
+
+
+            try
+            {
+                Login.f1.enligneCircleButton9.Visible = false;
+                Login.f1.activenowlabel1.Visible = false;
+                Login.f1.activenowlabel2.Visible = false;
+                Socket clientSocket = SocketSingleton.GetInstance();
+                SocketSingleton.Connect(clientSocket);
+
+                EnLigneCL enligne = new EnLigneCL();
+                enligne.UtilisateurId = Id;
+
+                NetworkStream networkStream = new NetworkStream(clientSocket);
+                BinaryFormatter formatter = new BinaryFormatter();
+
+                formatter.Serialize(networkStream, enligne);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Une ereur s'est produite. Veuillez réessayer.", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
