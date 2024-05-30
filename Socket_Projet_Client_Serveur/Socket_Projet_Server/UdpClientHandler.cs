@@ -1,52 +1,90 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using NAudio.Wave;
+using System.Collections.Concurrent;
 using System.Net;
 using System.Net.Sockets;
-using System.Text;
-using System.Threading;
-using NAudio.Wave;
+using System.Threading.Tasks;
 
-namespace Socket_Projet_Server
+public class UdpClientHandler
 {
-    public class UdpClientHandler
+    private Socket serverSocket;
+    public static  ConcurrentDictionary<int, EndPoint> dictClientEndPoints;
+    private readonly WaveOutEvent waveOut;
+    private readonly BufferedWaveProvider bufferedWaveProvider;
+
+    public UdpClientHandler(Socket serverSocket)
     {
-        private Socket serverSocket;
-        private Dictionary<int, EndPoint> dict_clientEndPoint;
-        private readonly WaveOutEvent waveOut;
-        private readonly BufferedWaveProvider bufferedWaveProvider;
-
-        public UdpClientHandler(Socket serverSocket)
+        this.serverSocket = serverSocket;
+        dictClientEndPoints = new ConcurrentDictionary<int, EndPoint>();
+        waveOut = new WaveOutEvent();
+        bufferedWaveProvider = new BufferedWaveProvider(new WaveFormat(8000, 16, 1))
         {
-            this.serverSocket = serverSocket;
-            dict_clientEndPoint = new Dictionary<int, EndPoint>();
-            waveOut = new WaveOutEvent();
-            bufferedWaveProvider = new BufferedWaveProvider(new WaveFormat(8000, 16, 1));
-            waveOut.Init(bufferedWaveProvider);
-            waveOut.Play(); // Commencer la lecture audio
-        }
+            BufferDuration = TimeSpan.FromSeconds(20) // Augmenter la durée du tampon à 20 secondes
+        };
+        waveOut.Init(bufferedWaveProvider);
+        waveOut.Play(); // Commencer la lecture audio
+    }
 
-        public void HandleClients()
+    public async Task HandleClientsAsync()
+    {
+        try
         {
-            try
+            byte[] buffer = new byte[65507];
+            EndPoint clientEndPoint = new IPEndPoint(IPAddress.Any, 0);
+            int bytesRead;
+            SocketReceiveFromResult result;
+            ArraySegment<byte> aaaa = new ArraySegment<byte>(buffer);
+            while (true)
             {
-                while (true)
-                {
-                    byte[] buffer = new byte[65507]; // Taille maximale pour un datagramme UDP
-                    EndPoint clientEndPoint = new IPEndPoint(IPAddress.Any, 0); // Point de terminaison du client
-                    int bytesRead = serverSocket.ReceiveFrom(buffer, ref clientEndPoint);
+                result = await serverSocket.ReceiveFromAsync(aaaa, SocketFlags.None, clientEndPoint);
+                bytesRead = result.ReceivedBytes;
+                clientEndPoint = result.RemoteEndPoint;
 
-                    // Ajoute les données audio au BufferedWaveProvider
+                // Vérifiez si l'EndPoint du client existe déjà dans le dictionnaire
+                if (!dictClientEndPoints.Values.Contains(clientEndPoint))
+                {
+                    int clientId = dictClientEndPoints.Count + 1;
+                    dictClientEndPoints[clientId] = clientEndPoint;
+                }
+
+                // Ajouter des échantillons au tampon si ce n'est pas plein
+                if (bufferedWaveProvider.BufferedDuration < TimeSpan.FromSeconds(20))
+                {
                     bufferedWaveProvider.AddSamples(buffer, 0, bytesRead);
                     Console.WriteLine("Données audio reçues du client. Taille : " + bytesRead + " octets.");
                 }
+                else
+                {
+                    Console.WriteLine("Le tampon est plein. Les données audio n'ont pas été ajoutées.");
+                }
+                
+                await BroadcastAudioAsync(buffer, bytesRead, clientEndPoint);
             }
-            catch (SocketException ex)
+        }
+        catch (SocketException ex)
+        {
+            Console.WriteLine("Une exception de socket s'est produite : " + ex.Message);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Une exception s'est produite : " + ex.Message);
+        }
+    }
+
+    private async Task BroadcastAudioAsync(byte[] buffer, int bytesRead, EndPoint senderEndPoint)
+    {
+        foreach (var clientEndPoint in dictClientEndPoints.Values)
+        {
+            if (!clientEndPoint.Equals(senderEndPoint))
             {
-                Console.WriteLine("Une exception de socket s'est produite : " + ex.Message);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Une exception s'est produite : " + ex.Message);
+                try
+                {
+                    await serverSocket.SendToAsync(new ArraySegment<byte>(buffer, 0, bytesRead), SocketFlags.None, clientEndPoint);
+                    Console.WriteLine("Données audio diffusées au client : " + clientEndPoint);
+                }
+                catch (SocketException ex)
+                {
+                    Console.WriteLine("Erreur lors de l'envoi des données au client : " + ex.Message);
+                }
             }
         }
     }

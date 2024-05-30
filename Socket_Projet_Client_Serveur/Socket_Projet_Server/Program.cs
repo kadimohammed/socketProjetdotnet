@@ -32,12 +32,18 @@ namespace Socket_Projet_Server
             // Utilisation
             Socket serverSocketUdp = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
             IPEndPoint endPointudp = new IPEndPoint(IPAddress.Any, 1252);
-            serverSocketUdp.Bind(endPointudp);
-            Console.WriteLine("Serveur Udp démarré...");
 
+            // Liaison du socket à l'adresse et au port spécifiés
+            serverSocketUdp.Bind(endPointudp);
+            Console.WriteLine("Serveur UDP démarré...");
+
+            // Création de l'instance du gestionnaire de clients UDP
             UdpClientHandler clientHandler = new UdpClientHandler(serverSocketUdp);
-            Thread serverThread = new Thread(clientHandler.HandleClients);
-            serverThread.Start();
+
+            // Démarrage d'un thread pour gérer les clients de manière asynchrone
+            Task.Run(() => clientHandler.HandleClientsAsync());
+
+
 
 
 
