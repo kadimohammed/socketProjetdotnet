@@ -5,6 +5,11 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using NAudio.Wave;
+using Newtonsoft.Json;
+using Socket_Projet_Client.Sockets;
+using Socket_Projet_Server.Classes;
+using Socket_Projet_Server.Models;
+using SocketsProject;
 
 namespace Socket_Projet_Client
 {
@@ -15,51 +20,71 @@ namespace Socket_Projet_Client
         private IPEndPoint serverEndPoint;
         private WaveOutEvent waveOut;
         private BufferedWaveProvider bufferedWaveProvider;
+        Thread receiveThread;
+        private bool isRecording = false;
+        private bool connected = true;
 
         public AppelAudio()
         {
             InitializeComponent();
 
             // Initialiser le client UDP
-            udpClient = new UdpClient();
-            serverEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 1252);
+            udpClient = UdpClientSingleton.GetInstance();
+            serverEndPoint = UdpClientSingleton.GetInstanceEndPoint();
+
+            // Envoyer les informations de contact au serveur
+            //string appel_client = "AppelClient" + Login.user.Id + "-" + 7;//Form1.contact_selected.Id;
+            //byte[] data = Encoding.UTF8.GetBytes(appel_client);
+            //udpClient.Send(data, data.Length, serverEndPoint);
+
 
             // Initialiser la capture audio
             waveIn = new WaveInEvent
             {
                 WaveFormat = new WaveFormat(8000, 16, 1)
             };
-            waveIn.BufferMilliseconds = 50; // Réduire la taille du tampon de capture à 50 millisecondes
+            waveIn.BufferMilliseconds = 20; // Réduire la taille du tampon de capture à 50 millisecondes
             waveIn.DataAvailable += WaveIn_DataAvailable;
 
-            // Commencer la capture audio
             waveIn.StartRecording();
 
             // Initialiser la lecture audio
             waveOut = new WaveOutEvent();
             bufferedWaveProvider = new BufferedWaveProvider(new WaveFormat(8000, 16, 1))
             {
-                BufferDuration = TimeSpan.FromSeconds(20) // Augmenter la durée du tampon à 20 secondes
+                BufferDuration = TimeSpan.FromSeconds(20) // Augmenter la durée du tampon à 30 secondes
             };
             waveOut.Init(bufferedWaveProvider);
             waveOut.Play();
 
-            // Démarrer le thread pour recevoir les données du serveur
-            Thread receiveThread = new Thread(ReceiveAudio);
+            receiveThread = new Thread(ReceiveAudio);
             receiveThread.IsBackground = true;
             receiveThread.Start();
         }
 
+        private void SendContactInfo(string contact)
+        {
+            try
+            {
+                byte[] message = Encoding.UTF8.GetBytes(contact);
+                udpClient.Send(message, message.Length, serverEndPoint);
+                MessageBox.Show("Contact information sent to the server.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An exception occurred while sending contact information: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void WaveIn_DataAvailable(object sender, WaveInEventArgs e)
         {
-            // Envoi des données audio au serveur
             try
             {
                 udpClient.Send(e.Buffer, e.BytesRecorded, serverEndPoint);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Une exception s'est produite lors de l'envoi des données audio : " + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An exception occurred while sending audio data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -67,32 +92,62 @@ namespace Socket_Projet_Client
         {
             try
             {
-                // Lier le client UDP à un point de terminaison local
-                udpClient.Client.Bind(new IPEndPoint(IPAddress.Any, 0));
                 byte[] buffer;
-                while (true)
+                while (connected)
                 {
                     buffer = udpClient.Receive(ref serverEndPoint);
                     bufferedWaveProvider.AddSamples(buffer, 0, buffer.Length);
+
+                    if (bufferedWaveProvider.BufferedDuration > TimeSpan.FromSeconds(25))
+                    {
+                        bufferedWaveProvider.ClearBuffer();
+                        MessageBox.Show("Buffer overflow detected, clearing buffer.", "Buffer Overflow", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
             }
             catch (SocketException ex)
             {
-                MessageBox.Show("Une exception de socket s'est produite : " + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("A socket exception occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Une exception s'est produite : " + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An exception occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void AppelAudio_FormClosing(object sender, FormClosingEventArgs e)
+        private void guna2CircleButton2_Click(object sender, EventArgs e)
         {
-            // Arrêter la capture audio
             waveIn.StopRecording();
+            connected = false;
+            this.Close();
+        }
 
-            // Fermer le client UDP
-            udpClient.Close();
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            waveIn.StopRecording();
+            connected = false;
+            this.Close();
+        }
+
+        private void guna2CircleButton1_Click(object sender, EventArgs e)
+        {
+            Microphone();
+        }
+
+        private void Microphone()
+        {
+            if (isRecording)
+            {
+                waveIn.StartRecording();
+                isRecording = false;
+                guna2CircleButton1.Image = Properties.Resources.microphone_enregistreur;
+            }
+            else
+            {
+                waveIn.StopRecording();
+                isRecording = true;
+                guna2CircleButton1.Image = Properties.Resources.microphonecoper;
+            }
         }
     }
 }

@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 public class UdpClientHandler
 {
-    private Socket serverSocket;
-    public static  ConcurrentDictionary<int, EndPoint> dictClientEndPoints;
+    private readonly Socket serverSocket;
+    public static ConcurrentDictionary<int, EndPoint> dictClientEndPoints;
     private readonly WaveOutEvent waveOut;
     private readonly BufferedWaveProvider bufferedWaveProvider;
+    private const int BufferSize = 65507;
+    private readonly TimeSpan MaxBufferDuration = TimeSpan.FromSeconds(100);
 
     public UdpClientHandler(Socket serverSocket)
     {
@@ -18,45 +20,41 @@ public class UdpClientHandler
         waveOut = new WaveOutEvent();
         bufferedWaveProvider = new BufferedWaveProvider(new WaveFormat(8000, 16, 1))
         {
-            BufferDuration = TimeSpan.FromSeconds(20) // Augmenter la durée du tampon à 20 secondes
+            BufferDuration = MaxBufferDuration
         };
         waveOut.Init(bufferedWaveProvider);
-        waveOut.Play(); // Commencer la lecture audio
+        waveOut.Play();
     }
 
     public async Task HandleClientsAsync()
     {
         try
         {
-            byte[] buffer = new byte[65507];
+            byte[] buffer = new byte[BufferSize];
             EndPoint clientEndPoint = new IPEndPoint(IPAddress.Any, 0);
-            int bytesRead;
-            SocketReceiveFromResult result;
-            ArraySegment<byte> aaaa = new ArraySegment<byte>(buffer);
+
             while (true)
             {
-                result = await serverSocket.ReceiveFromAsync(aaaa, SocketFlags.None, clientEndPoint);
-                bytesRead = result.ReceivedBytes;
+                SocketReceiveFromResult result = await serverSocket.ReceiveFromAsync(new ArraySegment<byte>(buffer), SocketFlags.None, clientEndPoint);
+                int bytesRead = result.ReceivedBytes;
                 clientEndPoint = result.RemoteEndPoint;
 
-                // Vérifiez si l'EndPoint du client existe déjà dans le dictionnaire
                 if (!dictClientEndPoints.Values.Contains(clientEndPoint))
                 {
                     int clientId = dictClientEndPoints.Count + 1;
                     dictClientEndPoints[clientId] = clientEndPoint;
                 }
 
-                // Ajouter des échantillons au tampon si ce n'est pas plein
-                if (bufferedWaveProvider.BufferedDuration < TimeSpan.FromSeconds(20))
+                if (bufferedWaveProvider.BufferedDuration < MaxBufferDuration)
                 {
                     bufferedWaveProvider.AddSamples(buffer, 0, bytesRead);
-                    Console.WriteLine("Données audio reçues du client. Taille : " + bytesRead + " octets.");
+                    //Console.WriteLine("Données audio reçues du client. Taille : " + bytesRead + " octets.");
                 }
                 else
                 {
                     Console.WriteLine("Le tampon est plein. Les données audio n'ont pas été ajoutées.");
                 }
-                
+
                 await BroadcastAudioAsync(buffer, bytesRead, clientEndPoint);
             }
         }
@@ -79,12 +77,32 @@ public class UdpClientHandler
                 try
                 {
                     await serverSocket.SendToAsync(new ArraySegment<byte>(buffer, 0, bytesRead), SocketFlags.None, clientEndPoint);
-                    Console.WriteLine("Données audio diffusées au client : " + clientEndPoint);
+                    //Console.WriteLine("Données audio diffusées au client : " + clientEndPoint);
                 }
                 catch (SocketException ex)
                 {
-                    Console.WriteLine("Erreur lors de l'envoi des données au client : " + ex.Message);
+                    if (ex.SocketErrorCode == SocketError.ConnectionReset)
+                    {
+                        RemoveClientByEndPoint(clientEndPoint);
+                        Console.WriteLine("Client déconnecté : " + clientEndPoint);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Erreur lors de l'envoi des données au client : " + ex.Message);
+                    }
                 }
+            }
+        }
+    }
+
+    private void RemoveClientByEndPoint(EndPoint endPoint)
+    {
+        foreach (var clientEntry in dictClientEndPoints)
+        {
+            if (clientEntry.Value.Equals(endPoint))
+            {
+                dictClientEndPoints.TryRemove(clientEntry.Key, out _);
+                break;
             }
         }
     }

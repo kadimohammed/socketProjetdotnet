@@ -1,6 +1,7 @@
 ﻿using Guna.UI2.WinForms;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualBasic.ApplicationServices;
+using NAudio.CoreAudioApi;
 using Socket_Projet_Client;
 using Socket_Projet_Client.Outiles;
 using Socket_Projet_Client.Sockets;
@@ -59,6 +60,8 @@ namespace SocketsProject
                     Program.login.Show();
                 });
             });
+
+            
 
 
 

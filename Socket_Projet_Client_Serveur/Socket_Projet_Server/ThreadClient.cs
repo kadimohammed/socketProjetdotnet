@@ -33,7 +33,6 @@ namespace Socket_Projet_Server
             {
                 while (liremessage)
                 {
-
                     receivedObject = formatter.Deserialize(networkStream);
                     switch (receivedObject)
                     {

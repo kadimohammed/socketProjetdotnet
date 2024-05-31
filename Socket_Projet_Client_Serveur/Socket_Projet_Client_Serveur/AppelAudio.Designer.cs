@@ -104,6 +104,7 @@
             guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2ControlBox1.Size = new Size(39, 28);
             guna2ControlBox1.TabIndex = 23;
+            guna2ControlBox1.Click += guna2ControlBox1_Click;
             // 
             // guna2Panel2
             // 
@@ -220,13 +221,14 @@
             guna2CircleButton1.FillColor = Color.Silver;
             guna2CircleButton1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2CircleButton1.ForeColor = Color.White;
-            guna2CircleButton1.Image = (Image)resources.GetObject("guna2CircleButton1.Image");
+            guna2CircleButton1.Image = Properties.Resources.microphone_enregistreur;
             guna2CircleButton1.Location = new Point(281, 345);
             guna2CircleButton1.Name = "guna2CircleButton1";
             guna2CircleButton1.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CircleButton1.Size = new Size(43, 43);
             guna2CircleButton1.TabIndex = 32;
+            guna2CircleButton1.Click += guna2CircleButton1_Click;
             // 
             // guna2CircleButton2
             // 
@@ -245,6 +247,7 @@
             guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CircleButton2.Size = new Size(43, 43);
             guna2CircleButton2.TabIndex = 33;
+            guna2CircleButton2.Click += guna2CircleButton2_Click;
             // 
             // label2
             // 
