@@ -61,7 +61,7 @@ namespace SocketsProject
                 });
             });
 
-            
+
 
 
 
@@ -353,6 +353,43 @@ namespace SocketsProject
         private void guna2Button5_Click(object sender, EventArgs e)
         {
             new Infos().ShowDialog();
+        }
+
+
+        private bool emogieform = false;
+        Emojis em;
+
+        private void guna2CircleButton2_MouseClick(object sender, MouseEventArgs e)
+        {
+
+            if (emogieform)
+            {
+                em.Close();
+                emogieform = false;
+            }
+            else
+            {
+                em = new Emojis();
+                em.Owner = this;
+                // Obtenir les dimensions de la fenêtre enfant
+                int childWidth = em.Width;
+                int childHeight = em.Height;
+
+                // Calculer la position de la fenêtre enfant dans le coin inférieur gauche du formulaire parent
+                int childX = this.Left + 350;
+                int childY = this.Bottom - childHeight - 50;
+
+                // Positionner la fenêtre enfant
+                em.StartPosition = FormStartPosition.Manual;
+                em.Location = new Point(childX, childY);
+
+                // Afficher la fenêtre enfant
+                em.Show();
+                emogieform = true;
+            }
+            
+            
+            
         }
     }
 }

@@ -293,6 +293,46 @@ namespace Socket_Projet_Client.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap emoji {
+            get {
+                object obj = ResourceManager.GetObject("emoji", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap emoji__1_ {
+            get {
+                object obj = ResourceManager.GetObject("emoji (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap emoji__2_ {
+            get {
+                object obj = ResourceManager.GetObject("emoji (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap emoji__3_ {
+            get {
+                object obj = ResourceManager.GetObject("emoji (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap empreinte_de_patte {
             get {
                 object obj = ResourceManager.GetObject("empreinte-de-patte", resourceCulture);
@@ -316,6 +356,26 @@ namespace Socket_Projet_Client.Properties {
         internal static System.Drawing.Bitmap envoyer_le_message {
             get {
                 object obj = ResourceManager.GetObject("envoyer-le-message", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Heart_Emoji_PNG_Free_Image {
+            get {
+                object obj = ResourceManager.GetObject("Heart-Emoji-PNG-Free-Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lamour {
+            get {
+                object obj = ResourceManager.GetObject("lamour", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -403,6 +463,26 @@ namespace Socket_Projet_Client.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rire_emoji {
+            get {
+                object obj = ResourceManager.GetObject("rire-emoji", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap souriant {
+            get {
+                object obj = ResourceManager.GetObject("souriant", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap statut {
             get {
                 object obj = ResourceManager.GetObject("statut", resourceCulture);
@@ -436,6 +516,16 @@ namespace Socket_Projet_Client.Properties {
         internal static System.Drawing.Bitmap telephone1 {
             get {
                 object obj = ResourceManager.GetObject("telephone1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap triste {
+            get {
+                object obj = ResourceManager.GetObject("triste", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -865,6 +865,7 @@
             guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CircleButton2.Size = new Size(36, 36);
             guna2CircleButton2.TabIndex = 2;
+            guna2CircleButton2.MouseClick += guna2CircleButton2_MouseClick;
             // 
             // MessageTextBox
             // 
@@ -880,17 +881,17 @@
             MessageTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             MessageTextBox.FillColor = Color.FromArgb(19, 25, 40);
             MessageTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            MessageTextBox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            MessageTextBox.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             MessageTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             MessageTextBox.IconLeftSize = new Size(16, 16);
-            MessageTextBox.Location = new Point(85, 4);
-            MessageTextBox.Margin = new Padding(3, 4, 3, 4);
+            MessageTextBox.Location = new Point(85, 5);
+            MessageTextBox.Margin = new Padding(3, 5, 3, 5);
             MessageTextBox.Name = "MessageTextBox";
             MessageTextBox.PasswordChar = '\0';
             MessageTextBox.PlaceholderText = "Tapper un message";
             MessageTextBox.SelectedText = "";
             MessageTextBox.ShadowDecoration.CustomizableEdges = customizableEdges60;
-            MessageTextBox.Size = new Size(386, 38);
+            MessageTextBox.Size = new Size(386, 36);
             MessageTextBox.TabIndex = 1;
             MessageTextBox.TextOffset = new Point(8, 0);
             // 
@@ -1012,7 +1013,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
-        private Guna.UI2.WinForms.Guna2TextBox MessageTextBox;
+        
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton3;
 
 
@@ -1025,6 +1026,7 @@
         public Guna.UI2.WinForms.Guna2CircleButton enligneCircleButton9;
         public System.Windows.Forms.Label activenowlabel1;
         public System.Windows.Forms.Label activenowlabel2;
+        public Guna.UI2.WinForms.Guna2TextBox MessageTextBox;
     }
 }
 
