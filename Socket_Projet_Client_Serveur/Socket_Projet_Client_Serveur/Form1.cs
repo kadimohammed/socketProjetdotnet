@@ -1,27 +1,12 @@
-﻿using Guna.UI2.WinForms;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualBasic.ApplicationServices;
-using NAudio.CoreAudioApi;
-using Socket_Projet_Client;
+﻿using Socket_Projet_Client;
 using Socket_Projet_Client.Outiles;
 using Socket_Projet_Client.Sockets;
 using Socket_Projet_Client_Serveur;
 using Socket_Projet_Server.Classes;
-using Socket_Projet_Server.Factory;
 using Socket_Projet_Server.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
 using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using Message = Socket_Projet_Server.Models.Message;
 
 namespace SocketsProject

@@ -1,13 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Socket_Projet_Server.Factory;
 using Socket_Projet_Server.Models;
-using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Socket_Projet_Server.Repository
 {
@@ -214,6 +207,35 @@ namespace Socket_Projet_Server.Repository
         }
 
 
+
+        public static bool UpdateUserPhoto(int id, string photoPath)
+        {
+            if (!File.Exists(photoPath))
+            {
+                Console.WriteLine("Le fichier image spécifié n'existe pas.");
+                return false;
+            }
+
+            try
+            {
+                byte[] imageBytes = File.ReadAllBytes(photoPath);
+
+                using (var context = ContextFactory.getContext())
+                {
+                    Utilisateur u = context.Utilisateurs.Where(u => u.Id == id).FirstOrDefault();
+                    u.Photo = imageBytes;
+                    context.SaveChanges();
+
+                    Console.WriteLine("L'utilisateur a été ajouté avec succès.");
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erreur lors de l'insertion de l'utilisateur : " + ex.Message);
+                return false;
+            }
+        }
 
 
     }

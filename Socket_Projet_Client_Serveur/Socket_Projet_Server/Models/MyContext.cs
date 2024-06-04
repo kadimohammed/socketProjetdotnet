@@ -1,5 +1,4 @@
-﻿using Socket_Projet_Server.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 
 namespace Socket_Projet_Server.Models

@@ -1,15 +1,8 @@
-﻿using System;
+﻿using NAudio.Wave;
+using Socket_Projet_Client.Sockets;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading;
-using System.Windows.Forms;
-using NAudio.Wave;
-using Newtonsoft.Json;
-using Socket_Projet_Client.Sockets;
-using Socket_Projet_Server.Classes;
-using Socket_Projet_Server.Models;
-using SocketsProject;
 
 namespace Socket_Projet_Client
 {

@@ -1,9 +1,7 @@
-﻿using Newtonsoft.Json;
-using Socket_Projet_Server.Classes;
+﻿using Socket_Projet_Server.Classes;
 using Socket_Projet_Server.Mappers;
 using Socket_Projet_Server.Models;
 using Socket_Projet_Server.Repository;
-using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
 

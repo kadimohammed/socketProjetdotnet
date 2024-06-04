@@ -1,10 +1,6 @@
 ﻿
-using System.Net.Sockets;
 using System.Net;
-using System.Runtime.Serialization.Formatters.Binary;
-using Socket_Projet_Server.Models;
-using Microsoft.VisualBasic;
-using System.Text;
+using System.Net.Sockets;
 
 namespace Socket_Projet_Server
 {

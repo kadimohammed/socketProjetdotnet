@@ -1,10 +1,7 @@
-﻿using Guna.UI2.WinForms;
-using NAudio.Wave;
+﻿using NAudio.Wave;
 using Socket_Projet_Client.Sockets;
-using System;
-using System.Net.Sockets;
 using System.Net;
-using System.Windows.Forms;
+using System.Net.Sockets;
 
 namespace Socket_Projet_Client.Outiles
 {

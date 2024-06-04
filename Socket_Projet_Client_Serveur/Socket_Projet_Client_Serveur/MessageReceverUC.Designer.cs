@@ -49,11 +49,12 @@
             DateTime_label.BackColor = Color.Transparent;
             DateTime_label.Font = new Font("Franklin Gothic Medium Cond", 7.2F, FontStyle.Regular, GraphicsUnit.Point);
             DateTime_label.ForeColor = Color.Silver;
-            DateTime_label.Location = new Point(288, 81);
+            DateTime_label.Location = new Point(251, 81);
             DateTime_label.Name = "DateTime_label";
-            DateTime_label.Size = new Size(43, 14);
+            DateTime_label.Size = new Size(89, 14);
             DateTime_label.TabIndex = 28;
-            DateTime_label.Text = "12:45 PM";
+            DateTime_label.Text = "12:45 PM ggggggggggg";
+            DateTime_label.TextAlign = ContentAlignment.MiddleRight;
             // 
             // Image_guna2CirclePictureBox7
             // 
@@ -95,9 +96,9 @@
             Message_label.ForeColor = Color.White;
             Message_label.Location = new Point(41, 15);
             Message_label.Name = "Message_label";
-            Message_label.Size = new Size(88, 36);
+            Message_label.Size = new Size(80, 36);
             Message_label.TabIndex = 16;
-            Message_label.Text = "Wee atmane cv \r\nwacha fiha";
+            Message_label.Text = "wee atman cv \r\nwacha fiha";
             // 
             // guna2Panel6
             // 

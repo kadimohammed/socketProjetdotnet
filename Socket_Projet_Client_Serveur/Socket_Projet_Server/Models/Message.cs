@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Socket_Projet_Server.Models
+﻿namespace Socket_Projet_Server.Models
 {
     [Serializable]
     public class Message

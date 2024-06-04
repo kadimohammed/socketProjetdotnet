@@ -92,12 +92,12 @@
             Messagelabel.AutoSize = true;
             Messagelabel.BackColor = Color.Transparent;
             Messagelabel.Font = new Font("Franklin Gothic Medium Cond", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            Messagelabel.ForeColor = Color.White;
+            Messagelabel.ForeColor = Color.Transparent;
             Messagelabel.Location = new Point(28, 14);
             Messagelabel.Name = "Messagelabel";
-            Messagelabel.Size = new Size(198, 36);
+            Messagelabel.Size = new Size(244, 36);
             Messagelabel.TabIndex = 17;
-            Messagelabel.Text = "wach khoya cv hamdullh wenta bikhir \r\nfirrak";
+            Messagelabel.Text = "wee wee wach khoya cv hamdullh wenta bikhir \r\nfirrak";
             // 
             // guna2Panel7
             // 

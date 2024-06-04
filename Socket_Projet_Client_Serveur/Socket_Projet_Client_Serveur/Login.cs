@@ -1,20 +1,7 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
-using Newtonsoft.Json;
-using Socket_Projet_Client.Sockets;
+﻿using Socket_Projet_Client.Sockets;
 using Socket_Projet_Server.Models;
-using Socket_Projet_Server.Repository;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Net;
 using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace SocketsProject
 {
@@ -38,10 +25,12 @@ namespace SocketsProject
 
         private async void guna2Button1_Click(object sender, EventArgs e)
         {
-            //bool c = UsersRepository.InsererUtilisateurAvecImage("1", "manini", "1", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\myimg.png", "cccccccc");
-            //bool a = UsersRepository.InsererUtilisateurAvecImage("2", "pitos","2", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\p2.jpg", "aaaaaa");
+            //bool c = UsersRepository.InsererUtilisateurAvecImage("5", "pitos", "5", "C:\\Users\\MO KADI\\Desktop\\Nouveau dossier\\korg.jpg", "dddd");
+            //bool a = UsersRepository.InsererUtilisateurAvecImage("6", "pitos","6", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\p2.jpg", "aaaaaa");
             //bool b = UsersRepository.InsererUtilisateurAvecImage("3", "camavinga", "3", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\p3.jpg", "bbbbbbb");
             //bool f = UsersRepository.InsererUtilisateurAvecImage("4", "manini", "4", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\p4.jpg", "cccccccc");  
+
+            //UsersRepository.UpdateUserPhoto(2, "C:\\Users\\MO KADI\\Desktop\\Nouveau dossier\\pitos.jpg");
 
             try
             {

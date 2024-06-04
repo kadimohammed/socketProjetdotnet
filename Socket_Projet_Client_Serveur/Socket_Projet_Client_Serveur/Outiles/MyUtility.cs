@@ -1,11 +1,4 @@
-﻿using Socket_Projet_Server.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Socket_Projet_Client.Outiles
+﻿namespace Socket_Projet_Client.Outiles
 {
     public class MyUtility
     {

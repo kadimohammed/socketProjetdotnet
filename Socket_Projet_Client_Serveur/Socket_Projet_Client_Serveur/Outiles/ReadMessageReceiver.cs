@@ -1,17 +1,8 @@
-﻿using Guna.UI2.WinForms;
-using Socket_Projet_Client.Sockets;
+﻿using Socket_Projet_Client.Sockets;
 using Socket_Projet_Server.Classes;
-using Socket_Projet_Server.Mappers;
-using Socket_Projet_Server.Models;
-using Socket_Projet_Server.Repository;
 using SocketsProject;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading.Tasks;
 using Message = Socket_Projet_Server.Models.Message;
 
 namespace Socket_Projet_Client.Outiles
