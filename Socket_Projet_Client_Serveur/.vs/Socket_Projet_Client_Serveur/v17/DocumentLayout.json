@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8600DFBE-25A0-40AA-B73B-BE896EEAB1E3}|Socket_Projet_Server\\Socket_Projet_Server.csproj|c:\\users\\mo kadi\\desktop\\socketprojetdotnet\\socket_projet_client_serveur\\socket_projet_server\\threadclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8600DFBE-25A0-40AA-B73B-BE896EEAB1E3}|Socket_Projet_Server\\Socket_Projet_Server.csproj|solutionrelative:socket_projet_server\\threadclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ThreadClient.cs",
+              "DocumentMoniker": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Server\\ThreadClient.cs",
+              "RelativeDocumentMoniker": "Socket_Projet_Server\\ThreadClient.cs",
+              "ToolTip": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Server\\ThreadClient.cs",
+              "RelativeToolTip": "Socket_Projet_Server\\ThreadClient.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAqwEMAAABkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T12:58:18.857Z",
+              "EditorCaption": ""
             }
           ]
         }

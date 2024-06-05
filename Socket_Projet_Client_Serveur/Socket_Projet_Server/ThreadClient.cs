@@ -35,14 +35,14 @@ namespace Socket_Projet_Server
                     switch (receivedObject)
                     {
                         case LoginCl request:
-                            Console.WriteLine("Tâche de login :" + request.Telephone);
+                            Console.WriteLine("login :" + request.Telephone+ " Password :" + request.Password);
                             Utilisateur user = UsersRepository.GetUserByTelephoneAndPassword(request.Telephone, request.Password);
                             if (user != null)
                             {
                                 try
                                 {
                                     LoginCl loginCl = UtilisateurMapper.GetLoginClFromUtilisateur(user);
-                                    Console.WriteLine("Client bien Connecter");
+                                    Console.WriteLine("Client id :"+ loginCl.Id+" -> "+ loginCl .FullName+ " bien Connecter");
                                     Program.Dict_Sockets_Client.Add(user.Id, clientSocket);
                                     formatter.Serialize(networkStream, loginCl);
                                 }
@@ -65,7 +65,7 @@ namespace Socket_Projet_Server
                             break;
                         case AjouterContactCL request:
 
-                            Console.WriteLine("Tâche d'ajouter un Contact :");
+                            Console.WriteLine("Utilisateur : " + request.UtilisateurId + " : Ajouter le contact : " + request.ContactTelephone);
                             Utilisateur userContact = UsersRepository.GetUserByTelephone(request.ContactTelephone);
                             Utilisateur newuser = new Utilisateur();
                             newuser.Id = -1;
@@ -101,7 +101,7 @@ namespace Socket_Projet_Server
                             formatter.Serialize(networkStream, ajouterContactResp);
                             break;
                         case ModifierNameCl request:
-                            Console.WriteLine("Tâche modifier full name :");
+                            Console.WriteLine("Mise à jour du nom complet de l'utilisateur : " + request.UtilisateurId + " nouveau nom : " + request.NewName);
                             string message_modifier_fullname = "";
                             if (request != null)
                             {
@@ -132,7 +132,7 @@ namespace Socket_Projet_Server
                             formatter.Serialize(networkStream, mfl);
                             break;
                         case ModifierInfosCl request:
-                            Console.WriteLine("Tâche modifier infos :");
+                            Console.WriteLine("Mise à jour des informations de l'utilisateur : " + request.UtilisateurId + " nouveau informations : " + request.NewInfos);
                             string message_modifier_infos = "";
                             if (request != null)
                             {
@@ -163,7 +163,8 @@ namespace Socket_Projet_Server
                             formatter.Serialize(networkStream, mInfos);
                             break;
                         case MessageEnvoyerCL request:
-                            foreach(var socket in Program.Dict_Sockets_Client)
+                            Console.WriteLine("Expéditeur : " + request.SenderId + " destinataire : " + request.ReceiverId + " Message : " + request.Content);
+                            foreach (var socket in Program.Dict_Sockets_Client)
                             {
                                 if (socket.Key == request.ReceiverId)
                                 {
@@ -175,22 +176,21 @@ namespace Socket_Projet_Server
                                     messageRecuCL.SenderId = request.SenderId;
 
                                     formatter1.Serialize(networkStream1, messageRecuCL);
-                                }
-                                //MessageRepository.AddMessage(request);
+                                }                           
                             }
-                            Console.WriteLine("Tâche envoyer message");
+                            MessageRepository.AddMessage(request);
                             
                             break;
                         case DeconnexionCL request:
-                            Console.WriteLine("Tâche Deconnexion Client");
+                            Console.WriteLine("Deconnexion Client "+ request.IdUser);
                             request.etat = true;
                             formatter.Serialize(networkStream, request);
                             Program.Dict_Sockets_Client.Remove(request.IdUser);
                             liremessage = false;
                             break;
                         case EnLigneCL request:
-                            Console.WriteLine("Tâche est client en ligne ");
-                            foreach(var socket in Program.Dict_Sockets_Client)
+                            Console.WriteLine("Verifier Client en ligne "+ request.UtilisateurId);
+                            foreach (var socket in Program.Dict_Sockets_Client)
                             {
                                 if (socket.Key == request.UtilisateurId)
                                 {
@@ -216,7 +216,7 @@ namespace Socket_Projet_Server
             finally
             {              
                 Dispose();
-                Console.WriteLine("Client DeConnecter");
+                Console.WriteLine("user DeConnecter");
             }
         }
 

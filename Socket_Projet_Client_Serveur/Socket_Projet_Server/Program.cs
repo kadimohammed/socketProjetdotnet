@@ -49,7 +49,7 @@ namespace Socket_Projet_Server
             IPEndPoint endPoint = new IPEndPoint(IPAddress.Any, 1234);
             serverSocket.Bind(endPoint);
             serverSocket.Listen();
-            Console.WriteLine("Serveur démarré...");
+            Console.WriteLine("Serveur TCP démarré...");
 
             try
             {

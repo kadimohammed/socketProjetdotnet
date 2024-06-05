@@ -51,9 +51,9 @@
             DateTime_label.ForeColor = Color.Silver;
             DateTime_label.Location = new Point(251, 81);
             DateTime_label.Name = "DateTime_label";
-            DateTime_label.Size = new Size(89, 14);
+            DateTime_label.Size = new Size(85, 14);
             DateTime_label.TabIndex = 28;
-            DateTime_label.Text = "12:45 PM ggggggggggg";
+            DateTime_label.Text = "12:45 PM ....................";
             DateTime_label.TextAlign = ContentAlignment.MiddleRight;
             // 
             // Image_guna2CirclePictureBox7
