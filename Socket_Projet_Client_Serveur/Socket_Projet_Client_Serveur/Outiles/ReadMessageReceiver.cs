@@ -101,8 +101,12 @@ namespace Socket_Projet_Client.Outiles
                                 {
                                     if (contact.Id == request.SenderId)
                                     {
-                                        contact.AfficherNotification();
-                                        contact.Notification = contact.Notification + 1;
+                                        Login.f1.Invoke(new Action(() =>
+                                        {
+                                            contact.AfficherNotification();
+                                            contact.Notification = contact.Notification + 1;
+                                        }));
+                                        
                                     }
                                 }
                             }
@@ -121,10 +125,26 @@ namespace Socket_Projet_Client.Outiles
                         case EnLigneCL request:
                             if (request.EnLigne)
                             {
-                                Login.f1.enligneCircleButton9.Visible = true;
-                                Login.f1.activenowlabel1.Visible = true;
-                                Login.f1.activenowlabel2.Visible = true;
+                                // Vérifiez si l'appel est nécessaire depuis un thread différent
+                                if (Login.f1.InvokeRequired)
+                                {
+                                    // Utilisez Invoke pour effectuer l'appel sur le thread UI
+                                    Login.f1.Invoke(new Action(() =>
+                                    {
+                                        Login.f1.enligneCircleButton9.Visible = true;
+                                        Login.f1.activenowlabel1.Visible = true;
+                                        Login.f1.activenowlabel2.Visible = true;
+                                    }));
+                                }
+                                else
+                                {
+                                    // Si vous êtes déjà sur le thread UI, effectuez directement les changements
+                                    Login.f1.enligneCircleButton9.Visible = true;
+                                    Login.f1.activenowlabel1.Visible = true;
+                                    Login.f1.activenowlabel2.Visible = true;
+                                }
                             }
+
                             break;
                         default:
                             Console.WriteLine("Type de requête non pris en charge.");

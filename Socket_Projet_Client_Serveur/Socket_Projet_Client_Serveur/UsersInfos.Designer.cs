@@ -315,6 +315,7 @@
             // 
             // guna2ShadowForm1
             // 
+            guna2ShadowForm1.ShadowColor = Color.DimGray;
             guna2ShadowForm1.TargetForm = this;
             // 
             // guna2AnimateWindow1

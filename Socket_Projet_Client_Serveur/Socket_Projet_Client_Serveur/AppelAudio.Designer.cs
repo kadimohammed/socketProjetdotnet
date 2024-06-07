@@ -190,13 +190,12 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Franklin Gothic Medium", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Silver;
-            label1.Location = new Point(196, 232);
-            label1.MinimumSize = new Size(255, 0);
+            label1.Location = new Point(275, 238);
             label1.Name = "label1";
-            label1.Size = new Size(255, 17);
+            label1.Size = new Size(93, 17);
             label1.TabIndex = 30;
-            label1.Text = "Appel en cours ...";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            label1.Text = "Appel en cours ";
+            label1.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // nom
             // 

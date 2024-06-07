@@ -1,5 +1,6 @@
 ﻿using Socket_Projet_Client.Sockets;
 using Socket_Projet_Server.Models;
+using Socket_Projet_Server.Repository;
 using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
 
@@ -28,7 +29,7 @@ namespace SocketsProject
             //bool c = UsersRepository.InsererUtilisateurAvecImage("5", "pitos", "5", "C:\\Users\\MO KADI\\Desktop\\Nouveau dossier\\korg.jpg", "dddd");
             //bool a = UsersRepository.InsererUtilisateurAvecImage("6", "pitos","6", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\p2.jpg", "aaaaaa");
             //bool b = UsersRepository.InsererUtilisateurAvecImage("3", "camavinga", "3", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\p3.jpg", "bbbbbbb");
-            //bool f = UsersRepository.InsererUtilisateurAvecImage("4", "manini", "4", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\p4.jpg", "cccccccc");  
+            //bool f = UsersRepository.InsererUtilisateurAvecImage("5", "Lolo", "5", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\p4.jpg", "llllllll");  
 
             //UsersRepository.UpdateUserPhoto(2, "C:\\Users\\MO KADI\\Desktop\\Nouveau dossier\\pitos.jpg");
 

@@ -38,7 +38,7 @@ namespace SocketsProject
                 this.Invoke((MethodInvoker)delegate
                 {
                     Login.user = null;
-                    formChild.Close();
+                    //formChild.Close();
                     Login.f1.Close();
                     SocketSingleton.clientSocket = null;
                     Program.login = new Login();
@@ -77,42 +77,6 @@ namespace SocketsProject
 
 
 
-
-
-        private void UserPicture_Click(object sender, EventArgs e)
-        {
-            if (OpenFormInfo)
-            {
-                formChild.Close();
-                OpenFormInfo = false;
-            }
-            else
-            {
-                formChild = new UsersInfos();
-                // Obtenir les dimensions du formulaire parent
-                int parentWidth = this.Width;
-                int parentHeight = this.Height;
-
-                // Obtenir les dimensions de la fenêtre enfant
-                int childWidth = formChild.Width;
-                int childHeight = formChild.Height;
-
-                // Calculer la position de la fenêtre enfant dans le coin inférieur gauche du formulaire parent
-                int childX = this.Left + 10;
-                int childY = this.Bottom - childHeight - 50;
-
-                // Positionner la fenêtre enfant
-                formChild.StartPosition = FormStartPosition.Manual;
-                formChild.Location = new Point(childX, childY);
-
-                // Afficher la fenêtre enfant
-                formChild.Show();
-                OpenFormInfo = true;
-            }
-        }
-
-
-
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
@@ -131,6 +95,10 @@ namespace SocketsProject
             if (contactList != null && contactList.Count > 0)
             {
                 contactList[0].ContactUC_Click(sender, e);
+            }
+            else
+            {
+                Messages_flowLayoutPanel2.Controls.Clear();
             }
 
             foreach (ContactUC c in contactList)
@@ -332,6 +300,8 @@ namespace SocketsProject
         private void guna2Button9_Click(object sender, EventArgs e)
         {
             AppelAudio appel = new AppelAudio();
+            appel.nom.Text = contact_selected.Name;
+            appel.photo.Image = contact_selected.Image;
             appel.ShowDialog();
         }
 
@@ -372,9 +342,42 @@ namespace SocketsProject
                 em.Show();
                 emogieform = true;
             }
-            
-            
-            
+
+
+
+        }
+
+        private void UserPicture_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (OpenFormInfo)
+            {
+                formChild.Close();
+                OpenFormInfo = false;
+            }
+            else
+            {
+                formChild = new UsersInfos();
+                formChild.Owner = this;
+                // Obtenir les dimensions du formulaire parent
+                int parentWidth = this.Width;
+                int parentHeight = this.Height;
+
+                // Obtenir les dimensions de la fenêtre enfant
+                int childWidth = formChild.Width;
+                int childHeight = formChild.Height;
+
+                // Calculer la position de la fenêtre enfant dans le coin inférieur gauche du formulaire parent
+                int childX = this.Left + 10;
+                int childY = this.Bottom - childHeight - 50;
+
+                // Positionner la fenêtre enfant
+                formChild.StartPosition = FormStartPosition.Manual;
+                formChild.Location = new Point(childX, childY);
+
+                // Afficher la fenêtre enfant
+                formChild.Show();
+                OpenFormInfo = true;
+            }
         }
     }
 }

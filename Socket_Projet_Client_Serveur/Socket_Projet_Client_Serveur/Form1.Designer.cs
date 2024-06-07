@@ -292,7 +292,7 @@
             UserPicture.SizeMode = PictureBoxSizeMode.StretchImage;
             UserPicture.TabIndex = 5;
             UserPicture.TabStop = false;
-            UserPicture.Click += UserPicture_Click;
+            UserPicture.MouseClick += UserPicture_MouseClick;
             UserPicture.MouseEnter += UserPicture_MouseEnter;
             UserPicture.MouseLeave += UserPicture_MouseLeave;
             // 

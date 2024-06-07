@@ -21,6 +21,9 @@ namespace Socket_Projet_Client
         {
             InitializeComponent();
 
+
+            StartLoadingIndicator();
+
             // Initialiser le client UDP
             udpClient = UdpClientSingleton.GetInstance();
             serverEndPoint = UdpClientSingleton.GetInstanceEndPoint();
@@ -142,5 +145,52 @@ namespace Socket_Projet_Client
                 guna2CircleButton1.Image = Properties.Resources.microphonecoper;
             }
         }
+
+
+
+
+        /// /////////////////////////////////////////////////////////////////////////////////////
+
+        private CancellationTokenSource _cancellationTokenSource;
+
+        private async void StartLoadingIndicator()
+        {
+            _cancellationTokenSource = new CancellationTokenSource();
+            var token = _cancellationTokenSource.Token;
+
+            string baseText = "Appel en cours ";
+            string[] dots = { "", ".", "..", "..." };
+            int dotIndex = 0;
+
+            while (!token.IsCancellationRequested)
+            {
+                string textToShow = baseText + dots[dotIndex];
+                dotIndex = (dotIndex + 1) % dots.Length;
+
+                // Invoke to update the UI thread safely
+                if (label1.InvokeRequired)
+                {
+                    label1.Invoke(new Action(() => label1.Text = textToShow));
+                }
+                else
+                {
+                    label1.Text = textToShow;
+                }
+
+                await Task.Delay(500); // Wait for 500 milliseconds
+            }
+        }
+
+        private void StopLoadingIndicator()
+        {
+            if (_cancellationTokenSource != null)
+            {
+                _cancellationTokenSource.Cancel();
+                label1.Text = "Loading"; // Reset to initial state
+            }
+        }
+
+
+
     }
 }
