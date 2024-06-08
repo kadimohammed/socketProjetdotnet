@@ -39,12 +39,6 @@ namespace Socket_Projet_Server
             // Démarrage d'un thread pour gérer les clients de manière asynchrone
             Task.Run(() => clientHandler.HandleClientsAsync());
 
-
-
-
-
-
-
             Socket serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             IPEndPoint endPoint = new IPEndPoint(IPAddress.Any, 1234);
             serverSocket.Bind(endPoint);

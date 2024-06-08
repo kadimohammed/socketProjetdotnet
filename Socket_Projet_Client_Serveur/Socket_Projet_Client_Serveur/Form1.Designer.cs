@@ -445,7 +445,6 @@
             // guna2PictureBox2
             // 
             guna2PictureBox2.CustomizableEdges = customizableEdges29;
-            guna2PictureBox2.Image = (Image)resources.GetObject("guna2PictureBox2.Image");
             guna2PictureBox2.ImageRotate = 0F;
             guna2PictureBox2.Location = new Point(101, 322);
             guna2PictureBox2.Margin = new Padding(3, 2, 3, 2);
@@ -458,13 +457,13 @@
             // guna2PictureBox1
             // 
             guna2PictureBox1.CustomizableEdges = customizableEdges31;
-            guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(31, 322);
             guna2PictureBox1.Margin = new Padding(3, 2, 3, 2);
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges32;
             guna2PictureBox1.Size = new Size(62, 53);
+            guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox1.TabIndex = 23;
             guna2PictureBox1.TabStop = false;
             // 
@@ -534,7 +533,7 @@
             label16.Name = "label16";
             label16.Size = new Size(255, 21);
             label16.TabIndex = 18;
-            label16.Text = "Jane Lopez";
+            label16.Text = "MO KADI";
             label16.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // guna2CircleProgressBar2
@@ -680,7 +679,7 @@
             enligneCircleButton9.FillColor = Color.Lime;
             enligneCircleButton9.Font = new Font("Segoe UI", 6F, FontStyle.Bold, GraphicsUnit.Point);
             enligneCircleButton9.ForeColor = Color.Silver;
-            enligneCircleButton9.Location = new Point(439, 13);
+            enligneCircleButton9.Location = new Point(352, 31);
             enligneCircleButton9.Margin = new Padding(3, 2, 3, 2);
             enligneCircleButton9.Name = "enligneCircleButton9";
             enligneCircleButton9.ShadowDecoration.CustomizableEdges = customizableEdges48;
@@ -694,7 +693,7 @@
             activenowlabel1.BackColor = Color.Transparent;
             activenowlabel1.Font = new Font("Franklin Gothic Demi", 6F, FontStyle.Regular, GraphicsUnit.Point);
             activenowlabel1.ForeColor = Color.FromArgb(0, 192, 192);
-            activenowlabel1.Location = new Point(355, 29);
+            activenowlabel1.Location = new Point(365, 29);
             activenowlabel1.Name = "activenowlabel1";
             activenowlabel1.Size = new Size(44, 11);
             activenowlabel1.TabIndex = 23;
@@ -708,9 +707,9 @@
             label30.ForeColor = Color.Silver;
             label30.Location = new Point(353, 11);
             label30.Name = "label30";
-            label30.Size = new Size(56, 16);
+            label30.Size = new Size(47, 16);
             label30.TabIndex = 22;
-            label30.Text = "Jane Lopez";
+            label30.Text = "MO KADI";
             // 
             // guna2CirclePictureBox14
             // 
@@ -894,6 +893,7 @@
             MessageTextBox.Size = new Size(386, 36);
             MessageTextBox.TabIndex = 1;
             MessageTextBox.TextOffset = new Point(8, 0);
+            MessageTextBox.KeyDown += MessageTextBox_KeyDown;
             // 
             // guna2CircleButton3
             // 
@@ -916,10 +916,8 @@
             // 
             // Messages_flowLayoutPanel2
             // 
-            Messages_flowLayoutPanel2.AccessibleRole = AccessibleRole.ScrollBar;
+            Messages_flowLayoutPanel2.AccessibleRole = AccessibleRole.MenuBar;
             Messages_flowLayoutPanel2.AutoScroll = true;
-            Messages_flowLayoutPanel2.AutoScrollMinSize = new Size(0, 3000);
-            Messages_flowLayoutPanel2.AutoSize = true;
             Messages_flowLayoutPanel2.Dock = DockStyle.Fill;
             Messages_flowLayoutPanel2.FlowDirection = FlowDirection.BottomUp;
             Messages_flowLayoutPanel2.Location = new Point(347, 54);
@@ -927,6 +925,7 @@
             Messages_flowLayoutPanel2.Padding = new Padding(10, 0, 10, 0);
             Messages_flowLayoutPanel2.Size = new Size(555, 550);
             Messages_flowLayoutPanel2.TabIndex = 37;
+            Messages_flowLayoutPanel2.Paint += Messages_flowLayoutPanel2_Paint;
             // 
             // Form1
             // 
@@ -971,7 +970,6 @@
             guna2Panel4.ResumeLayout(false);
             guna2Panel3.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -1009,7 +1007,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox10;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private FlowLayoutPanel flowLayoutPanel1;
+        public FlowLayoutPanel flowLayoutPanel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;

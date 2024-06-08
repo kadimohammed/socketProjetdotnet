@@ -49,9 +49,10 @@
             DateTime_label.BackColor = Color.Transparent;
             DateTime_label.Font = new Font("Franklin Gothic Medium Cond", 7.2F, FontStyle.Regular, GraphicsUnit.Point);
             DateTime_label.ForeColor = Color.Silver;
-            DateTime_label.Location = new Point(251, 81);
+            DateTime_label.Location = new Point(184, 81);
+            DateTime_label.MinimumSize = new Size(150, 0);
             DateTime_label.Name = "DateTime_label";
-            DateTime_label.Size = new Size(85, 14);
+            DateTime_label.Size = new Size(150, 14);
             DateTime_label.TabIndex = 28;
             DateTime_label.Text = "12:45 PM ....................";
             DateTime_label.TextAlign = ContentAlignment.MiddleRight;
@@ -117,7 +118,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(26, 32, 47);
+            BackColor = Color.FromArgb(128, 255, 255);
             Controls.Add(DateTime_label);
             Controls.Add(Image_guna2CirclePictureBox7);
             Controls.Add(BackMessage_guna2GradientPanel6);

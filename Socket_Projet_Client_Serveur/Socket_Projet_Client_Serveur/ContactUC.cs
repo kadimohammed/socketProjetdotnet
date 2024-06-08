@@ -33,7 +33,17 @@ namespace Socket_Projet_Client
         public string Message
         {
             get => lbl_msg.Text;
-            set => lbl_msg.Text = value;
+            set
+            {
+                if (value.Length > 10)
+                {
+                    lbl_msg.Text = value.Substring(0, 10) + " ...";
+                }
+                else
+                {
+                    lbl_msg.Text = value;
+                }
+            }
         }
 
         public string DateConnection
@@ -90,8 +100,8 @@ namespace Socket_Projet_Client
 
         public void ContactUC_Click(object sender, EventArgs e)
         {
-
-
+            Login.f1.Messages_flowLayoutPanel2.HorizontalScroll.Enabled = false;
+            Login.f1.Messages_flowLayoutPanel2.AutoScrollMinSize = new Size(0,0);
 
 
             this.cacherNotification();
@@ -185,7 +195,7 @@ namespace Socket_Projet_Client
             }
 
 
-
+            // verifier est ce que l'utilisateur en ligne
             try
             {
                 Login.f1.enligneCircleButton9.Visible = false;

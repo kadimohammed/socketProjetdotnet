@@ -49,7 +49,7 @@
             Image_guna2CirclePictureBox10.Image = (Image)resources.GetObject("Image_guna2CirclePictureBox10.Image");
             Image_guna2CirclePictureBox10.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Horizontal;
             Image_guna2CirclePictureBox10.ImageRotate = 0F;
-            Image_guna2CirclePictureBox10.Location = new Point(295, 4);
+            Image_guna2CirclePictureBox10.Location = new Point(472, 4);
             Image_guna2CirclePictureBox10.Margin = new Padding(3, 2, 3, 2);
             Image_guna2CirclePictureBox10.Name = "Image_guna2CirclePictureBox10";
             Image_guna2CirclePictureBox10.ShadowDecoration.Color = Color.Fuchsia;
@@ -66,7 +66,7 @@
             DateTimelabel.BackColor = Color.Transparent;
             DateTimelabel.Font = new Font("Franklin Gothic Medium Cond", 7.2F, FontStyle.Regular, GraphicsUnit.Point);
             DateTimelabel.ForeColor = Color.Silver;
-            DateTimelabel.Location = new Point(23, 82);
+            DateTimelabel.Location = new Point(200, 82);
             DateTimelabel.Name = "DateTimelabel";
             DateTimelabel.Size = new Size(43, 14);
             DateTimelabel.TabIndex = 29;
@@ -80,7 +80,7 @@
             BackMessage_guna2GradientPanel7.CustomizableEdges = customizableEdges4;
             BackMessage_guna2GradientPanel7.FillColor = Color.FromArgb(250, 48, 90);
             BackMessage_guna2GradientPanel7.FillColor2 = Color.FromArgb(128, 36, 206);
-            BackMessage_guna2GradientPanel7.Location = new Point(11, 16);
+            BackMessage_guna2GradientPanel7.Location = new Point(188, 16);
             BackMessage_guna2GradientPanel7.Margin = new Padding(3, 2, 3, 2);
             BackMessage_guna2GradientPanel7.Name = "BackMessage_guna2GradientPanel7";
             BackMessage_guna2GradientPanel7.ShadowDecoration.CustomizableEdges = customizableEdges5;
@@ -116,12 +116,12 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(26, 32, 47);
+            BackColor = Color.FromArgb(255, 128, 128);
             Controls.Add(Image_guna2CirclePictureBox10);
             Controls.Add(DateTimelabel);
             Controls.Add(BackMessage_guna2GradientPanel7);
             Name = "MessageSenderUC";
-            Size = new Size(338, 103);
+            Size = new Size(510, 103);
             ((System.ComponentModel.ISupportInitialize)Image_guna2CirclePictureBox10).EndInit();
             BackMessage_guna2GradientPanel7.ResumeLayout(false);
             BackMessage_guna2GradientPanel7.PerformLayout();

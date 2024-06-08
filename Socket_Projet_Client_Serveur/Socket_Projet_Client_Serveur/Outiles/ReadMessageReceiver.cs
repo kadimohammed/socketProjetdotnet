@@ -3,6 +3,7 @@ using Socket_Projet_Server.Classes;
 using SocketsProject;
 using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Windows.Forms;
 using Message = Socket_Projet_Server.Models.Message;
 
 namespace Socket_Projet_Client.Outiles
@@ -12,7 +13,6 @@ namespace Socket_Projet_Client.Outiles
         private static object receivedObject;
         public static void ReceiveMessages()
         {
-            
             try
             {
                 string message;
@@ -34,6 +34,21 @@ namespace Socket_Projet_Client.Outiles
                             if (request.loginCl != null && request.loginCl.Id != -1)
                             {
                                 Login.user = request.loginCl;
+
+
+                                ///////
+                                Form1.contactList = new List<ContactUC>();
+                                Login.f1.loadcontact();
+                               
+                                Login.f1.Invoke((MethodInvoker)delegate {
+                                    Login.f1.flowLayoutPanel1.Controls.Clear();
+                                    foreach (ContactUC c in Form1.contactList)
+                                    {
+                                        Login.f1.flowLayoutPanel1.Controls.Add(c);
+                                    }
+                                });
+                                ////////
+
                             }
 
                             if (request.Messsage != "")
@@ -85,12 +100,12 @@ namespace Socket_Projet_Client.Outiles
                         case MessageRecuCL request:
                             if (Form1.contact_selected.Id == request.SenderId)
                             {
-                                MessageReceverUC msgRecever = new MessageReceverUC();
-                                msgRecever.Message = request.Content;
-                                msgRecever.DateTimeMessage = DateTime.Now.ToString("HH:mm");
-                                msgRecever.Dock = DockStyle.Left;
-                                msgRecever.Image_user = Form1.contact_selected.Image;
                                 Login.f1.Invoke((MethodInvoker)delegate {
+                                    MessageReceverUC msgRecever = new MessageReceverUC();
+                                    msgRecever.Message = request.Content;
+                                    msgRecever.DateTimeMessage = DateTime.Now.ToString("HH:mm");
+                                    msgRecever.Dock = DockStyle.Left;
+                                    msgRecever.Image_user = Form1.contact_selected.Image;
                                     Login.f1.Messages_flowLayoutPanel2.Controls.Add(msgRecever);
                                     Login.f1.Messages_flowLayoutPanel2.Controls.SetChildIndex(msgRecever, 0);
                                 });
@@ -149,7 +164,6 @@ namespace Socket_Projet_Client.Outiles
                         default:
                             Console.WriteLine("Type de requête non pris en charge.");
                             break;
-
                     }
                 }
             }

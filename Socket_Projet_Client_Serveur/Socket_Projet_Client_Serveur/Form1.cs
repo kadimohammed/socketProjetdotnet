@@ -47,10 +47,12 @@ namespace SocketsProject
             });
 
 
+            // Obtenir la valeur maximale de défilement vertical
+            int maxValue = Messages_flowLayoutPanel2.VerticalScroll.Maximum - Messages_flowLayoutPanel2.VerticalScroll.LargeChange;
 
+            // Définir la position de défilement au maximum
+            Messages_flowLayoutPanel2.VerticalScroll.Value = maxValue;
 
-
-            Messages_flowLayoutPanel2.VerticalScroll.Value = 2500;
 
 
             flowLayoutPanel1.Controls.Clear();
@@ -111,52 +113,7 @@ namespace SocketsProject
 
         private void SendMesgCircleButton_Click(object sender, EventArgs e)
         {
-            string message = MessageTextBox.Text;
-            if (!string.IsNullOrEmpty(message))
-            {
-                MessageSenderUC msgSender = new MessageSenderUC();
-                msgSender.Message = message;
-                msgSender.DateTimeMessage = DateTime.Now.ToString("HH:mm");
-                msgSender.Dock = DockStyle.Right;
-                msgSender.Image_user = MyUtility.GetImageFromByte(Login.user.Photo);
-                Login.f1.Messages_flowLayoutPanel2.Controls.Add(msgSender);
-                Login.f1.Messages_flowLayoutPanel2.Controls.SetChildIndex(msgSender, 0);
-                MessageTextBox.Text = "";
-                //Login.f1.Messages_flowLayoutPanel2.ScrollControlIntoView(msgSender);
-
-                contact_selected.Message = message;
-
-
-                try
-                {
-
-                    Message m = new Message();
-                    m.Content = message;
-                    m.ReceiverId = ContactUC.Receiver;
-                    m.SenderId = Login.user.Id;
-                    Login.user.MessagesSent.Add(m);
-
-
-
-                    Socket clientSocket = SocketSingleton.GetInstance();
-                    SocketSingleton.Connect(clientSocket);
-
-                    MessageEnvoyerCL messageReceverUC = new MessageEnvoyerCL();
-                    messageReceverUC.Content = message;
-                    messageReceverUC.ReceiverId = ContactUC.Receiver;
-                    messageReceverUC.SenderId = Login.user.Id;
-                    messageReceverUC.SendDate = DateTime.Now;
-                    NetworkStream networkStream = new NetworkStream(clientSocket);
-                    BinaryFormatter formatter = new BinaryFormatter();
-
-                    formatter.Serialize(networkStream, messageReceverUC);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Une ereur s'est produite. Veuillez réessayer.", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-            }
+            this.envoyerMessage();
         }
 
 
@@ -174,8 +131,23 @@ namespace SocketsProject
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                DeconnexionCL deconnexion = new DeconnexionCL();
+                deconnexion.IdUser = Login.user.Id;
+                deconnexion.etat = false;
+                Socket clientSocket = SocketSingleton.GetInstance();
+                SocketSingleton.Connect(clientSocket);
 
+                NetworkStream networkStream = new NetworkStream(clientSocket);
+                BinaryFormatter formatter = new BinaryFormatter();
 
+                formatter.Serialize(networkStream, deconnexion);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Une ereur s'est produite. Veuillez réessayer.", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void UserPicture_MouseEnter(object sender, EventArgs e)
@@ -215,7 +187,7 @@ namespace SocketsProject
                     contactUC.Name = contact.ContactUser.FullName;
                     contactUC.Notification = 0;
 
-                    if (contact.ContactUser.FullName.Contains(TextRecherche))
+                    if (contact.ContactUser.FullName.IndexOf(TextRecherche, StringComparison.OrdinalIgnoreCase) >= 0)
                     {
                         if (user != null && contact != null && contact.ContactUser != null &&
                             user.MessagesSent != null && contact.ContactUser.MessagesReceived != null &&
@@ -267,29 +239,57 @@ namespace SocketsProject
                 {
                     contactUC = new ContactUC();
 
-                    if (user != null && contact != null && contact.ContactUser != null &&
-                        user.MessagesSent != null && contact.ContactUser.MessagesReceived != null &&
-                        contact.ContactUser.MessagesSent != null && user.MessagesReceived != null)
+                    if (contact != null && contact.ContactUser != null)
                     {
-                        var allMessages = user.MessagesSent
-                            .Concat(contact.ContactUser.MessagesReceived)
-                            .Concat(contact.ContactUser.MessagesSent)
-                            .Concat(user.MessagesReceived);
+                        IEnumerable<Message> allMessages = Enumerable.Empty<Message>();
 
-                        var lastMessage = allMessages
-                            .Where(m => (m.SenderId == user.Id && m.ReceiverId == contact.ContactUser.Id) ||
-                                        (m.SenderId == contact.ContactUser.Id && m.ReceiverId == user.Id))
-                            .OrderByDescending(m => m.SendDate)
-                            .FirstOrDefault();
+                        if (user.MessagesSent != null)
+                        {
+                            allMessages = allMessages.Concat(user.MessagesSent);
+                        }
 
-                        contactUC.Id = contact.ContactUser.Id;
-                        contactUC.Name = contact.ContactUser.FullName;
-                        contactUC.Notification = 0;
-                        contactUC.Message = lastMessage?.Content ?? "";
-                        contactUC.DateConnection = lastMessage?.SendDate.ToShortDateString() ?? "";
-                        byte[] photoBytes = contact.ContactUser.Photo;
-                        contactUC.Image = MyUtility.GetImageFromByte(photoBytes);
+                        if (contact.ContactUser.MessagesReceived != null)
+                        {
+                            allMessages = allMessages.Concat(contact.ContactUser.MessagesReceived);
+                        }
 
+                        if (contact.ContactUser.MessagesSent != null)
+                        {
+                            allMessages = allMessages.Concat(contact.ContactUser.MessagesSent);
+                        }
+
+                        if (user.MessagesReceived != null)
+                        {
+                            allMessages = allMessages.Concat(user.MessagesReceived);
+                        }
+
+                        if (allMessages.Any())
+                        {
+
+                            var lastMessage = allMessages
+                                .Where(m => (m.SenderId == user.Id && m.ReceiverId == contact.ContactUser.Id) ||
+                                            (m.SenderId == contact.ContactUser.Id && m.ReceiverId == user.Id))
+                                .OrderByDescending(m => m.SendDate)
+                                .FirstOrDefault();
+
+                            contactUC.Id = contact.ContactUser.Id;
+                            contactUC.Name = contact.ContactUser.FullName;
+                            contactUC.Notification = 0;
+                            contactUC.Message = lastMessage?.Content ?? "";
+                            contactUC.DateConnection = lastMessage?.SendDate.ToShortDateString() ?? "";
+                            byte[] photoBytes = contact.ContactUser.Photo;
+                            contactUC.Image = MyUtility.GetImageFromByte(photoBytes);
+                        }
+                        else
+                        {
+                            contactUC.Id = contact.ContactUser.Id;
+                            contactUC.Name = contact.ContactUser.FullName;
+                            contactUC.Notification = 0;
+                            contactUC.Message = "";
+                            contactUC.DateConnection = "";
+                            byte[] photoBytes = contact.ContactUser.Photo;
+                            contactUC.Image = MyUtility.GetImageFromByte(photoBytes);
+                        }
 
                         contactList.Add(contactUC);
                     }
@@ -378,6 +378,80 @@ namespace SocketsProject
                 formChild.Show();
                 OpenFormInfo = true;
             }
+        }
+
+        private void MessageTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                this.envoyerMessage();
+            }
+        }
+
+
+
+
+
+
+        private void envoyerMessage()
+        {
+            string message = MessageTextBox.Text;
+            if (!string.IsNullOrEmpty(message))
+            {
+                MessageSenderUC msgSender = new MessageSenderUC();
+                msgSender.Message = message;
+                msgSender.DateTimeMessage = DateTime.Now.ToString("HH:mm");
+                msgSender.Dock = DockStyle.Right;
+                msgSender.Image_user = MyUtility.GetImageFromByte(Login.user.Photo);
+                Login.f1.Messages_flowLayoutPanel2.Controls.Add(msgSender);
+                Login.f1.Messages_flowLayoutPanel2.Controls.SetChildIndex(msgSender, 0);
+                MessageTextBox.Text = "";
+                //Login.f1.Messages_flowLayoutPanel2.ScrollControlIntoView(msgSender);
+
+                contact_selected.Message = message;
+
+
+                try
+                {
+
+                    Message m = new Message();
+                    m.Content = message;
+                    m.ReceiverId = ContactUC.Receiver;
+                    m.SenderId = Login.user.Id;
+                    Login.user.MessagesSent.Add(m);
+
+
+
+                    Socket clientSocket = SocketSingleton.GetInstance();
+                    SocketSingleton.Connect(clientSocket);
+
+                    MessageEnvoyerCL messageReceverUC = new MessageEnvoyerCL();
+                    messageReceverUC.Content = message;
+                    messageReceverUC.ReceiverId = ContactUC.Receiver;
+                    messageReceverUC.SenderId = Login.user.Id;
+                    messageReceverUC.SendDate = DateTime.Now;
+                    NetworkStream networkStream = new NetworkStream(clientSocket);
+                    BinaryFormatter formatter = new BinaryFormatter();
+
+                    formatter.Serialize(networkStream, messageReceverUC);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Une ereur s'est produite. Veuillez réessayer.", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
+
+        private void UserPicture_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Messages_flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
     }
 }

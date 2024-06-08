@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using SocketsProject;
 using System.Text;
 
 namespace Socket_Projet_Client
@@ -100,9 +101,9 @@ namespace Socket_Projet_Client
 
                 }
 
-                this.Height = BackMessage_guna2GradientPanel6.Height + 40;
-                int newYPositionHight = BackMessage_guna2GradientPanel6.Top + BackMessage_guna2GradientPanel6.Height + 5;
-                int newYPositionwidth = BackMessage_guna2GradientPanel6.Width - 60;
+                this.Height = BackMessage_guna2GradientPanel6.Height + 55;
+                int newYPositionHight = BackMessage_guna2GradientPanel6.Top + BackMessage_guna2GradientPanel6.Height + 2;
+                int newYPositionwidth = BackMessage_guna2GradientPanel6.Width - 130;
                 DateTime_label.Top = newYPositionHight;
                 DateTime_label.Left = newYPositionwidth;
 
@@ -110,6 +111,31 @@ namespace Socket_Projet_Client
                 int labelX = (BackMessage_guna2GradientPanel6.Width - Message_label.Width) / 2;
                 int labelY = (BackMessage_guna2GradientPanel6.Height - Message_label.Height) / 2;
                 Message_label.Location = new Point(labelX, labelY);
+
+
+
+                // Calculer la hauteur totale des composants dans le FlowLayoutPanel
+                int totalHeight1 = 0;
+                foreach (Control control in Login.f1.Messages_flowLayoutPanel2.Controls)
+                {
+                    totalHeight1 += control.Height + control.Margin.Vertical; // Ajouter la marge verticale
+                }
+
+                // Ajouter un espace supplémentaire pour compenser tout remplissage ou marge
+                totalHeight1 += Login.f1.Messages_flowLayoutPanel2.Padding.Vertical;
+
+                // Vérifier si la hauteur totale des composants dépasse la hauteur maximale du FlowLayoutPanel
+                if (totalHeight1 +140 >= Login.f1.Messages_flowLayoutPanel2.ClientSize.Height)
+                {
+                    // Ajouter la taille de l'élément actuel à la taille de défilement automatique
+                    Login.f1.Messages_flowLayoutPanel2.AutoScrollMinSize = new Size(0, totalHeight1 +140 );
+
+                    // Définir le défilement vertical à la valeur maximale
+                    Login.f1.Messages_flowLayoutPanel2.VerticalScroll.Value = Login.f1.Messages_flowLayoutPanel2.VerticalScroll.Maximum;
+
+                }
+
+
             }
         }
 
