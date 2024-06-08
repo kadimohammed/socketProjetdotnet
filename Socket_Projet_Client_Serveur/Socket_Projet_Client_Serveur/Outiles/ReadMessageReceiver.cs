@@ -33,10 +33,8 @@ namespace Socket_Projet_Client.Outiles
 
                             if (request.loginCl != null && request.loginCl.Id != -1)
                             {
-                                Login.user = request.loginCl;
 
-
-                                ///////
+                                /*
                                 Form1.contactList = new List<ContactUC>();
                                 Login.f1.loadcontact();
                                
@@ -47,7 +45,24 @@ namespace Socket_Projet_Client.Outiles
                                         Login.f1.flowLayoutPanel1.Controls.Add(c);
                                     }
                                 });
-                                ////////
+                                */
+
+
+                                // Utiliser Invoke pour accéder à l'interface utilisateur en toute sécurité.
+                                Login.f1.Invoke((MethodInvoker)delegate {
+                                    Login.user = request.loginCl;
+
+                                    // Réinitialiser et recharger la liste des contacts.
+                                    Form1.contactList = new List<ContactUC>();
+                                    Login.f1.loadcontact();
+
+                                    // Effacer et ajouter les contacts dans flowLayoutPanel1.
+                                    Login.f1.flowLayoutPanel1.Controls.Clear();
+                                    foreach (ContactUC c in Form1.contactList)
+                                    {
+                                        Login.f1.flowLayoutPanel1.Controls.Add(c);
+                                    }
+                                });
 
                             }
 
@@ -104,6 +119,8 @@ namespace Socket_Projet_Client.Outiles
                                     MessageReceverUC msgRecever = new MessageReceverUC();
                                     msgRecever.Message = request.Content;
                                     msgRecever.DateTimeMessage = DateTime.Now.ToString("HH:mm");
+                                    Form1.contact_selected.DateConnection = DateTime.Now.ToString("");
+                                    Form1.contact_selected.Message = request.Content;
                                     msgRecever.Dock = DockStyle.Left;
                                     msgRecever.Image_user = Form1.contact_selected.Image;
                                     Login.f1.Messages_flowLayoutPanel2.Controls.Add(msgRecever);

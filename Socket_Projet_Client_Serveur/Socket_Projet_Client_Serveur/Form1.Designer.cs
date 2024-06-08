@@ -367,6 +367,7 @@
             guna2PictureBox7.Name = "guna2PictureBox7";
             guna2PictureBox7.ShadowDecoration.CustomizableEdges = customizableEdges16;
             guna2PictureBox7.Size = new Size(62, 53);
+            guna2PictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox7.TabIndex = 31;
             guna2PictureBox7.TabStop = false;
             // 
@@ -379,6 +380,7 @@
             guna2PictureBox8.Name = "guna2PictureBox8";
             guna2PictureBox8.ShadowDecoration.CustomizableEdges = customizableEdges18;
             guna2PictureBox8.Size = new Size(62, 53);
+            guna2PictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox8.TabIndex = 30;
             guna2PictureBox8.TabStop = false;
             // 
@@ -391,6 +393,7 @@
             guna2PictureBox9.Name = "guna2PictureBox9";
             guna2PictureBox9.ShadowDecoration.CustomizableEdges = customizableEdges20;
             guna2PictureBox9.Size = new Size(62, 53);
+            guna2PictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox9.TabIndex = 29;
             guna2PictureBox9.TabStop = false;
             // 
@@ -403,6 +406,7 @@
             guna2PictureBox4.Name = "guna2PictureBox4";
             guna2PictureBox4.ShadowDecoration.CustomizableEdges = customizableEdges22;
             guna2PictureBox4.Size = new Size(62, 53);
+            guna2PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox4.TabIndex = 28;
             guna2PictureBox4.TabStop = false;
             // 
@@ -415,6 +419,7 @@
             guna2PictureBox5.Name = "guna2PictureBox5";
             guna2PictureBox5.ShadowDecoration.CustomizableEdges = customizableEdges24;
             guna2PictureBox5.Size = new Size(62, 53);
+            guna2PictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox5.TabIndex = 27;
             guna2PictureBox5.TabStop = false;
             // 
@@ -427,6 +432,7 @@
             guna2PictureBox6.Name = "guna2PictureBox6";
             guna2PictureBox6.ShadowDecoration.CustomizableEdges = customizableEdges26;
             guna2PictureBox6.Size = new Size(62, 53);
+            guna2PictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox6.TabIndex = 26;
             guna2PictureBox6.TabStop = false;
             // 
@@ -439,6 +445,7 @@
             guna2PictureBox3.Name = "guna2PictureBox3";
             guna2PictureBox3.ShadowDecoration.CustomizableEdges = customizableEdges28;
             guna2PictureBox3.Size = new Size(62, 53);
+            guna2PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox3.TabIndex = 25;
             guna2PictureBox3.TabStop = false;
             // 
@@ -451,6 +458,7 @@
             guna2PictureBox2.Name = "guna2PictureBox2";
             guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges30;
             guna2PictureBox2.Size = new Size(62, 53);
+            guna2PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox2.TabIndex = 24;
             guna2PictureBox2.TabStop = false;
             // 
@@ -991,15 +999,15 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox7;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox8;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox9;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox6;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox7;
+        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox8;
+        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox9;
+        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
+        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
+        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox6;
+        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton7;
         private System.Windows.Forms.Label label32;
         

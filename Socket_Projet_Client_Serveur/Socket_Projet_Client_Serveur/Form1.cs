@@ -7,6 +7,7 @@ using Socket_Projet_Server.Models;
 using System.Data;
 using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Windows.Forms;
 using Message = Socket_Projet_Server.Models.Message;
 
 namespace SocketsProject
@@ -189,14 +190,30 @@ namespace SocketsProject
 
                     if (contact.ContactUser.FullName.IndexOf(TextRecherche, StringComparison.OrdinalIgnoreCase) >= 0)
                     {
-                        if (user != null && contact != null && contact.ContactUser != null &&
-                            user.MessagesSent != null && contact.ContactUser.MessagesReceived != null &&
-                            contact.ContactUser.MessagesSent != null && user.MessagesReceived != null)
+                        IEnumerable<Message> allMessages = Enumerable.Empty<Message>();
+
+                        if (user.MessagesSent != null)
                         {
-                            var allMessages = user.MessagesSent
-                                .Concat(contact.ContactUser.MessagesReceived)
-                                .Concat(contact.ContactUser.MessagesSent)
-                                .Concat(user.MessagesReceived);
+                            allMessages = allMessages.Concat(user.MessagesSent);
+                        }
+
+                        if (contact.ContactUser.MessagesReceived != null)
+                        {
+                            allMessages = allMessages.Concat(contact.ContactUser.MessagesReceived);
+                        }
+
+                        if (contact.ContactUser.MessagesSent != null)
+                        {
+                            allMessages = allMessages.Concat(contact.ContactUser.MessagesSent);
+                        }
+
+                        if (user.MessagesReceived != null)
+                        {
+                            allMessages = allMessages.Concat(user.MessagesReceived);
+                        }
+
+                        if (allMessages.Any())
+                        {
 
                             var lastMessage = allMessages
                                 .Where(m => (m.SenderId == user.Id && m.ReceiverId == contact.ContactUser.Id) ||
@@ -204,7 +221,9 @@ namespace SocketsProject
                                 .OrderByDescending(m => m.SendDate)
                                 .FirstOrDefault();
 
-
+                            contactUC.Id = contact.ContactUser.Id;
+                            contactUC.Name = contact.ContactUser.FullName;
+                            contactUC.Notification = 0;
                             contactUC.Message = lastMessage?.Content ?? "";
                             contactUC.DateConnection = lastMessage?.SendDate.ToShortDateString() ?? "";
                         }
@@ -276,7 +295,7 @@ namespace SocketsProject
                             contactUC.Name = contact.ContactUser.FullName;
                             contactUC.Notification = 0;
                             contactUC.Message = lastMessage?.Content ?? "";
-                            contactUC.DateConnection = lastMessage?.SendDate.ToShortDateString() ?? "";
+                            contactUC.DateConnection = lastMessage?.SendDate.ToString("yyyy-MM-dd HH:mm:ss") ?? "";
                             byte[] photoBytes = contact.ContactUser.Photo;
                             contactUC.Image = MyUtility.GetImageFromByte(photoBytes);
                         }

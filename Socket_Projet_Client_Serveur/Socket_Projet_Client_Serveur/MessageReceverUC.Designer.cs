@@ -118,7 +118,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(128, 255, 255);
+            BackColor = Color.FromArgb(26, 32, 47);
             Controls.Add(DateTime_label);
             Controls.Add(Image_guna2CirclePictureBox7);
             Controls.Add(BackMessage_guna2GradientPanel6);

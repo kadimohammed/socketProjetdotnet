@@ -1,4 +1,5 @@
 ﻿
+using Guna.UI2.WinForms;
 using Socket_Projet_Client.Outiles;
 using Socket_Projet_Client.Sockets;
 using Socket_Projet_Server.Classes;
@@ -6,6 +7,7 @@ using Socket_Projet_Server.Models;
 using SocketsProject;
 using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Windows.Forms;
 
 
 
@@ -49,7 +51,30 @@ namespace Socket_Projet_Client
         public string DateConnection
         {
             get => lbl_dateconnect.Text;
-            set => lbl_dateconnect.Text = value;
+            set
+            {
+                DateTime dateValue;
+                if (DateTime.TryParse(value, out dateValue))
+                {
+                    if (dateValue.Date == DateTime.Now.Date)
+                    {
+                        lbl_dateconnect.Text = dateValue.ToString("HH:mm");
+                    }
+                    else if (dateValue.Date.AddDays(1) == DateTime.Now.Date)
+                    {
+                        lbl_dateconnect.Text = "Hier, " + dateValue.ToString("HH:mm");
+                    }
+                    else
+                    {
+                        lbl_dateconnect.Text = dateValue.ToString("dd/MM/yyyy HH:mm");
+                    }
+                }
+                else
+                {
+                    lbl_dateconnect.Text = "";
+                }
+            }
+
         }
 
         public Image Image
@@ -100,6 +125,9 @@ namespace Socket_Projet_Client
 
         public void ContactUC_Click(object sender, EventArgs e)
         {
+            ClearImageBoxes();
+
+
             Login.f1.Messages_flowLayoutPanel2.HorizontalScroll.Enabled = false;
             Login.f1.Messages_flowLayoutPanel2.AutoScrollMinSize = new Size(0,0);
 
@@ -145,9 +173,10 @@ namespace Socket_Projet_Client
 
             MessageSenderUC msgSender;
             MessageReceverUC msgReceiver;
+            int cmpteur_afficher_9_image = 1;
             foreach (var message in allMessages)
             {
-                if (message.SenderId == user.Id && message.ReceiverId == Id)
+                if (message.SenderId == user.Id && message.ReceiverId == Id && message.Content != "imagecontent")
                 {
                     msgSender = new MessageSenderUC();
                     msgSender.Message = message.Content;
@@ -170,7 +199,7 @@ namespace Socket_Projet_Client
 
                     Login.f1.Messages_flowLayoutPanel2.Controls.Add(msgSender);
                 }
-                else if (message.SenderId == Id && message.ReceiverId == user.Id)
+                else if (message.SenderId == Id && message.ReceiverId == user.Id && message.Content != "imagecontent")
                 {
                     msgReceiver = new MessageReceverUC();
                     msgReceiver.Message = message.Content;
@@ -192,6 +221,16 @@ namespace Socket_Projet_Client
 
                     Login.f1.Messages_flowLayoutPanel2.Controls.Add(msgReceiver);
                 }
+                else if (message.Image != null)
+                {
+                    if (((message.SenderId == user.Id && message.ReceiverId == Id) || (message.SenderId == Id && message.ReceiverId == user.Id)) && message.Content == "imagecontent")
+                    {
+                        byte[] photoBytes = message.Image;
+                        SetPictureBoxImage(cmpteur_afficher_9_image, photoBytes);
+                        cmpteur_afficher_9_image++;
+                    }
+                }
+                
             }
 
 
@@ -220,5 +259,68 @@ namespace Socket_Projet_Client
 
 
         }
+
+
+
+        private void SetPictureBoxImage(int pictureBoxNumber, byte[] photoBytes)
+        {
+            switch (pictureBoxNumber)
+            {
+                case 1:
+                    Login.f1.guna2PictureBox1.Image = MyUtility.GetImageFromByte(photoBytes);
+                    break;
+                case 2:
+                    Login.f1.guna2PictureBox2.Image = MyUtility.GetImageFromByte(photoBytes);
+                    break;
+                case 3:
+                    Login.f1.guna2PictureBox3.Image = MyUtility.GetImageFromByte(photoBytes);
+                    break;
+                case 4:
+                    Login.f1.guna2PictureBox4.Image = MyUtility.GetImageFromByte(photoBytes);
+                    break;
+                case 5:
+                    Login.f1.guna2PictureBox5.Image = MyUtility.GetImageFromByte(photoBytes);
+                    break;
+                case 6:
+                    Login.f1.guna2PictureBox6.Image = MyUtility.GetImageFromByte(photoBytes);
+                    break;
+                case 7:
+                    Login.f1.guna2PictureBox7.Image = MyUtility.GetImageFromByte(photoBytes);
+                    break;
+                case 8:
+                    Login.f1.guna2PictureBox8.Image = MyUtility.GetImageFromByte(photoBytes);
+                    break;
+                case 9:
+                    Login.f1.guna2PictureBox9.Image = MyUtility.GetImageFromByte(photoBytes);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+
+
+
+        // Définissez une méthode pour réinitialiser le contenu de tous les PictureBox
+        public void ClearImageBoxes()
+        {
+            // Réinitialiser le contenu de chaque PictureBox individuellement
+            Login.f1.guna2PictureBox1.Image = new Bitmap(1, 1); // Réinitialiser avec une image vide
+            Login.f1.guna2PictureBox2.Image = new Bitmap(1, 1); // Réinitialiser avec une image vide
+            Login.f1.guna2PictureBox3.Image = new Bitmap(1, 1); // Réinitialiser avec une image vide
+            Login.f1.guna2PictureBox4.Image = new Bitmap(1, 1); // Réinitialiser avec une image vide
+            Login.f1.guna2PictureBox5.Image = new Bitmap(1, 1); // Réinitialiser avec une image vide
+            Login.f1.guna2PictureBox6.Image = new Bitmap(1, 1); // Réinitialiser avec une image vide
+            Login.f1.guna2PictureBox7.Image = new Bitmap(1, 1); // Réinitialiser avec une image vide
+            Login.f1.guna2PictureBox8.Image = new Bitmap(1, 1); // Réinitialiser avec une image vide
+            Login.f1.guna2PictureBox9.Image = new Bitmap(1, 1); // Réinitialiser avec une image vide
+        }
+
+
+
+
+
+
+
     }
 }

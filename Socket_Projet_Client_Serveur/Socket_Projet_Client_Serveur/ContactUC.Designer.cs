@@ -65,11 +65,13 @@
             lbl_dateconnect.BackColor = Color.Transparent;
             lbl_dateconnect.Font = new Font("Franklin Gothic Medium Cond", 7.2F, FontStyle.Regular, GraphicsUnit.Point);
             lbl_dateconnect.ForeColor = Color.Silver;
-            lbl_dateconnect.Location = new Point(189, 8);
+            lbl_dateconnect.Location = new Point(151, 8);
+            lbl_dateconnect.MinimumSize = new Size(100, 0);
             lbl_dateconnect.Name = "lbl_dateconnect";
-            lbl_dateconnect.Size = new Size(57, 14);
+            lbl_dateconnect.Size = new Size(100, 14);
             lbl_dateconnect.TabIndex = 21;
-            lbl_dateconnect.Text = "16/02/2024";
+            lbl_dateconnect.Text = "16/02/2024 00:00";
+            lbl_dateconnect.TextAlign = ContentAlignment.MiddleRight;
             // 
             // lbl_msg
             // 
