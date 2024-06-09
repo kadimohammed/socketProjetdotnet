@@ -933,7 +933,6 @@
             Messages_flowLayoutPanel2.Padding = new Padding(10, 0, 10, 0);
             Messages_flowLayoutPanel2.Size = new Size(555, 550);
             Messages_flowLayoutPanel2.TabIndex = 37;
-            Messages_flowLayoutPanel2.Paint += Messages_flowLayoutPanel2_Paint;
             // 
             // Form1
             // 

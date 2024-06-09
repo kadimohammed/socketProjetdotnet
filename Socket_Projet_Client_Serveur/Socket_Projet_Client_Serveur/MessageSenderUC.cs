@@ -49,7 +49,6 @@ namespace Socket_Projet_Client
 
                 if (numberOfLines <= 1)
                 {
-                    
                     int messageWidth = messageLength * characterWidth;
                     if (messageLength == 1)
                     {
@@ -64,7 +63,7 @@ namespace Socket_Projet_Client
                     Messagelabel.Text = value;
                     BackMessage_guna2GradientPanel7.Left = this.Width - BackMessage_guna2GradientPanel7.Width -16;
 
-                    guna2Panel7.Location = new Point(Messagelabel.Location.X + messageWidth - 62, guna2Panel7.Location.Y);
+                    guna2Panel7.Location = new Point(Messagelabel.Location.X + messageWidth - 57, guna2Panel7.Location.Y);
 
                 }
                 else

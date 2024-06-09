@@ -113,7 +113,6 @@ namespace SocketsProject
                 // Création du BinaryFormatter
                 BinaryFormatter formatter = new BinaryFormatter();
 
-
                 // Envoi de l'utilisateur au serveur
                 formatter.Serialize(networkStream, utilisateurToSend);
             }

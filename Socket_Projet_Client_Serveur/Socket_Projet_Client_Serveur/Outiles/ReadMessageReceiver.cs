@@ -34,20 +34,6 @@ namespace Socket_Projet_Client.Outiles
                             if (request.loginCl != null && request.loginCl.Id != -1)
                             {
 
-                                /*
-                                Form1.contactList = new List<ContactUC>();
-                                Login.f1.loadcontact();
-                               
-                                Login.f1.Invoke((MethodInvoker)delegate {
-                                    Login.f1.flowLayoutPanel1.Controls.Clear();
-                                    foreach (ContactUC c in Form1.contactList)
-                                    {
-                                        Login.f1.flowLayoutPanel1.Controls.Add(c);
-                                    }
-                                });
-                                */
-
-
                                 // Utiliser Invoke pour accéder à l'interface utilisateur en toute sécurité.
                                 Login.f1.Invoke((MethodInvoker)delegate {
                                     Login.user = request.loginCl;
@@ -129,15 +115,20 @@ namespace Socket_Projet_Client.Outiles
                             }
                             else
                             {
-                                foreach(var contact in Form1.contactList)
+                                
+                                foreach (var contact in Form1.contactList)
                                 {
                                     if (contact.Id == request.SenderId)
                                     {
+                                        Login.f1.Invoke((MethodInvoker)delegate {
+                                            contact.Message = request.Content;
+                                        });
                                         Login.f1.Invoke(new Action(() =>
                                         {
                                             contact.AfficherNotification();
                                             contact.Notification = contact.Notification + 1;
                                         }));
+                                        break;
                                         
                                     }
                                 }

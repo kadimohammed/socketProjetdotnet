@@ -16,12 +16,9 @@ namespace Socket_Projet_Server
 
         public ThreadClient(Socket socket)
         {
-            lock (typeof(ThreadClient))
-            {
-                clientSocket = socket;
-                networkStream = new NetworkStream(clientSocket);
-                formatter = new BinaryFormatter();
-            }
+            clientSocket = socket;
+            networkStream = new NetworkStream(clientSocket);
+            formatter = new BinaryFormatter();
         }
 
         public void Run()

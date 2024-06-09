@@ -72,12 +72,12 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = Color.FromArgb(17, 22, 32);
-            label2.Font = new Font("Magneto", 48F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Magneto", 60F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(224, 224, 224);
-            label2.Location = new Point(207, 101);
+            label2.Location = new Point(218, 186);
             label2.Name = "label2";
-            label2.Size = new Size(276, 78);
+            label2.Size = new Size(346, 97);
             label2.TabIndex = 0;
             label2.Text = "Wonam";
             // 
@@ -99,6 +99,7 @@
             guna2Button1.TabIndex = 3;
             guna2Button1.Text = "Commencer";
             guna2Button1.Click += guna2Button1_Click;
+            guna2Button1.DoubleClick += guna2Button1_DoubleClick;
             // 
             // label1
             // 

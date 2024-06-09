@@ -377,9 +377,6 @@ namespace SocketsProject
             {
                 formChild = new UsersInfos();
                 formChild.Owner = this;
-                // Obtenir les dimensions du formulaire parent
-                int parentWidth = this.Width;
-                int parentHeight = this.Height;
 
                 // Obtenir les dimensions de la fenêtre enfant
                 int childWidth = formChild.Width;
@@ -463,14 +460,6 @@ namespace SocketsProject
             }
         }
 
-        private void UserPicture_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void Messages_flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
     }
 }

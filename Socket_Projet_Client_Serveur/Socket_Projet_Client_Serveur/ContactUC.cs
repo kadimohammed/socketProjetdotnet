@@ -136,6 +136,7 @@ namespace Socket_Projet_Client
             this.Notification = 0;
             Form1.contact_selected = this;
             Receiver = Id;
+
             foreach (ContactUC uc in Form1.contactList)
             {
                 uc.BackColor = Color.FromArgb(26, 32, 47);
@@ -150,6 +151,10 @@ namespace Socket_Projet_Client
             Login.f1.label30.Text = Name;
             Login.f1.guna2CirclePictureBox13.Image = Image;
             Login.f1.guna2CirclePictureBox14.Image = Image;
+            Login.f1.guna2CirclePictureBox13.Refresh();
+            Login.f1.guna2CirclePictureBox14.Refresh();
+
+
 
 
 
@@ -234,7 +239,14 @@ namespace Socket_Projet_Client
             }
 
 
-            // verifier est ce que l'utilisateur en ligne
+
+
+
+
+
+
+
+
             try
             {
                 Login.f1.enligneCircleButton9.Visible = false;
@@ -255,6 +267,48 @@ namespace Socket_Projet_Client
             {
                 MessageBox.Show("Une ereur s'est produite. Veuillez réessayer.", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
+
+
+            /*
+            Thread thread11 = new Thread(() =>
+            {
+                try
+                {
+                    Login.f1.Invoke((Action)(() =>
+                    {
+                        Login.f1.enligneCircleButton9.Visible = false;
+                        Login.f1.activenowlabel1.Visible = false;
+                        Login.f1.activenowlabel2.Visible = false;
+                    }));
+
+                    Socket clientSocket = SocketSingleton.GetInstance();
+                    SocketSingleton.Connect(clientSocket);
+
+                    EnLigneCL enligne = new EnLigneCL();
+                    enligne.UtilisateurId = Id;
+
+                    NetworkStream networkStream = new NetworkStream(clientSocket);
+                    BinaryFormatter formatter = new BinaryFormatter();
+
+                    formatter.Serialize(networkStream, enligne);
+                }
+                catch (Exception ex)
+                {
+                    // Utilisez Invoke pour mettre à jour l'interface utilisateur à partir d'un thread de fond
+                    Login.f1.Invoke((Action)(() =>
+                    {
+                        MessageBox.Show("Une erreur s'est produite. Veuillez réessayer.", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }));
+                }
+            });
+
+            thread11.Start();
+            */
+
+
+
+
 
 
 

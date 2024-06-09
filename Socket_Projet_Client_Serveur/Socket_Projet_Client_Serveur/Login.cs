@@ -26,11 +26,11 @@ namespace SocketsProject
 
         private async void guna2Button1_Click(object sender, EventArgs e)
         {
+
             //bool c = UsersRepository.InsererUtilisateurAvecImage("5", "pitos", "5", "C:\\Users\\MO KADI\\Desktop\\Nouveau dossier\\korg.jpg", "dddd");
             //bool a = UsersRepository.InsererUtilisateurAvecImage("6", "pitos","6", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\p2.jpg", "aaaaaa");
             //bool b = UsersRepository.InsererUtilisateurAvecImage("3", "camavinga", "3", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\p3.jpg", "bbbbbbb");
             //bool f = UsersRepository.InsererUtilisateurAvecImage("5", "Lolo", "5", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\p4.jpg", "llllllll");  
-
             //UsersRepository.UpdateUserPhoto(1, "C:\\Users\\MO KADI\\Desktop\\photos\\mokadi.jpg");
 
             try
@@ -47,7 +47,7 @@ namespace SocketsProject
                 LoginCl utilisateurToSend = new LoginCl { Telephone = Telephone, Password = Password };
 
                 // Envoi de l'utilisateur au serveur de manière asynchrone
-               
+
                 NetworkStream networkStream = new NetworkStream(clientSocket);
                 BinaryFormatter formatter = new BinaryFormatter();
                 formatter.Serialize(networkStream, utilisateurToSend);
@@ -59,7 +59,7 @@ namespace SocketsProject
 
 
                 user = (LoginCl)formatter.Deserialize(networkStream);
-        
+
 
                 if (user != null && user.Id != -1)
                 {
@@ -83,8 +83,11 @@ namespace SocketsProject
             {
                 guna2Button1.Enabled = true;
             }
-
         }
 
+        private void guna2Button1_DoubleClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("hello", "hellow world", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }
