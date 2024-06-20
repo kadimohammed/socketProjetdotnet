@@ -94,7 +94,6 @@ namespace SocketsProject
                 loadcontact();
             }
 
-
             if (contactList != null && contactList.Count > 0)
             {
                 contactList[0].ContactUC_Click(sender, e);
@@ -109,8 +108,6 @@ namespace SocketsProject
                 flowLayoutPanel1.Controls.Add(c);
             }
         }
-
-
 
         private void SendMesgCircleButton_Click(object sender, EventArgs e)
         {
@@ -247,7 +244,6 @@ namespace SocketsProject
 
         public void loadcontact()
         {
-
             LoginCl user = Login.user;
 
             if (user != null && user.Contacts != null)
@@ -284,7 +280,6 @@ namespace SocketsProject
 
                         if (allMessages.Any())
                         {
-
                             var lastMessage = allMessages
                                 .Where(m => (m.SenderId == user.Id && m.ReceiverId == contact.ContactUser.Id) ||
                                             (m.SenderId == contact.ContactUser.Id && m.ReceiverId == user.Id))
@@ -426,7 +421,7 @@ namespace SocketsProject
                 //Login.f1.Messages_flowLayoutPanel2.ScrollControlIntoView(msgSender);
 
                 contact_selected.Message = message;
-
+                contact_selected.DateConnection = DateTime.Now.ToString("HH:mm");
 
                 try
                 {

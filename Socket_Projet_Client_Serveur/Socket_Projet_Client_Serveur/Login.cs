@@ -27,7 +27,7 @@ namespace SocketsProject
         private async void guna2Button1_Click(object sender, EventArgs e)
         {
 
-            //bool c = UsersRepository.InsererUtilisateurAvecImage("5", "pitos", "5", "C:\\Users\\MO KADI\\Desktop\\Nouveau dossier\\korg.jpg", "dddd");
+            //bool c = UsersRepository.InsererUtilisateurAvecImage("0612345678", "VINI JR", "0612345678", "C:\\Users\\MO KADI\\Desktop\\photos\\Nouveau dossier\\vinicus.jpg", "Suuuuuuuuuuu");
             //bool a = UsersRepository.InsererUtilisateurAvecImage("6", "pitos","6", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\p2.jpg", "aaaaaa");
             //bool b = UsersRepository.InsererUtilisateurAvecImage("3", "camavinga", "3", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\p3.jpg", "bbbbbbb");
             //bool f = UsersRepository.InsererUtilisateurAvecImage("5", "Lolo", "5", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\p4.jpg", "llllllll");  

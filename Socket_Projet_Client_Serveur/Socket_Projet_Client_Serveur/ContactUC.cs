@@ -127,7 +127,6 @@ namespace Socket_Projet_Client
         {
             ClearImageBoxes();
 
-
             Login.f1.Messages_flowLayoutPanel2.HorizontalScroll.Enabled = false;
             Login.f1.Messages_flowLayoutPanel2.AutoScrollMinSize = new Size(0,0);
 
