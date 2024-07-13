@@ -75,11 +75,11 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Magneto", 60F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(224, 224, 224);
-            label2.Location = new Point(218, 186);
+            label2.Location = new Point(235, 186);
             label2.Name = "label2";
-            label2.Size = new Size(346, 97);
+            label2.Size = new Size(294, 97);
             label2.TabIndex = 0;
-            label2.Text = "Wonam";
+            label2.Text = "HiHo";
             // 
             // guna2Button1
             // 

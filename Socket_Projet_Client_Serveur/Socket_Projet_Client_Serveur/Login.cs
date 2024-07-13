@@ -31,7 +31,7 @@ namespace SocketsProject
             //bool a = UsersRepository.InsererUtilisateurAvecImage("6", "pitos","6", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\p2.jpg", "aaaaaa");
             //bool b = UsersRepository.InsererUtilisateurAvecImage("3", "camavinga", "3", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\p3.jpg", "bbbbbbb");
             //bool f = UsersRepository.InsererUtilisateurAvecImage("5", "Lolo", "5", "C:\\Users\\MO KADI\\Desktop\\Med kadi\\p4.jpg", "llllllll");  
-            //UsersRepository.UpdateUserPhoto(1, "C:\\Users\\MO KADI\\Desktop\\photos\\mokadi.jpg");
+            //UsersRepository.UpdateUserPhoto(2, "C:\\Users\\MO KADI\\Desktop\\piano.jpg");
 
             try
             {

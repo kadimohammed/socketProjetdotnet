@@ -259,7 +259,7 @@
             label2.Name = "label2";
             label2.Size = new Size(255, 20);
             label2.TabIndex = 34;
-            label2.Text = "Wonam";
+            label2.Text = "HiHo";
             label2.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // guna2DragControl1
