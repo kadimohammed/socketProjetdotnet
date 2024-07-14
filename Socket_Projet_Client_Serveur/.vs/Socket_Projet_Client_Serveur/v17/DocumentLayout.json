@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E24857FB-E72A-4FA2-B9AD-0ADE1B0D0AE3}|Socket_Projet_Client_Serveur\\Socket_Projet_Client.csproj|c:\\users\\mo kadi\\desktop\\socketprojetdotnet\\socket_projet_client_serveur\\socket_projet_client_serveur\\socket_projet_client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E24857FB-E72A-4FA2-B9AD-0ADE1B0D0AE3}|Socket_Projet_Client_Serveur\\Socket_Projet_Client.csproj|solutionrelative:socket_projet_client_serveur\\socket_projet_client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Socket_Projet_Client",
+              "DocumentMoniker": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Client_Serveur\\Socket_Projet_Client.csproj",
+              "RelativeDocumentMoniker": "Socket_Projet_Client_Serveur\\Socket_Projet_Client.csproj",
+              "ToolTip": "C:\\Users\\MO KADI\\Desktop\\socketProjetdotnet\\Socket_Projet_Client_Serveur\\Socket_Projet_Client_Serveur\\Socket_Projet_Client.csproj",
+              "RelativeToolTip": "Socket_Projet_Client_Serveur\\Socket_Projet_Client.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-07-14T11:15:56.578Z",
+              "EditorCaption": ""
             }
           ]
         }
